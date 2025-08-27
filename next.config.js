@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Static site export for Vercel deployment
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-      },
-    ],
-    formats: ['image/webp', 'image/avif'],
   },
+  distDir: 'out'
 }
 
 module.exports = nextConfig
