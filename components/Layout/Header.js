@@ -88,10 +88,10 @@ export default function Header({ style = 'default', isScrolled = false }) {
               </Link>
             </div>
 
-            {/* Desktop Layout - Three sections */}
-            <div className="hidden lg:flex lg:w-full lg:items-center lg:justify-center">
+            {/* Desktop Layout - Simple centered grid */}
+            <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:w-full lg:items-center lg:gap-4">
               {/* Left Navigation */}
-              <div className="flex items-center space-x-6 mr-12">
+              <div className="flex items-center justify-end space-x-4">
                 {navigation.slice(0, 2).map((item) => {
                   const isActive = pathname === item.href || 
                     (item.href !== '/' && pathname.startsWith(item.href))
@@ -117,7 +117,7 @@ export default function Header({ style = 'default', isScrolled = false }) {
               </div>
 
               {/* Center Logo */}
-              <div className="flex-shrink-0">
+              <div className="flex items-center justify-center">
                 <Link href="/" className="flex items-center">
                   <Image
                     src="/images/logos/agp-nature-villa-logo-main.png"
@@ -131,7 +131,7 @@ export default function Header({ style = 'default', isScrolled = false }) {
               </div>
 
               {/* Right Navigation */}
-              <div className="flex items-center space-x-6 ml-12">
+              <div className="flex items-center justify-start space-x-4">
                 {navigation.slice(2).map((item) => {
                   const isActive = pathname === item.href || 
                     (item.href !== '/' && pathname.startsWith(item.href))
