@@ -16,36 +16,78 @@ export const metadata = {
 }
 
 async function getBlogData() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/blog`, {
-      next: { revalidate: 300 } // Revalidate every 5 minutes
-    })
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch blog posts')
-    }
-    
-    return res.json()
-  } catch (error) {
-    console.error('Error fetching blog data:', error)
-    return { posts: [], total: 0 }
-  }
+  // Skip API calls for static deployment - use default data directly
+  return getDefaultBlogData()
 }
 
 async function getTaxonomy() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/blog/taxonomy`, {
-      next: { revalidate: 3600 } // Revalidate every hour
-    })
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch taxonomy')
-    }
-    
-    return res.json()
-  } catch (error) {
-    console.error('Error fetching taxonomy:', error)
-    return { categories: [], tags: [] }
+  // Skip API calls for static deployment - use default data directly
+  return getDefaultTaxonomy()
+}
+
+function getDefaultBlogData() {
+  return {
+    posts: [
+      {
+        id: 1,
+        title: "Discovering Hidden Gems Around Udaipur",
+        slug: "discovering-hidden-gems-around-udaipur",
+        excerpt: "Explore the lesser-known attractions and secret spots that make Udaipur truly magical. From ancient temples to scenic viewpoints, discover what lies beyond the tourist trail.",
+        content: "Full content here...",
+        image: "/images/Blog/udaipur-hidden-gems.jpg",
+        author: "AGP Nature Villa",
+        publishedAt: "2024-01-15",
+        category: "Travel Guide",
+        tags: ["Udaipur", "Hidden Gems", "Travel Tips"],
+        readTime: 8
+      },
+      {
+        id: 2,
+        title: "Best Time to Visit Rajasthan: A Complete Guide",
+        slug: "best-time-to-visit-rajasthan-complete-guide",
+        excerpt: "Planning your Rajasthan adventure? Learn about the perfect seasons, weather patterns, and local events to make your trip unforgettable.",
+        content: "Full content here...",
+        image: "/images/Blog/rajasthan-seasons.jpg",
+        author: "AGP Nature Villa",
+        publishedAt: "2024-01-10",
+        category: "Travel Planning",
+        tags: ["Rajasthan", "Weather", "Travel Planning"],
+        readTime: 6
+      },
+      {
+        id: 3,
+        title: "Authentic Rajasthani Cuisine: A Food Lover's Journey",
+        slug: "authentic-rajasthani-cuisine-food-lovers-journey",
+        excerpt: "Dive into the rich flavors of Rajasthani cuisine. From dal baati churma to gatte ki sabzi, discover the authentic tastes of the desert state.",
+        content: "Full content here...",
+        image: "/images/Blog/rajasthani-cuisine.jpg",
+        author: "AGP Nature Villa",
+        publishedAt: "2024-01-05",
+        category: "Food & Culture",
+        tags: ["Food", "Rajasthani Cuisine", "Culture"],
+        readTime: 10
+      }
+    ],
+    total: 3
+  }
+}
+
+function getDefaultTaxonomy() {
+  return {
+    categories: [
+      { id: 1, name: "Travel Guide", count: 5 },
+      { id: 2, name: "Travel Planning", count: 3 },
+      { id: 3, name: "Food & Culture", count: 4 },
+      { id: 4, name: "Villa Experience", count: 6 }
+    ],
+    tags: [
+      { id: 1, name: "Udaipur", count: 8 },
+      { id: 2, name: "Rajasthan", count: 10 },
+      { id: 3, name: "Travel Tips", count: 7 },
+      { id: 4, name: "Hidden Gems", count: 3 },
+      { id: 5, name: "Food", count: 4 },
+      { id: 6, name: "Culture", count: 5 }
+    ]
   }
 }
 
