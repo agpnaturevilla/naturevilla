@@ -91,7 +91,7 @@ function getDefaultTaxonomy() {
   }
 }
 
-export default async function BlogPage({ searchParams }) {
+export default async function BlogPage() {
   const [blogData, taxonomy] = await Promise.all([
     getBlogData(),
     getTaxonomy()
@@ -142,7 +142,7 @@ export default async function BlogPage({ searchParams }) {
               <Suspense fallback={<Loading />}>
                 <BlogList 
                   initialPosts={blogData.posts} 
-                  searchParams={searchParams}
+                  searchParams={{}}
                 />
               </Suspense>
             </div>
@@ -150,8 +150,8 @@ export default async function BlogPage({ searchParams }) {
             <div className="mt-12 lg:mt-0">
               <Suspense fallback={<div className="h-64 bg-white/80 rounded-2xl shadow-lg animate-pulse" />}>
                 <BlogSidebar 
-                  categories={taxonomy.categories}
-                  tags={taxonomy.tags}
+                  categories={taxonomy.categories.map(cat => cat.name)}
+                  tags={taxonomy.tags.map(tag => tag.name)}
                 />
               </Suspense>
             </div>

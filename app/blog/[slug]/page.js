@@ -274,8 +274,8 @@ export default async function BlogPostPage({ params }) {
             <div className="mt-12 lg:mt-0">
               <Suspense fallback={<div className="h-64 bg-gray-50 rounded shadow animate-pulse" />}>
                 <BlogSidebar 
-                  categories={taxonomy.categories}
-                  tags={taxonomy.tags}
+                  categories={taxonomy.categories.map(cat => cat.name)}
+                  tags={taxonomy.tags.map(tag => tag.name)}
                   currentPost={post}
                 />
               </Suspense>
