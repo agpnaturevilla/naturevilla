@@ -6,23 +6,8 @@ import DynamicPageRenderer from '../../components/Page/DynamicPageRenderer'
 
 async function getPageData(slug) {
   const cleanSlug = Array.isArray(slug) ? slug.join('/') : slug
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/pages/${cleanSlug}`, {
-      next: { revalidate: 60 }
-    })
-    
-    if (!res.ok) {
-      if (res.status === 404) {
-        return getDefaultPageData(cleanSlug)
-      }
-      throw new Error('Failed to fetch page data')
-    }
-    
-    return res.json()
-  } catch (error) {
-    console.error('Error fetching page data:', error)
-    return getDefaultPageData(cleanSlug)
-  }
+  // Skip API calls for static deployment - use default data directly
+  return getDefaultPageData(cleanSlug)
 }
 
 function getDefaultPageData(slug) {
