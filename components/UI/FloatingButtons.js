@@ -44,9 +44,9 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
   }
 
   return (
-    <div className="fixed z-50">
+    <>
       {/* Mobile - Bottom flat buttons */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-4 shadow-lg">
         <div className="flex space-x-3 max-w-sm mx-auto">
           <a
             href={`tel:${phone}`}
@@ -60,7 +60,7 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
             href={directionLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 bg-accent-600 hover:bg-accent-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2"
+            className="flex-1 bg-slate-600 hover:bg-slate-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2"
           >
             <MapPinIcon className="w-5 h-5" />
             <span className="font-medium">Direction</span>
@@ -69,7 +69,7 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
       </div>
 
       {/* Desktop - Right side center floating buttons with slide animation */}
-      <div className="hidden md:block fixed right-8 top-1/2 transform -translate-y-1/2">
+      <div className="hidden md:block fixed right-8 top-1/2 transform -translate-y-1/2 z-50">
         <div className="flex flex-col space-y-4" ref={buttonsRef}>
           <a
             href={`tel:${phone}`}
@@ -90,7 +90,7 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
           <a
             href={directionLink}
             onClick={handleDirections}
-            className={`group bg-accent-600 hover:bg-accent-700 text-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center overflow-hidden ${
+            className={`group bg-slate-600 hover:bg-slate-700 text-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center overflow-hidden ${
               isExpanded ? 'px-6 py-4 min-w-[140px]' : 'p-4 w-14 h-14 justify-center'
             }`}
             title="Get Direction"
@@ -104,6 +104,6 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
           </a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
