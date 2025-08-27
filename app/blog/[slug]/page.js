@@ -158,6 +158,15 @@ function getDefaultTaxonomy() {
   }
 }
 
+export async function generateStaticParams() {
+  // Generate static params for all blog post slugs
+  return [
+    { slug: 'discovering-hidden-gems-around-udaipur' },
+    { slug: 'best-time-to-visit-rajasthan-complete-guide' },
+    { slug: 'authentic-rajasthani-cuisine-food-lovers-journey' }
+  ]
+}
+
 export async function generateMetadata({ params }) {
   const post = await getBlogPost(params.slug)
   
