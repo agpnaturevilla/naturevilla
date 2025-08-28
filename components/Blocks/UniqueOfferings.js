@@ -36,7 +36,7 @@ export default function UniqueOfferings({ content, settings }) {
   ]
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-16 bg-white overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">

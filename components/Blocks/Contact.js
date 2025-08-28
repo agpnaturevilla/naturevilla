@@ -166,7 +166,7 @@ export default function Contact({ content, settings }) {
   ]
 
   return (
-    <div className="relative py-20 pb-16">
+    <div className="relative py-16">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>

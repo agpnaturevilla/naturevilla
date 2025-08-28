@@ -20,7 +20,7 @@ export default function StorySections({ content, settings }) {
         return (
           <section 
             key={index}
-            className={`relative py-20 lg:py-28 ${
+            className={`relative py-16 ${
               isGradient 
                 ? 'bg-gradient-to-br from-primary-100 via-primary-50 to-primary-200' 
                 : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'

@@ -125,7 +125,7 @@ export default function InteractiveAmenities({ content, settings }) {
   const selectedAmenityData = amenities[selectedAmenity]
 
   return (
-    <div ref={sectionRef} className="relative py-32 bg-white overflow-hidden">
+    <div ref={sectionRef} className="relative py-16 bg-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary-100 rounded-full opacity-30 blur-3xl" />

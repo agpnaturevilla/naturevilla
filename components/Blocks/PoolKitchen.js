@@ -13,7 +13,7 @@ export default function PoolKitchen({ content, settings }) {
   } = content || {}
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-primary-100 via-primary-50 to-primary-200 overflow-hidden">
+    <section className="relative py-16 bg-gradient-to-br from-primary-100 via-primary-50 to-primary-200 overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16">

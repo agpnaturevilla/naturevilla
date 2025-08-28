@@ -64,7 +64,7 @@ export default function VillaStorytellingSection({ content, settings }) {
   }, [isVisible, sections.length])
 
   return (
-    <div ref={sectionRef} className="relative py-32 overflow-hidden bg-gray-900">
+    <div ref={sectionRef} className="relative py-16 overflow-hidden bg-gray-900">
       {/* Dynamic Background */}
       <div className="absolute inset-0">
         {sections.map((section, index) => (

@@ -83,7 +83,7 @@ export default function TestimonialsSection({ content, settings }) {
   const currentTestimonial = testimonials[activeTestimonial]
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white via-primary-50 to-primary-100">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-white via-primary-50 to-primary-100">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.03]" style={{

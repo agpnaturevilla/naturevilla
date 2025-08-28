@@ -77,7 +77,7 @@ export default function Features({ content, settings }) {
   const { layout = 'grid', columns = 3 } = settings || {}
 
   return (
-    <div className="relative py-24 bg-white overflow-hidden">
+    <div className="relative py-16 bg-white overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}

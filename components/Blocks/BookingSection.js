@@ -12,7 +12,7 @@ export default function BookingSection({ content, settings }) {
   } = content || {}
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200">
+    <section className="relative py-16 bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Content Section */}

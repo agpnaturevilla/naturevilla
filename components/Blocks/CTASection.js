@@ -24,7 +24,7 @@ export default function CTASection({ content, settings }) {
   const yearsSinceEstablishment = currentYear - establishedYear + 1 // +1 to include the establishment year
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
