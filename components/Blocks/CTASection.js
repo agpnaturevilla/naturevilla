@@ -18,6 +18,11 @@ export default function CTASection({ content, settings }) {
     ]
   } = content || {}
 
+  // Calculate years since establishment (2023)
+  const currentYear = new Date().getFullYear()
+  const establishedYear = 2023
+  const yearsSinceEstablishment = currentYear - establishedYear + 1 // +1 to include the establishment year
+
   return (
     <section className="relative py-24 overflow-hidden bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900">
       {/* Background Elements */}
@@ -120,9 +125,9 @@ export default function CTASection({ content, settings }) {
               </div>
               
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-white mb-2">2024</div>
+                <div className="text-4xl font-bold text-white mb-2">2023</div>
                 <div className="text-white/70">Established</div>
-                <div className="text-green-300 text-sm mt-2 font-medium">4+ Years</div>
+                <div className="text-green-300 text-sm mt-2 font-medium">{yearsSinceEstablishment}+ Years</div>
               </div>
             </div>
 
