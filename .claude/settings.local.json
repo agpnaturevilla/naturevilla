@@ -17,7 +17,8 @@
       "Bash(git push:*)",
       "Bash(vercel:*)",
       "Bash(git commit:*)",
-      "Bash(npm audit:*)"
+      "Bash(npm audit:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

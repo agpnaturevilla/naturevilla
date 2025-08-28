@@ -82,7 +82,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
   const currentRoom = rooms[activeRoom]
 
   return (
-    <div ref={sectionRef} className="luxury-rooms-section relative py-16 bg-gray-50" style={{overflowX: 'hidden', overflowY: 'visible', scrollbarWidth: 'none'}}>
+    <div ref={sectionRef} className="luxury-rooms-section relative py-16 bg-gray-50" style={{overflowY: 'visible', scrollbarWidth: 'none'}}>
       {/* Dynamic Background */}
       <div className="absolute inset-0">
         {rooms.map((room, index) => (
@@ -105,7 +105,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-12">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -170,15 +170,14 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
                     src={room.image}
                     alt={room.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                    sizes="320px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   
                   {/* Icon Overlay */}
-                  <div className={`absolute top-4 right-4 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  <div className={`absolute top-4 right-4 w-12 h-12 rounded-full flex items-center justify-center ${
                     activeRoom === index 
-                      ? `bg-white text-gray-900 shadow-lg` 
+                      ? 'bg-white text-gray-900' 
                       : 'bg-white/20 backdrop-blur-sm text-white'
                   }`}>
                     {index === 0 && <HeartIcon className="w-6 h-6" />}
@@ -252,45 +251,26 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
                     setIsAutoPlaying(false)
                   }}
                   onMouseEnter={() => setIsAutoPlaying(false)}
-                  className={`group relative p-8 rounded-3xl transition-all duration-700 text-left overflow-hidden ${
+                  className={`relative p-8 rounded-3xl text-left ${
                     activeRoom === index
-                      ? 'bg-white shadow-2xl scale-105 ring-2 ring-primary-200'
-                      : 'bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-xl hover:scale-102'
+                      ? 'bg-white shadow-2xl ring-2 ring-primary-200'
+                      : 'bg-white/80 backdrop-blur-sm'
                   }`}
                 >
                   {/* Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${room.gradient} transition-opacity duration-700 ${
-                    activeRoom === index ? 'opacity-10' : 'opacity-0 group-hover:opacity-5'
+                  <div className={`absolute inset-0 bg-gradient-to-br ${room.gradient} ${
+                    activeRoom === index ? 'opacity-10' : 'opacity-0'
                   }`} />
                   
                   {/* Room Image */}
-                  <div className="relative aspect-[4/3] mb-6 rounded-2xl overflow-hidden">
+                  <div className="aspect-[4/3] mb-6 rounded-2xl overflow-hidden">
                     <Image
                       src={room.image}
                       alt={room.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    
-                    {/* Icon Overlay */}
-                    <div className={`absolute top-4 right-4 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      activeRoom === index 
-                        ? `bg-white text-gray-900 shadow-lg` 
-                        : 'bg-white/20 backdrop-blur-sm text-white'
-                    }`}>
-                      {index === 0 && <HeartIcon className="w-6 h-6" />}
-                      {index === 1 && <HomeIcon className="w-6 h-6" />}
-                      {index === 2 && <StarIcon className="w-6 h-6" />}
-                    </div>
-
-                    {/* Mood Badge */}
-                    <div className="absolute bottom-4 left-4">
-                      <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-gray-700">
-                        {room.mood}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Content */}
@@ -406,16 +386,15 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
               </div>
 
               {/* Right - Large Image */}
-              <div className="relative">
+              <div>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src={currentRoom.image}
                     alt={currentRoom.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    width={500}
+                    height={375}
+                    className="w-full h-full object-cover"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${currentRoom.gradient} opacity-20`} />
                 </div>
                 
                 {/* Floating Badge */}
@@ -431,7 +410,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
         </div>
 
         {/* Navigation Dots */}
-        <div className="flex justify-center space-x-4 mt-12">
+        <div className="flex justify-center space-x-4 mt-12 mb-8 py-4">
           {rooms.map((_, index) => (
             <button
               key={index}
