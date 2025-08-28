@@ -115,8 +115,62 @@ export default function TestimonialsSection({ content, settings }) {
           </p>
         </div>
 
-        {/* Main Testimonial Display */}
-        <div className="max-w-5xl mx-auto px-8">
+        {/* Mobile: Sliding Cards */}
+        <div className="md:hidden px-4 py-8">
+          <div className="flex gap-6 overflow-x-auto scrollbar-hide px-4 py-4" style={{ scrollSnapType: 'x mandatory' }}>
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={testimonial.id}
+                className="bg-white rounded-3xl overflow-hidden border border-primary-200/50 flex-shrink-0 w-80"
+                style={{
+                  boxShadow: '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 4px 16px -4px rgba(0, 0, 0, 0.08)',
+                  scrollSnapAlign: 'center'
+                }}
+              >
+                <div className="p-6">
+                  
+                  {/* Quote */}
+                  <div className="relative mb-6">
+                    <svg className="absolute -top-4 -left-4 w-10 h-10 text-primary-600/20" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote className="font-light text-gray-700 leading-relaxed pl-6 text-lg">
+                      "{testimonial.text}"
+                    </blockquote>
+                  </div>
+
+                  <div className="flex flex-col gap-4 text-center">
+                    {/* Guest Info */}
+                    <div className="flex flex-col items-center space-y-4">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 flex items-center justify-center shadow-lg">
+                        <UserCircleIcon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="text-xl font-semibold text-gray-900">{testimonial.name}</h4>
+                        <div className="text-gray-600">
+                          <span className="text-sm">{testimonial.experience}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Rating */}
+                    <div className="flex flex-col items-center">
+                      <div className="flex space-x-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <StarIcon key={i} className="h-6 w-6 text-amber-400" />
+                        ))}
+                      </div>
+                      <span className="text-gray-900 font-semibold">Excellent Review</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Single Card Display */}
+        <div className="hidden md:block max-w-6xl mx-auto">
           
           {/* Featured Testimonial Card */}
           <div className="bg-white rounded-3xl overflow-hidden border border-primary-200/50" style={{
@@ -160,36 +214,36 @@ export default function TestimonialsSection({ content, settings }) {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center space-x-4 mt-8 mb-4">
-            <button
-              onClick={prevTestimonial}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-primary-200 flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-all duration-300"
-            >
-              <ChevronLeftIcon className="w-6 h-6" />
-            </button>
-            <div className="flex space-x-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setActiveTestimonial(index)
-                    setIsAutoPlaying(false)
-                  }}
-                  className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                    index === activeTestimonial ? 'bg-primary-600 scale-125' : 'bg-primary-200 hover:bg-primary-400'
-                  }`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={nextTestimonial}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-primary-200 flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-all duration-300"
-            >
-              <ChevronRightIcon className="w-6 h-6" />
-            </button>
+        {/* Navigation - Desktop Only */}
+        <div className="hidden md:flex items-center justify-center space-x-4 mt-8 mb-4">
+          <button
+            onClick={prevTestimonial}
+            className="w-14 h-14 rounded-full bg-white shadow-lg border border-primary-200 flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-all duration-300"
+          >
+            <ChevronLeftIcon className="w-6 h-6" />
+          </button>
+          <div className="flex space-x-3">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setActiveTestimonial(index)
+                  setIsAutoPlaying(false)
+                }}
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  index === activeTestimonial ? 'bg-primary-600 scale-125' : 'bg-primary-200 hover:bg-primary-400'
+                }`}
+              />
+            ))}
           </div>
+          <button
+            onClick={nextTestimonial}
+            className="w-14 h-14 rounded-full bg-white shadow-lg border border-primary-200 flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-all duration-300"
+          >
+            <ChevronRightIcon className="w-6 h-6" />
+          </button>
         </div>
 
 
