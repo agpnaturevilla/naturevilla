@@ -82,7 +82,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
   const currentRoom = rooms[activeRoom]
 
   return (
-    <div ref={sectionRef} className="luxury-rooms-section relative py-16 overflow-hidden bg-gray-50" style={{overflowX: 'hidden', scrollbarWidth: 'none'}}>
+    <div ref={sectionRef} className="luxury-rooms-section relative py-16 bg-gray-50" style={{overflowX: 'hidden', overflowY: 'visible', scrollbarWidth: 'none'}}>
       {/* Dynamic Background */}
       <div className="absolute inset-0">
         {rooms.map((room, index) => (
@@ -127,23 +127,38 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
         </div>
 
         {/* Room Showcase */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* Room Cards */}
-          {rooms.map((room, index) => {
-            return (
-              <button
-                key={room.id}
-                onClick={() => {
-                  setActiveRoom(index)
-                  setIsAutoPlaying(false)
-                }}
-                onMouseEnter={() => setIsAutoPlaying(false)}
-                className={`group relative p-8 rounded-3xl transition-all duration-700 text-left overflow-hidden ${
-                  activeRoom === index
-                    ? 'bg-white shadow-2xl scale-105 ring-2 ring-primary-200'
-                    : 'bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-xl hover:scale-102'
-                }`}
-              >
+        <div className="mb-4 lg:mb-8" style={{ overflow: 'visible' }}>
+          {/* Mobile: Sliding Cards */}
+          <div className="lg:hidden" style={{ overflow: 'visible' }}>
+            {/* Swipe Hint */}
+            <div className="flex justify-center mb-4 px-6">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-gray-600 text-sm">
+                <span>Swipe to explore rooms</span>
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-4 overflow-x-auto scrollbar-hide px-6" style={{ scrollSnapType: 'x mandatory', paddingTop: '20px', paddingBottom: '10px' }}>
+              {rooms.map((room, index) => {
+                return (
+                  <button
+                    key={room.id}
+                    onClick={() => {
+                      setActiveRoom(index)
+                      setIsAutoPlaying(false)
+                    }}
+                    className={`group relative p-6 rounded-3xl transition-all duration-700 text-left flex-shrink-0 w-80 ${
+                      activeRoom === index
+                        ? 'bg-white ring-2 ring-primary-200'
+                        : 'bg-white/80 backdrop-blur-sm hover:bg-white'
+                    }`}
+                    style={{ 
+                      scrollSnapAlign: 'center'
+                    }}
+                  >
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${room.gradient} transition-opacity duration-700 ${
                   activeRoom === index ? 'opacity-10' : 'opacity-0 group-hover:opacity-5'
@@ -220,9 +235,109 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
                 <div className={`absolute bottom-4 right-4 w-3 h-3 rounded-full transition-all duration-300 ${
                   activeRoom === index ? 'bg-primary-500' : 'bg-transparent'
                 }`} />
-              </button>
-            )
-          })}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Desktop: Grid Layout */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+            {rooms.map((room, index) => {
+              return (
+                <button
+                  key={room.id}
+                  onClick={() => {
+                    setActiveRoom(index)
+                    setIsAutoPlaying(false)
+                  }}
+                  onMouseEnter={() => setIsAutoPlaying(false)}
+                  className={`group relative p-8 rounded-3xl transition-all duration-700 text-left overflow-hidden ${
+                    activeRoom === index
+                      ? 'bg-white shadow-2xl scale-105 ring-2 ring-primary-200'
+                      : 'bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-xl hover:scale-102'
+                  }`}
+                >
+                  {/* Background Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${room.gradient} transition-opacity duration-700 ${
+                    activeRoom === index ? 'opacity-10' : 'opacity-0 group-hover:opacity-5'
+                  }`} />
+                  
+                  {/* Room Image */}
+                  <div className="relative aspect-[4/3] mb-6 rounded-2xl overflow-hidden">
+                    <Image
+                      src={room.image}
+                      alt={room.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    
+                    {/* Icon Overlay */}
+                    <div className={`absolute top-4 right-4 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      activeRoom === index 
+                        ? `bg-white text-gray-900 shadow-lg` 
+                        : 'bg-white/20 backdrop-blur-sm text-white'
+                    }`}>
+                      {index === 0 && <HeartIcon className="w-6 h-6" />}
+                      {index === 1 && <HomeIcon className="w-6 h-6" />}
+                      {index === 2 && <StarIcon className="w-6 h-6" />}
+                    </div>
+
+                    {/* Mood Badge */}
+                    <div className="absolute bottom-4 left-4">
+                      <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-gray-700">
+                        {room.mood}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative">
+                    <h3 className={`font-bold text-2xl mb-2 transition-all duration-300 ${
+                      activeRoom === index ? 'text-gray-900' : 'text-gray-800'
+                    }`}>
+                      {room.name}
+                    </h3>
+                    
+                    <p className={`text-sm font-medium mb-4 transition-all duration-300 ${
+                      activeRoom === index ? 'text-primary-600' : 'text-gray-600'
+                    }`}>
+                      {room.tagline}
+                    </p>
+
+                    <p className={`text-sm leading-relaxed mb-6 transition-all duration-300 ${
+                      activeRoom === index ? 'text-gray-700' : 'text-gray-600'
+                    }`}>
+                      {room.description.slice(0, 120)}...
+                    </p>
+
+                    {/* Features */}
+                    <div className="space-y-2">
+                      {room.features.slice(0, 2).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-2">
+                          <div className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
+                            activeRoom === index ? 'bg-primary-500' : 'bg-gray-400'
+                          }`} />
+                          <span className={`text-xs transition-colors duration-300 ${
+                            activeRoom === index ? 'text-gray-700' : 'text-gray-600'
+                          }`}>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Active Indicator */}
+                  <div className={`absolute bottom-4 right-4 w-3 h-3 rounded-full transition-all duration-300 ${
+                    activeRoom === index ? 'bg-primary-500' : 'bg-transparent'
+                  }`} />
+                </button>
+              )
+            })}
+          </div>
         </div>
 
         {/* Detailed View */}
