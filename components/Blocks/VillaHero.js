@@ -23,7 +23,7 @@ export default function VillaHero({ content, settings }) {
       rating: 4.9,
       reviews: 182,
       rooms: 3,
-      established: '2020'
+      established: '2024'
     }
   } = content || {}
 

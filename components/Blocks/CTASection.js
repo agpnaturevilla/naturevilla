@@ -120,7 +120,7 @@ export default function CTASection({ content, settings }) {
               </div>
               
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-white mb-2">2020</div>
+                <div className="text-4xl font-bold text-white mb-2">2024</div>
                 <div className="text-white/70">Established</div>
                 <div className="text-green-300 text-sm mt-2 font-medium">4+ Years</div>
               </div>

@@ -45,7 +45,7 @@ function getDefaultPageData(slug = 'home') {
             rating: 4.9,
             reviews: 182,
             rooms: 3,
-            established: '2020'
+            established: '2024'
           }
         }
       },
