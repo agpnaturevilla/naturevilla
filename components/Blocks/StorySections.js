@@ -20,11 +20,14 @@ export default function StorySections({ content, settings }) {
         return (
           <section 
             key={index}
-            className={`relative py-20 lg:py-28 overflow-hidden ${
+            className={`relative py-20 lg:py-28 ${
               isGradient 
                 ? 'bg-gradient-to-br from-primary-100 via-primary-50 to-primary-200' 
                 : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'
             }`}
+            style={{
+              overflow: 'visible'
+            }}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
@@ -33,64 +36,24 @@ export default function StorySections({ content, settings }) {
                 
                 {/* Image Column */}
                 <div className={`relative ${isLeft ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className={`transform transition-all duration-1000 delay-200 ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`}>
-                    <div 
-                      className="relative aspect-[4/3] overflow-hidden rounded-2xl"
-                      style={{
-                        pointerEvents: 'none',
-                        userSelect: 'none',
-                        touchAction: 'none',
-                        position: 'relative'
-                      }}
-                      onClick={(e) => e.preventDefault()}
-                      onMouseDown={(e) => e.preventDefault()}
-                      onMouseUp={(e) => e.preventDefault()}
-                      onMouseEnter={(e) => e.preventDefault()}
-                      onMouseMove={(e) => e.preventDefault()}
-                      onWheel={(e) => e.preventDefault()}
-                      onTouchStart={(e) => e.preventDefault()}
-                      onTouchMove={(e) => e.preventDefault()}
-                      onTouchEnd={(e) => e.preventDefault()}
-                    >
+                  <div className="relative group">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                       <Image
                         src={section.image}
                         alt={section.title}
                         fill
-                        className="object-cover select-none"
+                        className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        style={{
-                          pointerEvents: 'none',
-                          userSelect: 'none',
-                          touchAction: 'none',
-                          objectFit: 'cover',
-                          transform: 'none'
-                        }}
-                        draggable={false}
-                        unselectable="on"
-                        priority={false}
                       />
-                      <div 
-                        className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent select-none"
-                        style={{
-                          pointerEvents: 'none',
-                          userSelect: 'none',
-                          touchAction: 'none'
-                        }}
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                    
-                    {/* Subtle Decorative Elements */}
-                    <div className={`absolute -top-2 ${isLeft ? '-right-2' : '-left-2'} w-16 h-16 bg-gradient-to-br from-primary-100/40 to-accent-100/40 rounded-full blur-2xl`} />
-                    <div className={`absolute -bottom-4 ${isLeft ? '-left-4' : '-right-4'} w-20 h-20 bg-gradient-to-br from-accent-100/30 to-secondary-100/30 rounded-full blur-3xl`} />
                   </div>
                 </div>
 
                 {/* Content Column */}
                 <div className={`relative ${isLeft ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <div className={`transform transition-all duration-1000 delay-400 ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                  <div className={`transition-opacity duration-1000 delay-400 ${
+                    isLoaded ? 'opacity-100' : 'opacity-0'
                   }`}>
                     
 
