@@ -100,7 +100,7 @@ export default function VillaStorytellingSection({ content, settings }) {
         </div>
 
         {/* Story Sections */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start lg:items-center">
           
           {/* Left - Visual Panel */}
           <div className="relative">
@@ -179,14 +179,14 @@ export default function VillaStorytellingSection({ content, settings }) {
               </div>
 
               {/* Active Section Content */}
-              <div className="relative min-h-[200px]">
+              <div className="relative min-h-[300px] lg:min-h-[200px]">
                 {sections.map((section, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-all duration-700 ${
+                    className={`absolute inset-0 transition-opacity duration-700 ${
                       index === currentSection 
-                        ? 'translate-y-0 opacity-100' 
-                        : 'translate-y-5 opacity-0 pointer-events-none'
+                        ? 'opacity-100' 
+                        : 'opacity-0 pointer-events-none'
                     }`}
                   >
                     <h3 className="text-3xl lg:text-4xl font-light text-white mb-6">
@@ -205,7 +205,7 @@ export default function VillaStorytellingSection({ content, settings }) {
         </div>
 
         {/* Bottom Quote */}
-        <div className={`text-center mt-20 md:mt-20 pt-8 md:pt-0 transition-all duration-1000 delay-700 ${
+        <div className={`text-center mt-20 md:mt-20 transition-all duration-1000 delay-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <blockquote className="text-2xl lg:text-3xl font-light text-white/90 italic max-w-4xl mx-auto">
