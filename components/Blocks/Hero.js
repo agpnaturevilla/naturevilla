@@ -135,7 +135,7 @@ export default function Hero({ content, settings }) {
 
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-light text-white leading-tight tracking-tight">
-                  <span className="font-serif italic text-4xl lg:text-6xl text-primary-200 block mb-2">
+                  <span className="font-sans italic text-4xl lg:text-6xl text-primary-200 block mb-2">
                     AGP Nature Villa
                   </span>
                   <br />

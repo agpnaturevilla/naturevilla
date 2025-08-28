@@ -61,7 +61,7 @@ export default function OurGallery({ content, settings }) {
           </div>
           
           <h3 className="text-4xl lg:text-6xl font-light text-gray-900 mb-8 leading-tight">
-            <span className="font-serif italic text-primary-600 uppercase">Our</span> Gallery
+            <span className="font-sans italic text-primary-600 uppercase">Our</span> Gallery
           </h3>
           
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-8"></div>

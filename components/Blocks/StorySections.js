@@ -101,7 +101,7 @@ export default function StorySections({ content, settings }) {
                           ? 'text-gray-800' 
                           : 'text-gray-800'
                       }`}>
-                        <span className="font-serif italic text-gray-600">{section.title.split(' ').slice(0, -3).join(' ')}</span>{' '}
+                        <span className="font-sans italic text-gray-600">{section.title.split(' ').slice(0, -3).join(' ')}</span>{' '}
                         <span className="font-normal">{section.title.split(' ').slice(-3).join(' ')}</span>
                       </h2>
                       

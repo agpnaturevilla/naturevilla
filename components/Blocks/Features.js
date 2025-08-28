@@ -88,7 +88,7 @@ export default function Features({ content, settings }) {
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6">
-            <span className="font-serif italic text-primary-600">Premium</span> Villa Features
+            <span className="font-sans italic text-primary-600">Premium</span> Villa Features
           </h2>
           
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-8"></div>

@@ -46,7 +46,7 @@ export default function CTASection({ content, settings }) {
             {/* Title */}
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-5xl font-light text-white leading-tight">
-                <span className="font-serif italic text-primary-300">Book Your</span>{' '}
+                <span className="font-sans italic text-primary-300">Book Your</span>{' '}
                 <span className="font-sans">Break Now</span>
               </h2>
               

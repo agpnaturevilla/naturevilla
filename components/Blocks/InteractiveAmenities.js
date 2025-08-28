@@ -126,7 +126,7 @@ export default function InteractiveAmenities({ content, settings }) {
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6">
-            <span className="font-serif italic text-primary-600">{title.split(' ')[0]}</span>{' '}
+            <span className="font-sans italic text-primary-600">{title.split(' ')[0]}</span>{' '}
             {title.split(' ').slice(1).join(' ')}
           </h2>
           

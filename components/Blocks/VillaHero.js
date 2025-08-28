@@ -148,7 +148,7 @@ export default function VillaHero({ content, settings }) {
                 </div>
                 
                 <h1 className="text-5xl lg:text-7xl font-light text-white leading-tight tracking-tight mb-6">
-                  <span className="block text-3xl lg:text-5xl text-primary-300 font-serif italic mb-2">
+                  <span className="block text-3xl lg:text-5xl text-primary-300 font-sans italic mb-2">
                     {subtitle}
                   </span>
                   <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">

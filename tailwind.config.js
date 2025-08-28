@@ -41,7 +41,6 @@ module.exports = {
         }
       },
       fontFamily: {
-        'serif': ['Georgia', 'serif'],
         'sans': ['Inter', 'sans-serif'],
       },
       animation: {

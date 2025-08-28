@@ -60,7 +60,7 @@ export default function VillaInfo({ content, settings }) {
               </div>
               
               <h2 className="text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
-                <span className="font-serif italic text-primary-600">Discover</span> Our Villa
+                <span className="font-sans italic text-primary-600">Discover</span> Our Villa
               </h2>
               
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full"></div>

@@ -69,7 +69,7 @@ export default function FeaturedGallery({ content, settings }) {
           </div>
           
           <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4">
-            <span className="font-serif italic text-primary-600">Featured</span> Gallery
+            <span className="font-sans italic text-primary-600">Featured</span> Gallery
           </h3>
           
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-6"></div>
