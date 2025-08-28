@@ -28,6 +28,16 @@ body::-webkit-scrollbar {
   display: none; /* WebKit */
 }
 
+/* Hide scrollbar utility class */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
 /* Allow vertical scrolling but hide scrollbar */
 body {
   overflow-y: auto;

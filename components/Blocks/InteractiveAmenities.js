@@ -16,6 +16,7 @@ export default function InteractiveAmenities({ content, settings }) {
   const [isVisible, setIsVisible] = useState(false)
   const [hoveredAmenity, setHoveredAmenity] = useState(null)
   const sectionRef = useRef(null)
+  const sliderRef = useRef(null)
 
   const {
     title = "What's Present at AGP Nature Villa",
@@ -105,6 +106,22 @@ export default function InteractiveAmenities({ content, settings }) {
     }
   }, [])
 
+  const scrollToCard = (index) => {
+    if (sliderRef.current) {
+      const cardWidth = 256 + 16 // w-64 (256px) + gap-4 (16px)
+      const scrollPosition = index * cardWidth - 24 // subtract some padding for better centering
+      sliderRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  const handleCardSelect = (index) => {
+    setSelectedAmenity(index)
+    scrollToCard(index)
+  }
+
   const selectedAmenityData = amenities[selectedAmenity]
 
   return (
@@ -117,7 +134,7 @@ export default function InteractiveAmenities({ content, settings }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className={`text-center mb-20 transition-all duration-1000 ${
+        <div className={`text-center mb-4 lg:mb-20 transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <div className="inline-flex items-center px-6 py-3 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
@@ -137,8 +154,153 @@ export default function InteractiveAmenities({ content, settings }) {
           </p>
         </div>
 
-        {/* Interactive Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        {/* Mobile: Full Width Layout */}
+        <div className="lg:hidden">
+          {/* Mobile Slider */}
+          <div className={`transition-all duration-1000 delay-300 mb-6 ${
+            isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+          }`}>
+            <div className="-mx-6">
+              <div ref={sliderRef} className="flex gap-4 overflow-x-auto scrollbar-hide px-6 pt-8 pb-12">
+                {amenities.map((amenity, index) => {
+                  const IconComponent = amenity.icon
+                  return (
+                    <button
+                      key={amenity.id}
+                      onClick={() => handleCardSelect(index)}
+                      className={`group relative p-4 rounded-2xl border-2 transition-all duration-500 text-left w-64 flex-shrink-0 ${
+                        selectedAmenity === index
+                          ? 'border-primary-300 bg-primary-50 shadow-lg scale-105'
+                          : 'border-gray-200 bg-white hover:border-primary-200 hover:shadow-md'
+                      }`}
+                    >
+                      {/* Background Gradient */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${amenity.color} opacity-0 rounded-2xl transition-opacity duration-500 ${
+                        selectedAmenity === index ? 'opacity-10' : 'group-hover:opacity-5'
+                      }`} />
+                      
+                      {/* Icon */}
+                      <div className={`relative mb-4 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                        selectedAmenity === index 
+                          ? `bg-gradient-to-br ${amenity.color} text-white` 
+                          : 'bg-gray-100 text-gray-600 group-hover:bg-primary-100 group-hover:text-primary-600'
+                      }`}>
+                        <IconComponent className="w-7 h-7" />
+                        
+                        {/* Stats Badge */}
+                        <div className={`absolute top-0 right-0 px-2 py-1 rounded-full text-xs font-bold transition-all duration-300 ${
+                          selectedAmenity === index
+                            ? 'bg-white text-primary-600 shadow-lg'
+                            : 'bg-primary-500 text-white'
+                        }`}>
+                          {amenity.stats.count}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="relative">
+                        <h3 className={`font-semibold text-lg mb-2 transition-colors duration-300 ${
+                          selectedAmenity === index ? 'text-primary-900' : 'text-gray-900'
+                        }`}>
+                          {amenity.name}
+                        </h3>
+                        <p className={`text-sm transition-colors duration-300 ${
+                          selectedAmenity === index ? 'text-primary-700' : 'text-gray-600'
+                        }`}>
+                          {amenity.shortDesc}
+                        </p>
+                      </div>
+
+                      {/* Active indicator */}
+                      <div className={`absolute bottom-2 right-2 w-2 h-2 rounded-full transition-all duration-300 ${
+                        selectedAmenity === index ? 'bg-primary-500' : 'bg-transparent'
+                      }`} />
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Feature Showcase */}
+          <div className={`transition-all duration-1000 delay-500 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}>
+            <div className="relative">
+              {/* Main Image */}
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-900">
+                <div className="absolute inset-0 transition-all duration-700">
+                  <Image
+                    src={selectedAmenityData.image}
+                    alt={selectedAmenityData.name}
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    sizes="100vw"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent`} />
+                </div>
+
+                {/* Overlay Info */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-white font-bold text-2xl">
+                        {selectedAmenityData.name}
+                      </h3>
+                      <div className="text-right">
+                        <div className="text-white font-bold text-xl">
+                          {selectedAmenityData.stats.count}
+                        </div>
+                        <div className="text-white/70 text-sm">
+                          {selectedAmenityData.stats.unit}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      {selectedAmenityData.shortDesc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description Panel */}
+              <div className="mt-8 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${selectedAmenityData.color} flex items-center justify-center`}>
+                    <selectedAmenityData.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl text-gray-900">
+                      {selectedAmenityData.name}
+                    </h4>
+                    <p className="text-primary-600 font-medium">
+                      {selectedAmenityData.shortDesc}
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {selectedAmenityData.fullDesc}
+                </p>
+
+                {/* Progress Indicators */}
+                <div className="flex space-x-2 mt-6">
+                  {amenities.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-1 flex-1 rounded-full transition-all duration-300 ${
+                        index === selectedAmenity ? 'bg-primary-500' : 'bg-gray-200'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Grid Layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-16 items-start">
           
           {/* Left - Amenity Grid */}
           <div className={`transition-all duration-1000 delay-300 ${
