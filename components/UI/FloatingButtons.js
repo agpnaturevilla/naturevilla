@@ -45,12 +45,12 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
 
   return (
     <>
-      {/* Mobile - Bottom flat buttons */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-4 shadow-lg">
+      {/* Mobile - Bottom floating buttons */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 pb-2 px-2">
         <div className="flex space-x-3 max-w-sm mx-auto">
           <a
             href={`tel:${phone}`}
-            className="flex-1 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2"
+            className="flex-1 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2 shadow-lg"
           >
             <PhoneIcon className="w-5 h-5" />
             <span className="font-medium">Call Now</span>
@@ -60,7 +60,7 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
             href={directionLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 bg-slate-600 hover:bg-slate-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2"
+            className="flex-1 bg-slate-600 hover:bg-slate-700 text-white px-4 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2 shadow-lg"
           >
             <MapPinIcon className="w-5 h-5" />
             <span className="font-medium">Direction</span>
@@ -69,7 +69,7 @@ export default function FloatingButtons({ phone = '+91 9892611983', directionLin
       </div>
 
       {/* Desktop - Right side center floating buttons with slide animation */}
-      <div className="hidden md:block fixed right-8 top-1/2 transform -translate-y-1/2 z-50">
+      <div className="hidden md:block fixed right-2 top-1/2 transform -translate-y-1/2 z-50">
         <div className="flex flex-col space-y-4" ref={buttonsRef}>
           <a
             href={`tel:${phone}`}
