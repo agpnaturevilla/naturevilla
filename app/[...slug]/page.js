@@ -488,8 +488,6 @@ export async function generateStaticParams() {
     { slug: ['villa-in-udaipur'] },
     { slug: ['rooms'] },
     { slug: ['contact'] },
-    { slug: ['faqs'] },
-    { slug: ['terms'] },
     { slug: ['guide-pdf'] }
   ]
 }
