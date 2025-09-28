@@ -103,9 +103,8 @@ export default function TestimonialsSection({ content, settings }) {
             Guest Experiences
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-8 leading-tight">
-            <span className="font-sans italic text-primary-600">{title.split(' ').slice(0, 2).join(' ')}</span>{' '}
-            <span className="font-sans">{title.split(' ').slice(2).join(' ')}</span>
+          <h2 className="text-4xl font-light text-gray-900 mb-8 leading-tight" style={{ fontSize: '2.25rem' }}>
+{title}
           </h2>
           
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-500 rounded-full mx-auto mb-8"></div>

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Static site export for Vercel deployment
-  trailingSlash: false,
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

@@ -21,7 +21,7 @@ export default function CTASection({ content, settings }) {
   // Calculate years since establishment (2023)
   const currentYear = new Date().getFullYear()
   const establishedYear = 2023
-  const yearsSinceEstablishment = currentYear - establishedYear + 1 // +1 to include the establishment year
+  const yearsSinceEstablishment = currentYear - establishedYear // Calculate years since establishment
 
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900">
@@ -50,9 +50,8 @@ export default function CTASection({ content, settings }) {
 
             {/* Title */}
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-light text-white leading-tight">
-                <span className="font-sans italic text-primary-300">Book Your</span>{' '}
-                <span className="font-sans">Break Now</span>
+              <h2 className="text-4xl font-light text-white leading-tight" style={{ fontSize: '2.25rem' }}>
+Book Your Break Now
               </h2>
               
               <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full mx-auto lg:mx-0"></div>

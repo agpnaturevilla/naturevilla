@@ -14,7 +14,7 @@ const navigation = {
     { name: 'Home', href: '/' },
     { name: 'The Villa', href: '/villa-in-udaipur/' },
     { name: 'Rooms', href: '/rooms/' },
-    { name: 'Blog', href: '/blog/' },
+    { name: 'Customer FAQs', href: '/faqs/' },
     { name: 'Contact', href: '/contact/' },
   ],
   social: [

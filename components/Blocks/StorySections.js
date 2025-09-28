@@ -59,13 +59,12 @@ export default function StorySections({ content, settings }) {
 
                     {/* Title */}
                     <div className="text-center mb-8">
-                      <h2 className={`text-3xl lg:text-4xl font-light leading-tight ${
-                        isGradient 
-                          ? 'text-gray-800' 
+                      <h2 className={`text-3xl font-light leading-tight ${
+                        isGradient
+                          ? 'text-gray-800'
                           : 'text-gray-800'
-                      }`}>
-                        <span className="font-sans italic text-gray-600">{section.title.split(' ').slice(0, -3).join(' ')}</span>{' '}
-                        <span className="font-normal">{section.title.split(' ').slice(-3).join(' ')}</span>
+                      }`} style={{ fontSize: '2.25rem' }}>
+{section.title}
                       </h2>
                       
                       <div className="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mt-4"></div>

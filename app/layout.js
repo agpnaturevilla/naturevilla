@@ -4,14 +4,14 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('https://agpnaturevilla.com'),
+  metadataBase: new URL('https://agpnaturevilla.com/'),
   title: {
     default: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
     template: '%s | AGP Nature Villa'
   },
   description: 'A beautiful villa cum Homestay nestled amidst the Aravali mountains. Experience luxury accommodation with private pool, open kitchen, and stunning mountain views in Udaipur, Rajasthan.',
   keywords: ['villa', 'udaipur', 'homestay', 'luxury', 'pool', 'rajasthan', 'vacation rental', 'nature villa', 'aravali mountains', 'private pool'],
-  authors: [{ name: 'AGP Nature Villa', url: 'https://agpnaturevilla.com' }],
+  authors: [{ name: 'AGP Nature Villa', url: 'https://agpnaturevilla.com/' }],
   creator: 'AGP Nature Villa',
   publisher: 'AGP Nature Villa',
   formatDetection: {
@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://agpnaturevilla.com',
+    url: 'https://agpnaturevilla.com/',
     siteName: 'AGP Nature Villa',
     title: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
     description: 'Experience luxury accommodation with private pool and stunning mountain views in Udaipur, Rajasthan',
@@ -71,7 +71,7 @@ export const metadata = {
     yahoo: 'your-yahoo-verification-code',
   },
   alternates: {
-    canonical: 'https://agpnaturevilla.com',
+    canonical: 'https://agpnaturevilla.com/',
   },
   other: {
     'geo.region': 'IN-RJ',
@@ -119,7 +119,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "AGP Nature Villa",
-              "url": "https://agpnaturevilla.com",
+              "url": "https://agpnaturevilla.com/",
               "logo": "https://agpnaturevilla.com/images/logos/agp-nature-villa-logo-main.png",
               "contactPoint": {
                 "@type": "ContactPoint",

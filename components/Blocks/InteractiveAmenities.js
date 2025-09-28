@@ -29,7 +29,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "Three uniquely designed sanctuaries: Love Nest wraps you in warm tones and quiet nooks—perfect for couples. Mountain Peak throws the Aravalis in your face with glass walls. Valley View pulls the valley close, a green sweep that feels like your own secret.",
         icon: HomeIcon,
         color: "from-blue-500 to-indigo-600",
-        image: "/images/Rooms/image-1.jpg",
+        image: "/images/Rooms/image-6.jpg",
         stats: { count: "3", unit: "Rooms" }
       },
       {
@@ -39,7 +39,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "The modern kitchen shines—steel counters, stocked shelves, ready for a midnight snack or a full-blown feast. Every essential material at your fingertips, with a dedicated helper available to assist with your culinary adventures.",
         icon: FireIcon,
         color: "from-orange-500 to-red-600",
-        image: "/images/Villa/open-kitchen-and-dining-area.jpg",
+        image: "/images/Villa/modern-indoor-kitchen.jpg",
         stats: { count: "2", unit: "Kitchens" }
       },
       {
@@ -49,7 +49,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "A swimming pool glimmers like a private jewel. Kids leap in, water exploding as yells bounce off the hills; adults float, drink in hand, the Aravalis brooding above. It's not just a dip—it's the heart of this private getaway.",
         icon: SparklesIcon,
         color: "from-cyan-500 to-blue-600",
-        image: "/images/Villa/pool-area-agp-nature-villa.jpg",
+        image: "/images/Villa/swimming-pool.jpg",
         stats: { count: "1", unit: "Pool" }
       },
       {
@@ -59,7 +59,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "The bonfire place sits rough-hewn, logs piled like a challenge. Strike a match, and flames lick the dark, embers swirling as the Aravalis swallow the haze. Families cluster tight, kids jabbing sticks into the glow; friends trade tales that grow wilder.",
         icon: FireIcon,
         color: "from-yellow-500 to-orange-600",
-        image: "/images/Villa/slider-image-2.jpg",
+        image: "/images/Villa/bonfire-place.jpg",
         stats: { count: "1", unit: "Firepit" }
       },
       {
@@ -69,7 +69,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "Out back, the outdoor kitchen's grittier—coals flare, meat sizzles, smoke stings your eyes just right. This is where authentic flavors are born, where barbecue sessions turn into legendary feasts under the starlit Aravali sky.",
         icon: SunIcon,
         color: "from-green-500 to-teal-600",
-        image: "/images/Villa/agp-nature-villa-outer-area.jpg",
+        image: "/images/Villa/open-kitchen.jpg",
         stats: { count: "1", unit: "Outdoor" }
       },
       {
@@ -79,7 +79,7 @@ export default function InteractiveAmenities({ content, settings }) {
         fullDesc: "The big garden seals it. Grass wears thin from tag games, a blanket lies crumpled where lunch dragged on, and a lone chair sits crooked from someone chasing the sunset. A sprawl space for family chaos, group sprawls, or just soaking in the quiet.",
         icon: HeartIcon,
         color: "from-emerald-500 to-green-600",
-        image: "/images/Villa/slider-image-1.jpg",
+        image: "/images/Villa/slider-image-5.jpg",
         stats: { count: "∞", unit: "Memories" }
       }
     ]
@@ -142,9 +142,8 @@ export default function InteractiveAmenities({ content, settings }) {
             Premium Villa Amenities
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6">
-            <span className="font-sans italic text-primary-600">{title.split(' ')[0]}</span>{' '}
-            {title.split(' ').slice(1).join(' ')}
+          <h2 className="text-4xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
+{title}
           </h2>
           
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-8" />

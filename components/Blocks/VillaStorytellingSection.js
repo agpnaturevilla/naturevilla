@@ -91,7 +91,7 @@ export default function VillaStorytellingSection({ content, settings }) {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <h2 className="text-5xl lg:text-7xl font-light text-white mb-8">
+          <h2 className="text-4xl font-light text-white mb-8" style={{ fontSize: '2.25rem' }}>
             <span className="bg-gradient-to-r from-white via-primary-300 to-white bg-clip-text text-transparent">
               {title}
             </span>

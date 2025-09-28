@@ -91,7 +91,7 @@ function getDefaultPageData(slug) {
                 tagline: 'Where Hearts Find Home',
                 description: 'Love Nest wraps you in warm tones and quiet nooks—perfect for couples craving a romantic stay or parents dodging the kids\' racket. Pillows fluffed to sink into, lights dialed soft, and corners that feel lived-in.',
                 features: ['King Size Bed', 'Mountain Views', 'Romantic Ambiance'],
-                image: '/images/Rooms/image-1.jpg',
+                image: '/images/Rooms/image-6.jpg',
                 gradient: 'from-rose-500 via-pink-500 to-red-500',
                 mood: 'Intimate & Romantic'
               },
@@ -101,7 +101,7 @@ function getDefaultPageData(slug) {
                 tagline: 'Touch the Aravalis',
                 description: 'Mountain Peak throws the Aravalis in your face, glass walls letting the peaks leer back over morning tea. Wake up to jagged hills painting the horizon, where every sunrise feels like a personal performance.',
                 features: ['Floor-to-Ceiling Windows', 'Mountain Views', 'Morning Tea Setup', 'Panoramic Vistas'],
-                image: '/images/Rooms/image-3.jpg',
+                image: '/images/Rooms/image-7.jpg',
                 gradient: 'from-blue-500 via-indigo-500 to-purple-500',
                 mood: 'Majestic & Inspiring'
               },
@@ -126,15 +126,23 @@ function getDefaultPageData(slug) {
             subtitle: 'Experience the beauty and luxury through our curated collection of memories waiting to be made',
             images: [
               '/images/Villa/slider-image-1.jpg',
+              '/images/Villa/slider-image-2.jpg',
+              '/images/Villa/slider-image-3.jpg',
+              '/images/Villa/slider-image-4.jpg',
+              '/images/Villa/slider-image-5.jpg',
+              '/images/Villa/slider-image-6.jpg',
+              '/images/Villa/slider-image-7.jpg',
+              '/images/Villa/slider-image-8.jpg',
+              '/images/Villa/slider-image-9.jpg',
+              '/images/Villa/slider-image-10.jpg',
               '/images/Villa/pool-area-agp-nature-villa.jpg',
+              '/images/Villa/swimming-pool.jpg',
+              '/images/Villa/open-kitchen.jpg',
               '/images/Villa/open-kitchen-and-dining-area.jpg',
+              '/images/Villa/modern-indoor-kitchen.jpg',
               '/images/Villa/agp-nature-villa-outer-area.jpg',
-              '/images/Rooms/image-1.jpg',
-              '/images/Rooms/image-3.jpg',
-              '/images/Rooms/image-4.jpg',
-              '/images/Gallery/gallery-image-1.jpg',
-              '/images/Gallery/gallery-image-2.jpg',
-              '/images/Villa/slider-image-2.jpg'
+              '/images/Villa/bonfire-place.jpg',
+              '/images/Villa/image-1.jpg'
             ]
           }
         },
@@ -147,49 +155,49 @@ function getDefaultPageData(slug) {
               {
                 title: 'The Ultimate Villa in Udaipur - AGP Nature Villa',
                 content: 'Udaipur\'s charm is no secret—lakes ripple under golden light, palaces loom with history, and the Aravali mountains cast a timeless shadow. In 2023, nearly 2 million travelers flooded in, hooked on its royal allure.\n\nDrive up to AGP Nature Villa, and the vibe hits hard—gravel pops under tires, and the big garden unfurls like a playground begging for chaos. Inside, three luxury rooms stand apart: Love Nest, a snug hideout; Mountain Peak, framed by jagged hills; Valley View, green and sprawling below.\n\nA swimming pool glimmers like a private jewel, a bonfire place crackles with promise, and kitchens—modern indoors, rugged outdoors—wait for your takeover.\n\nThis isn\'t just a luxury villa in Udaipur—it\'s AGP Nature Villa, the king of private getaways, and here\'s why it leaves every other option scrambling.',
-                image: '/images/Villa/agp-nature-villa-outer-area.jpg',
+                image: '/images/Villa/villa-gallery/night-time-outdoor.jpg',
                 layout: 'left',
                 backgroundColor: 'gradient'
               },
               {
                 title: 'Luxury Rooms That Redefine Comfort',
                 content: 'Rooms set the tone, and AGP Nature Villa nails it. Love Nest wraps you in warm tones and quiet nooks—perfect for couples craving a romantic stay or parents dodging the kids\' racket.\n\nMountain Peak throws the Aravalis in your face, glass walls letting the peaks leer back over morning tea. Valley View pulls the valley close, a green sweep that feels like your own secret. These aren\'t just beds to crash in—they\'re sanctuaries, plush and roomy, built for kicking back.\n\nOther Udaipur homestays might slap "luxury" on a cramped box. Not AGP Nature Villa. Decades of hospitality craft go into these spaces—pillows fluffed to sink into, lights dialed soft, and corners that feel lived-in.\n\nFamilies split the crew across them; groups bicker over who gets Valley View\'s panorama. This family villa Udaipur lovers rave about isn\'t playing—it\'s rewriting what a villa in Udaipur can be.',
-                image: '/images/Rooms/image-1.jpg',
+                image: '/images/Rooms/image-4.jpg',
                 layout: 'right',
                 backgroundColor: 'white'
               },
               {
                 title: 'A Private Pool and Garden That Owns the Scene',
                 content: 'Walk out at AGP Nature Villa, and the swimming pool grabs you—cool, clear, and yours alone. No elbowing strangers like at some hotel\'s soggy free-for-all.\n\nKids leap in, water exploding as yells bounce off the hills; adults float, drink in hand, the Aravalis brooding above. It\'s not just a dip—it\'s the heart of this private getaway, turning a lazy day into gold.\n\nThe big garden seals it. Grass wears thin from tag games, a blanket lies crumpled where lunch dragged on, and a lone chair sits crooked from someone chasing the sunset. Other Udaipur retreats might skimp with a patio or nothing at all.\n\nAGP Nature Villa delivers a sprawl space for family chaos, group sprawls, or just soaking in the quiet. No luxury villa in Udaipur matches this duo; it\'s why this Aravali retreat reigns supreme.',
-                image: '/images/Villa/pool-area-agp-nature-villa.jpg',
+                image: '/images/Villa/swimming-pool-1.jpg',
                 layout: 'left',
                 backgroundColor: 'gradient'
               },
               {
                 title: 'Bonfire Nights and Kitchens That Spark Connection',
                 content: 'Nights at AGP Nature Villa don\'t dim—they blaze. The bonfire place sits rough-hewn, logs piled like a challenge. Strike a match, and flames lick the dark, embers swirling as the Aravalis swallow the haze.\n\nFamilies cluster tight, kids jabbing sticks into the glow; friends trade tales that grow wilder with each round. It\'s primal, messy, and pure—no hotel\'s stiff bar can touch it.\n\nFood\'s where it gets real. The modern kitchen shines—steel counters, stocked shelves, ready for a midnight snack or a full-blown feast. Staff can whip up something hot and local if you\'d rather lounge.\n\nOut back, the outdoor kitchen\'s grittier—coals flare, meat sizzles, smoke stings your eyes just right. Other villas in Udaipur might toss you a hot plate and call it done. AGP Nature Villa builds bonding into its core, making it the best family villa Udaipur has to offer.',
-                image: '/images/Villa/open-kitchen-and-dining-area.jpg',
+                image: '/images/Villa/bonfire-place.jpg',
                 layout: 'right',
                 backgroundColor: 'white'
               },
               {
                 title: 'Tailored for Family Time and Private Retreats',
                 content: 'Udaipur\'s got its tourist pull—Lake Pichola, City Palace, the works—but AGP Nature Villa isn\'t about that hustle. This is where families dig in deep. The garden turns into a battleground, cousins darting through as shouts fill the air.\n\nThe pool\'s a splash fest till the sun quits, parents lounging by the bonfire, finally free. Love Nest, Mountain Peak, and Valley View split the gang just right—everyone\'s got their spot.\n\nGroups eat it up, too. Buddies haul in coolers, fire up the outdoor kitchen for a barbecue that stinks of charred glory, and then sprawl across the villa till dawn. Couples sneak to Love Nest, windows ajar, mountain air sifting in slow.\n\nWeekend getaways here don\'t need a checklist—the villa\'s the whole deal. Hotels lean on city noise; even big names can\'t match this seclusion. AGP Nature Villa owns the private getaway game.',
-                image: '/images/Villa/slider-image-1.jpg',
+                image: '/images/Villa/slider-image-10.jpg',
                 layout: 'left',
                 backgroundColor: 'gradient'
               },
               {
                 title: 'Service That\'s a Cut Above',
                 content: 'The crew at AGP Nature Villa isn\'t just staff—they\'re the backbone. Years of hosting sharpen their edge: blankets drop before you\'re cold, the bonfire\'s roaring before you blink, a kid\'s fussy plate gets swapped without a shrug.\n\nNo fake grins or stiff nods—just folks who\'ve mastered making you feel at home. A guest once muttered, "They read our minds." That\'s AGP Nature Villa—not luck, but skill.\n\nStack that against hotel churn or shaky villa rentals. This luxury homestay delivers care that\'s personal—your stay, your rhythm, their polish. It\'s why this villa in Udaipur doesn\'t just stand out—it towers.',
-                image: '/images/Gallery/gallery-image-2.jpg',
+                image: '/images/Villa/villa-gallery/night-time-outdoor-1.jpg',
                 layout: 'right',
                 backgroundColor: 'white'
               },
               {
                 title: 'Near Udaipur\'s Gems, But the Real Gem\'s Here',
                 content: 'Udaipur\'s got its draws—Lake Pichola\'s glassy boats, Sajjangarh Fort\'s hilltop glare, the City Palace\'s sprawl. They\'re a jaunt from AGP Nature Villa, there if you itch for them. But why bother?\n\nThis Aravali retreat packs the punch—pool, garden, bonfire, kitchens—keeping you planted. Other spots bank on location; AGP Nature Villa makes its own pull.\n\nGuests back it up. "Skipped the city—pool and bonfire were plenty," one family said. Another raved, "Rooms stunned us, garden was massive—best weekend yet." That\'s the clincher: AGP Nature Villa isn\'t just a villa in Udaipur—it\'s *the* villa in Udaipur.',
-                image: '/images/Gallery/gallery-image-1.jpg',
+                image: '/images/Villa/villa-gallery/slider-image-7.jpg',
                 layout: 'left',
                 backgroundColor: 'gradient'
               }
@@ -298,10 +306,10 @@ function getDefaultPageData(slug) {
             subtitle: 'Your Perfect Mountain Retreat',
             description: 'Three beautifully designed rooms, each offering a unique perspective of the majestic Aravali mountains. From intimate romance to panoramic vistas, find your perfect sanctuary.',
             images: [
-              '/images/Rooms/image-1.jpg',
-              '/images/Rooms/image-3.jpg', 
-              '/images/Rooms/image-4.jpg',
-              '/images/Rooms/image-6.jpg'
+              '/images/Rooms/image-7.jpg',
+              '/images/Rooms/image-8.jpg',
+              '/images/Rooms/image-9.jpg',
+              '/images/Rooms/image-10.jpg'
             ],
             stats: {
               rooms: 3,
@@ -326,7 +334,7 @@ function getDefaultPageData(slug) {
                 shortDescription: "Intimate sanctuary for couples seeking romance and tranquility",
                 features: ["King Size Bed", "Mountain Views", "Romantic Ambiance", "Reading Corner", "Mood Lighting"],
                 amenities: ["AC", "WiFi", "TV", "Room Service"],
-                images: ["/images/Rooms/image-1.jpg", "/images/Rooms/image-10.jpg"],
+                images: ["/images/Rooms/image-10.jpg"],
                 gradient: "from-rose-500 via-pink-500 to-red-500",
                 mood: "Intimate & Romantic",
                 capacity: "4 guests",
@@ -342,7 +350,7 @@ function getDefaultPageData(slug) {
                 shortDescription: "Breathtaking mountain vistas through panoramic windows",
                 features: ["Floor-to-Ceiling Windows", "Mountain Views", "Morning Tea Setup", "Panoramic Vistas", "Spacious Layout", "Sunrise Views"],
                 amenities: ["AC", "WiFi", "TV", "Work Desk"],
-                images: ["/images/Rooms/image-3.jpg", "/images/Rooms/image-6.jpg"],
+                images: ["/images/Rooms/image-6.jpg"],
                 gradient: "from-blue-500 via-indigo-500 to-purple-500",
                 mood: "Majestic & Inspiring",
                 capacity: "4 guests",
@@ -358,7 +366,7 @@ function getDefaultPageData(slug) {
                 shortDescription: "Serene valley panoramas with private terrace retreat",
                 features: ["Valley Panorama", "Private Terrace", "Nature Immersion", "Serene Atmosphere", "Garden Access", "Bird Watching"],
                 amenities: ["AC", "WiFi", "TV"],
-                images: ["/images/Rooms/image-4.jpg", "/images/Rooms/image-7.jpg"],
+                images: ["/images/Rooms/image-7.jpg"],
                 gradient: "from-green-500 via-emerald-500 to-teal-500", 
                 mood: "Tranquil & Refreshing",
                 capacity: "4 guests",
@@ -376,32 +384,18 @@ function getDefaultPageData(slug) {
             title: "Room Gallery",
             subtitle: "Explore every corner of luxury and comfort",
             categories: [
-              { id: 'all', name: 'All Rooms', count: 8 },
-              { id: 'love-nest', name: 'Love Nest', count: 2 },
-              { id: 'mountain-peak', name: 'Mountain Peak', count: 3 },
+              { id: 'all', name: 'All Rooms', count: 6 },
+              { id: 'love-nest', name: 'Love Nest', count: 1 },
+              { id: 'mountain-peak', name: 'Mountain Peak', count: 2 },
               { id: 'valley-view', name: 'Valley View', count: 3 }
             ],
             images: [
               {
-                id: 1,
-                src: '/images/Rooms/image-1.jpg',
-                category: 'love-nest',
-                title: 'Love Nest - Romantic Ambiance',
-                description: 'Intimate setting with warm tones and cozy corners'
-              },
-              {
                 id: 2,
                 src: '/images/Rooms/image-10.jpg',
-                category: 'love-nest', 
+                category: 'love-nest',
                 title: 'Love Nest - Reading Corner',
                 description: 'Perfect nook for quiet moments together'
-              },
-              {
-                id: 3,
-                src: '/images/Rooms/image-3.jpg',
-                category: 'mountain-peak',
-                title: 'Mountain Peak - Panoramic Views',
-                description: 'Floor-to-ceiling windows framing the Aravalis'
               },
               {
                 id: 4,
@@ -494,6 +488,8 @@ export async function generateStaticParams() {
     { slug: ['villa-in-udaipur'] },
     { slug: ['rooms'] },
     { slug: ['contact'] },
+    { slug: ['faqs'] },
+    { slug: ['terms'] },
     { slug: ['guide-pdf'] }
   ]
 }
@@ -508,7 +504,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const baseUrl = 'https://agpnaturevilla.com'
+  const baseUrl = 'https://agpnaturevilla.com/'
   const currentUrl = `${baseUrl}/${Array.isArray(params.slug) ? params.slug.join('/') : params.slug}`
 
   return {

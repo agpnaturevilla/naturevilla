@@ -21,7 +21,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
         tagline: "Where Hearts Find Home",
         description: "Love Nest wraps you in warm tones and quiet nooks—perfect for couples craving a romantic stay or parents dodging the kids' racket. Pillows fluffed to sink into, lights dialed soft, and corners that feel lived-in.",
         features: ["King Size Bed", "Mountain Views", "Romantic Ambiance"],
-        image: "/images/Rooms/image-1.jpg",
+        image: "/images/Rooms/image-6.jpg",
         gradient: "from-rose-500 via-pink-500 to-red-500",
         mood: "Intimate & Romantic"
       },
@@ -31,7 +31,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
         tagline: "Touch the Aravalis",
         description: "Mountain Peak throws the Aravalis in your face, glass walls letting the peaks leer back over morning tea. Wake up to jagged hills painting the horizon, where every sunrise feels like a personal performance.",
         features: ["Floor-to-Ceiling Windows", "Mountain Views", "Morning Tea Setup", "Panoramic Vistas"],
-        image: "/images/Rooms/image-3.jpg",
+        image: "/images/Rooms/image-7.jpg",
         gradient: "from-blue-500 via-indigo-500 to-purple-500",
         mood: "Majestic & Inspiring"
       },
@@ -115,7 +115,7 @@ export default function LuxuryRoomsShowcase({ content, settings }) {
             Three Unique Experiences
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6">
+          <h2 className="text-4xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
             {title}
           </h2>
           

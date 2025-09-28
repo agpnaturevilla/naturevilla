@@ -19,12 +19,128 @@ function getDefaultPageData(slug = 'home') {
       title: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
       description: 'A beautiful villa cum Homestay nestled amidst the Aravali mountains of Udaipur is a perfect destination to spend time with your family or friends. The care and comfort given here at our property is very personalized.',
       keywords: ['villa', 'udaipur', 'homestay', 'luxury', 'pool', 'rajasthan', 'aravali', 'mountains'],
-      canonicalUrl: 'https://agpnaturevilla.com',
+      canonicalUrl: 'https://agpnaturevilla.com/',
       structuredData: {
         "@context": "https://schema.org",
         "@type": "LodgingBusiness",
         "name": "AGP Nature Villa",
-        "description": "A beautiful villa cum Homestay nestled amidst the Aravali mountains"
+        "alternateName": "AGP Nature Villa Udaipur",
+        "description": "A beautiful villa cum Homestay nestled amidst the Aravali mountains of Udaipur is a perfect destination to spend time with your family or friends. The care and comfort given here at our property is very personalized.",
+        "url": "https://agpnaturevilla.com/",
+        "logo": "https://agpnaturevilla.com/images/logos/agp-nature-villa-logo-main.png",
+        "image": [
+          "https://agpnaturevilla.com/images/Villa/slider-image-1.jpg",
+          "https://agpnaturevilla.com/images/Villa/pool-area-agp-nature-villa.jpg",
+          "https://agpnaturevilla.com/images/Villa/agp-nature-villa-outer-area.jpg",
+          "https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg"
+        ],
+        "telephone": "+91-9892611983",
+        "email": "agpnaturevilla@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "5, Dangiyo Ki Hundar, near Animal Aid",
+          "addressLocality": "Udaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "313011",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.571270",
+          "longitude": "73.691544"
+        },
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "182",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "priceRange": "₹₹₹",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, Bank Transfer, UPI",
+        "checkInTime": "14:00",
+        "checkOutTime": "11:00",
+        "numberOfRooms": "3",
+        "maximumAttendeeCapacity": "10",
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Private Swimming Pool",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Open Kitchen",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Garden",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Bonfire Area",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Mountain Views",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Air Conditioning",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "WiFi",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Parking",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Pet Friendly",
+            "value": true
+          }
+        ],
+        "petsAllowed": true,
+        "smokingAllowed": false,
+        "openingHours": "Mo-Su 00:00-24:00",
+        "availableLanguage": ["English", "Hindi"],
+        "sameAs": [
+          "https://www.facebook.com/agpnaturevilla",
+          "https://www.instagram.com/agpnaturevilla"
+        ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://agpnaturevilla.com/contact/",
+            "actionPlatform": [
+              "https://schema.org/DesktopWebPlatform",
+              "https://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": {
+            "@type": "LodgingReservation",
+            "name": "Villa Booking"
+          }
+        },
+        "tourBookingPage": "https://agpnaturevilla.com/contact/",
+        "hasMap": "https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011"
       }
     },
     contentBlocks: [
@@ -58,7 +174,7 @@ function getDefaultPageData(slug = 'home') {
           poolImage: '/images/Villa/pool-area-agp-nature-villa.jpg',
           kitchenTitle: 'OUTDOOR KITCHEN',
           kitchenDescription: 'Experience the joy of cooking and entertaining in our villa\'s spacious open kitchen.',
-          kitchenImage: '/images/Villa/open-kitchen-and-dining-area.jpg'
+          kitchenImage: '/images/Villa/open-kitchen.jpg'
         }
       },
       {
@@ -82,15 +198,23 @@ function getDefaultPageData(slug = 'home') {
           title: 'OUR Gallery',
           subtitle: '',
           images: [
-            '/images/Villa/slider-image-1.jpg',
-            '/images/Villa/pool-area-agp-nature-villa.jpg',
-            '/images/Villa/open-kitchen-and-dining-area.jpg',
-            '/images/Gallery/gallery-image-1.jpg',
-            '/images/Gallery/gallery-image-2.jpg',
-            '/images/Gallery/gallery-image-3.jpg',
-            '/images/Rooms/image-1.jpg',
-            '/images/Rooms/image-3.jpg',
-            '/images/Rooms/image-4.jpg'
+            '/images/Villa/villa-gallery/slider-image-1.jpg',
+            '/images/Villa/villa-gallery/slider-image-3.jpg',
+            '/images/Villa/villa-gallery/slider-image-5.jpg',
+            '/images/Villa/villa-gallery/slider-image-6.jpg',
+            '/images/Villa/villa-gallery/slider-image-7.jpg',
+            '/images/Villa/villa-gallery/slider-image-8.jpg',
+            '/images/Villa/villa-gallery/slider-image-10.jpg',
+            '/images/Villa/villa-gallery/agp-nature-villa-outer-area.jpg',
+            '/images/Villa/villa-gallery/bonfire-place.jpg',
+            '/images/Villa/villa-gallery/night-time-outdoor.jpg',
+            '/images/Villa/villa-gallery/night-time-outdoor-1.jpg',
+            '/images/Villa/villa-gallery/night-time-outdoor-2.jpg',
+            '/images/Villa/villa-gallery/open-kitchen.jpg',
+            '/images/Villa/villa-gallery/swimming-pool.jpg',
+            '/images/Villa/villa-gallery/villa-outdoor-area-1.jpg',
+            '/images/Villa/villa-gallery/villa-outdoor-area-2.jpg',
+            '/images/Villa/villa-gallery/villa-outdoor-area-3.jpg'
           ]
         }
       },
@@ -134,7 +258,7 @@ Valley View pulls you in with a sweep of green dipping low—each one's got its 
 The crew here knows how to make it work. Years of hosting mean they've got the knack—extra pillows land before the kids start whining, the bonfire's crackling by nightfall. No polished scripts, just folks who get it. AGP Nature Villa isn't about fuss—it's about handing you the keys to your own retreat.`,
               layout: 'left',
               backgroundColor: 'gradient',
-              image: '/images/Rooms/image-1.jpg'
+              image: '/images/Rooms/image-10.jpg'
             },
             {
               title: 'Built for Getaways, Not Hustle',
@@ -156,7 +280,7 @@ Couples slip off to Love Nest, windows cracked to let the mountain air drift thr
 The swimming pool glints under the sun, cool and tempting. The outdoor kitchen's a rough gem—someone's always poking at the coals, turning out charred snacks. AGP Nature Villa hands over the reins: stay in, tune out, and make it yours.`,
               layout: 'left',
               backgroundColor: 'gradient',
-              image: '/images/Villa/open-kitchen-and-dining-area.jpg'
+              image: '/images/Villa/slider-image-3.jpg'
             }
           ]
         }
@@ -193,10 +317,10 @@ export async function generateMetadata() {
       title: page.seo.ogTitle || page.seo.title,
       description: page.seo.ogDescription || page.seo.description,
       images: page.seo.ogImage ? [page.seo.ogImage] : [],
-      url: 'https://agpnaturevilla.com',
+      url: 'https://agpnaturevilla.com/',
     },
     alternates: {
-      canonical: page.seo.canonicalUrl || 'https://agpnaturevilla.com',
+      canonical: page.seo.canonicalUrl || 'https://agpnaturevilla.com/',
     }
   }
 }

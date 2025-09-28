@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'The Villa', href: '/villa-in-udaipur/' },
   { name: 'Rooms', href: '/rooms/' },
+  { name: 'FAQs', href: '/faqs/' },
   { name: 'Contact', href: '/contact/' },
 ]
 
@@ -54,8 +55,8 @@ export default function Header({ style = 'default', isScrolled = false }) {
               </div>
               <div className="flex items-center">
                 <EnvelopeIcon className="h-4 w-4 mr-2" />
-                <a href="mailto:hello@agpnaturevilla.com" className="hover:text-primary-200 transition-colors">
-                  hello@agpnaturevilla.com
+                <a href="mailto:agpnaturevilla@gmail.com" className="hover:text-primary-200 transition-colors">
+                  agpnaturevilla@gmail.com
                 </a>
               </div>
             </div>
@@ -92,7 +93,7 @@ export default function Header({ style = 'default', isScrolled = false }) {
             <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:w-full lg:items-center lg:gap-4">
               {/* Left Navigation */}
               <div className="flex items-center justify-end space-x-4">
-                {navigation.slice(0, 2).map((item) => {
+                {navigation.slice(0, 3).map((item) => {
                   const isActive = pathname === item.href || 
                     (item.href !== '/' && pathname.startsWith(item.href))
 
@@ -132,7 +133,7 @@ export default function Header({ style = 'default', isScrolled = false }) {
 
               {/* Right Navigation */}
               <div className="flex items-center justify-start space-x-4">
-                {navigation.slice(2).map((item) => {
+                {navigation.slice(3).map((item) => {
                   const isActive = pathname === item.href || 
                     (item.href !== '/' && pathname.startsWith(item.href))
 
@@ -249,9 +250,9 @@ export default function Header({ style = 'default', isScrolled = false }) {
                       <PhoneIcon className="h-4 w-4 mr-2" />
                       +91 9892611983
                     </a>
-                    <a href="mailto:hello@agpnaturevilla.com" className="flex items-center text-sm text-gray-600">
+                    <a href="mailto:agpnaturevilla@gmail.com" className="flex items-center text-sm text-gray-600">
                       <EnvelopeIcon className="h-4 w-4 mr-2" />
-                      hello@agpnaturevilla.com
+                      agpnaturevilla@gmail.com
                     </a>
                   </div>
                 </div>

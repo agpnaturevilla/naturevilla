@@ -15,7 +15,7 @@ export default function UniqueOfferings({ content, settings }) {
   const offerings = [
     {
       title: 'Luxurious Rooms',
-      image: '/images/Rooms/image-3.jpg',
+      image: '/images/Rooms/image-7.jpg',
       description: 'Elegant bedrooms with modern amenities and mountain views'
     },
     {
@@ -25,7 +25,7 @@ export default function UniqueOfferings({ content, settings }) {
     },
     {
       title: 'Modern Open Kitchen',
-      image: '/images/Villa/open-kitchen-and-dining-area.jpg',
+      image: '/images/Villa/open-kitchen.jpg',
       description: 'Fully equipped kitchen for culinary adventures'
     },
     {
@@ -45,8 +45,8 @@ export default function UniqueOfferings({ content, settings }) {
             Luxury Experience
           </div>
           
-          <h3 className="text-4xl lg:text-5xl font-light text-gray-900 mb-8 leading-tight">
-            <span className="font-sans italic text-primary-600">Unique Offerings</span> of Our Villa
+          <h3 className="text-4xl font-light text-gray-900 mb-8 leading-tight" style={{ fontSize: '2.25rem' }}>
+Unique Offerings of Our Villa
           </h3>
           
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-8"></div>

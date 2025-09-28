@@ -195,7 +195,7 @@ export default function RoomGallery({ content, settings }) {
               Visual Tour
             </div>
             
-            <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
+            <h2 className="text-4xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
               {title}
             </h2>
             
@@ -396,7 +396,7 @@ export default function RoomGallery({ content, settings }) {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/50">
-              <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-6">
+              <h3 className="text-2xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
                 Ready to Experience These Rooms?
               </h3>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
