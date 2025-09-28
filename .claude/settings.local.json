@@ -18,7 +18,11 @@
       "Bash(vercel:*)",
       "Bash(git commit:*)",
       "Bash(npm audit:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:agpmantravilla.com)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
