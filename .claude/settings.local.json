@@ -22,7 +22,8 @@
       "Bash(find:*)",
       "Bash(curl:*)",
       "WebFetch(domain:agpmantravilla.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git remote set-url:*)"
     ],
     "deny": [],
     "ask": []
