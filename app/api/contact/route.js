@@ -14,6 +14,24 @@ export async function POST(request) {
       )
     }
 
+    // Check if Gmail credentials are configured
+    const gmailUser = process.env.GMAIL_USER
+    const gmailPassword = process.env.GMAIL_APP_PASSWORD
+
+    if (!gmailUser || !gmailPassword) {
+      console.error('Gmail credentials not configured')
+      console.error('GMAIL_USER:', gmailUser ? 'Set' : 'Missing')
+      console.error('GMAIL_APP_PASSWORD:', gmailPassword ? 'Set' : 'Missing')
+
+      return NextResponse.json(
+        {
+          error: 'Email service not configured. Please contact the administrator.',
+          message: 'Your inquiry has been logged but email notification failed.'
+        },
+        { status: 500 }
+      )
+    }
+
     // Create email HTML content
     const emailHTML = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9fafb; border-radius: 10px;">
@@ -91,18 +109,31 @@ ${message}
 This inquiry was submitted via AGP Nature Villa contact form on ${new Date().toLocaleString()}
     `
 
+    console.log('Attempting to send email...')
+    console.log('From:', gmailUser)
+    console.log('To: agpnaturevilla@gmail.com')
+
     // Configure nodemailer with Gmail
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.GMAIL_USER || 'agpnaturevilla@gmail.com',
-        pass: process.env.GMAIL_APP_PASSWORD
+        user: gmailUser,
+        pass: gmailPassword
       }
     })
 
+    // Verify transporter configuration
+    try {
+      await transporter.verify()
+      console.log('SMTP connection verified successfully')
+    } catch (verifyError) {
+      console.error('SMTP verification failed:', verifyError)
+      throw new Error(`Gmail authentication failed: ${verifyError.message}`)
+    }
+
     // Send email
     const mailOptions = {
-      from: `"AGP Nature Villa Website" <${process.env.GMAIL_USER || 'agpnaturevilla@gmail.com'}>`,
+      from: `"AGP Nature Villa Website" <${gmailUser}>`,
       to: 'agpnaturevilla@gmail.com',
       replyTo: email,
       subject: `New Booking Inquiry from ${name}`,
@@ -110,17 +141,31 @@ This inquiry was submitted via AGP Nature Villa contact form on ${new Date().toL
       html: emailHTML
     }
 
-    await transporter.sendMail(mailOptions)
+    const info = await transporter.sendMail(mailOptions)
+    console.log('Email sent successfully:', info.messageId)
 
     return NextResponse.json(
-      { message: 'Message sent successfully' },
+      {
+        message: 'Message sent successfully',
+        messageId: info.messageId
+      },
       { status: 200 }
     )
 
   } catch (error) {
     console.error('Contact form error:', error)
+    console.error('Error details:', {
+      message: error.message,
+      code: error.code,
+      command: error.command
+    })
+
     return NextResponse.json(
-      { error: 'Failed to send message', details: error.message },
+      {
+        error: 'Failed to send message',
+        details: error.message,
+        suggestion: 'Please try calling us directly at +91 9892611983'
+      },
       { status: 500 }
     )
   }
