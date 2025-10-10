@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Force production deployment with serverless functions enabled
 }
 
 module.exports = nextConfig
