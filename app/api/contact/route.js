@@ -167,7 +167,3 @@ This inquiry was submitted via AGP Nature Villa contact form on ${new Date().toL
     )
   }
 }
-
-// Mark this route as edge-compatible for better serverless performance
-export const runtime = 'nodejs'
-export const dynamic = 'force-dynamic'
