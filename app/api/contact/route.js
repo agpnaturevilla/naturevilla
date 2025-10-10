@@ -113,23 +113,20 @@ This inquiry was submitted via AGP Nature Villa contact form on ${new Date().toL
     console.log('From:', gmailUser)
     console.log('To: agpnaturevilla@gmail.com')
 
-    // Configure nodemailer with Gmail
+    // Configure nodemailer with Gmail using explicit SMTP settings
+    // This works better in serverless environments like Vercel
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // use TLS
       auth: {
         user: gmailUser,
         pass: gmailPassword
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     })
-
-    // Verify transporter configuration
-    try {
-      await transporter.verify()
-      console.log('SMTP connection verified successfully')
-    } catch (verifyError) {
-      console.error('SMTP verification failed:', verifyError)
-      throw new Error(`Gmail authentication failed: ${verifyError.message}`)
-    }
 
     // Send email
     const mailOptions = {
@@ -170,3 +167,7 @@ This inquiry was submitted via AGP Nature Villa contact form on ${new Date().toL
     )
   }
 }
+
+// Mark this route as edge-compatible for better serverless performance
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
