@@ -87,11 +87,12 @@ export default function Footer() {
           <div className="lg:col-span-1 mb-8 lg:mb-0">
             <div className="flex items-center justify-center lg:justify-start">
               <Image
-                src="/images/logos/agp-nature-villa-logo-main.png"
+                src="/images/logos/agp-nature-villa-logo-main-white.png"
                 alt="AGP Nature Villa"
-                width={160}
-                height={50}
-                className="h-12 w-auto"
+                width={400}
+                height={120}
+                className="h-32 w-auto bg-transparent"
+                style={{ backgroundColor: 'transparent' }}
               />
             </div>
             <p className="mt-4 text-gray-300 text-sm leading-6 text-center lg:text-left">

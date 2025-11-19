@@ -79,11 +79,10 @@ export default function Header({ style = 'default', isScrolled = false }) {
             <div className="flex items-center lg:hidden flex-1 justify-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/images/logos/agp-nature-villa-logo-main.png"
+                  src="/images/logos/agp-nature-villa-logo-main-new.png"
                   alt="AGP Nature Villa"
-                  width={160}
-                  height={50}
-                  className="h-12 w-auto"
+                  width={80}
+                  height={34}
                   priority
                 />
               </Link>
@@ -121,11 +120,10 @@ export default function Header({ style = 'default', isScrolled = false }) {
               <div className="flex items-center justify-center">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/images/logos/agp-nature-villa-logo-main.png"
+                    src="/images/logos/agp-nature-villa-logo-main-new.png"
                     alt="AGP Nature Villa"
-                    width={160}
-                    height={50}
-                    className="h-12 w-auto"
+                    width={80}
+                    height={34}
                     priority
                   />
                 </Link>
@@ -205,11 +203,10 @@ export default function Header({ style = 'default', isScrolled = false }) {
                 <div className="pb-4 pt-5 px-6">
                   <div className="flex items-center">
                     <Image
-                      src="/images/logos/agp-nature-villa-logo-main.png"
+                      src="/images/logos/agp-nature-villa-logo-main-new.png"
                       alt="AGP Nature Villa"
-                      width={120}
-                      height={40}
-                      className="h-10 w-auto"
+                      width={80}
+                      height={34}
                     />
                   </div>
                 </div>
