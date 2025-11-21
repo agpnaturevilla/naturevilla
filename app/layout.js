@@ -111,31 +111,6 @@ export default function RootLayout({ children }) {
         
         {/* DNS Prefetch for third-party domains */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        
-        {/* Structured Data for Organization */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "AGP Nature Villa",
-              "url": "https://agpnaturevilla.com/",
-              "logo": "https://agpnaturevilla.com/images/logos/agp-nature-villa-logo-main.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9892611983",
-                "contactType": "customer service",
-                "areaServed": "IN",
-                "availableLanguage": ["English", "Hindi"]
-              },
-              "sameAs": [
-                "https://www.facebook.com/agpnaturevilla",
-                "https://www.instagram.com/agpnaturevilla"
-              ]
-            })
-          }}
-        />
       </head>
       <body className={inter.className}>
         <div id="root">
