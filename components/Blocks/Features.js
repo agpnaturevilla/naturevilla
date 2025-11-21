@@ -87,7 +87,7 @@ export default function Features({ content, settings }) {
             Premium Amenities
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6">
+          <h2 className="text-4xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
             <span className="font-sans italic text-primary-600">Premium</span> Villa Features
           </h2>
           

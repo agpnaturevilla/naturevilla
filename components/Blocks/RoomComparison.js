@@ -133,7 +133,7 @@ export default function RoomComparison({ content, settings }) {
             Room Comparison
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
+          <h2 className="text-4xl font-light text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
             {title}
           </h2>
           

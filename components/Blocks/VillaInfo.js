@@ -59,7 +59,7 @@ export default function VillaInfo({ content, settings }) {
                 Luxury Villa Experience
               </div>
               
-              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
+              <h2 className="text-4xl font-light text-gray-900 leading-tight" style={{ fontSize: '2.25rem' }}>
                 <span className="font-sans italic text-primary-600">Discover</span> Our Villa
               </h2>
               

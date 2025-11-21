@@ -26,7 +26,7 @@ export default function TextBlock({ content, settings }) {
       <div className={`${maxWidth} mx-auto px-4 sm:px-6 lg:px-8`}>
         <div className={alignmentClasses[alignment]}>
           {title && (
-            <h2 className={`text-3xl font-bold ${textColor} sm:text-4xl mb-6`}>
+            <h2 className={`text-4xl font-bold ${textColor} mb-6`} style={{ fontSize: '2.25rem' }}>
               {title}
             </h2>
           )}

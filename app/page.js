@@ -17,138 +17,198 @@ function getDefaultPageData(slug = 'home') {
     template: 'home',
     seo: {
       title: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
-      description: 'A beautiful villa cum Homestay nestled amidst the Aravali mountains of Udaipur is a perfect destination to spend time with your family or friends. The care and comfort given here at our property is very personalized.',
+      description: 'Luxurious 2 BHK villa in Udaipur surrounded by nature. Features a private swimming pool, open kitchen, bonfire area, and mountain views. Perfect for families and groups of 4-15 guests.',
       keywords: ['villa', 'udaipur', 'homestay', 'luxury', 'pool', 'rajasthan', 'aravali', 'mountains'],
       canonicalUrl: 'https://agpnaturevilla.com/',
-      structuredData: {
-        "@context": "https://schema.org",
-        "@type": "LodgingBusiness",
-        "name": "AGP Nature Villa",
-        "alternateName": "AGP Nature Villa Udaipur",
-        "description": "A beautiful villa cum Homestay nestled amidst the Aravali mountains of Udaipur is a perfect destination to spend time with your family or friends. The care and comfort given here at our property is very personalized.",
-        "url": "https://agpnaturevilla.com/",
-        "logo": "https://agpnaturevilla.com/images/logos/agp-nature-villa-logo-main.png",
-        "image": [
-          "https://agpnaturevilla.com/images/Villa/slider-image-1.jpg",
-          "https://agpnaturevilla.com/images/Villa/pool-area-agp-nature-villa.jpg",
-          "https://agpnaturevilla.com/images/Villa/agp-nature-villa-outer-area.jpg",
-          "https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg"
-        ],
-        "telephone": "+91-9892611983",
-        "email": "agpnaturevilla@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "5, Dangiyo Ki Hundar, near Animal Aid",
-          "addressLocality": "Udaipur",
-          "addressRegion": "Rajasthan",
-          "postalCode": "313011",
-          "addressCountry": "IN"
+      structuredData: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Resort",
+          "@id": "https://agpnaturevilla.com/#localbusiness",
+          "name": "AGP Nature Villa",
+          "alternateName": "AGP Nature Villa Udaipur",
+          "description": "Luxurious 2 BHK villa in Udaipur surrounded by nature. Features a private swimming pool, open kitchen, bonfire area, and mountain views. Perfect for families and groups of 4-15 guests.",
+          "url": "https://agpnaturevilla.com/",
+          "logo": "https://agpnaturevilla.com/images/logos/agp-nature-villa-logo-main.png",
+          "image": [
+            "https://agpnaturevilla.com/images/Villa/slider-image-1.jpg",
+            "https://agpnaturevilla.com/images/Villa/pool-area-agp-nature-villa.jpg",
+            "https://agpnaturevilla.com/images/Villa/agp-nature-villa-outer-area.jpg",
+            "https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg",
+            "https://agpnaturevilla.com/images/Villa/villa-gallery/slider-image-1.jpg",
+            "https://agpnaturevilla.com/images/Villa/villa-gallery/swimming-pool.jpg",
+            "https://agpnaturevilla.com/images/Rooms/image-10.jpg",
+            "https://agpnaturevilla.com/images/Villa/villa-gallery/night-time-outdoor.jpg"
+          ],
+          "telephone": "+91-9892611983",
+          "email": "agpnaturevilla@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5, Dangiyo Ki Hundar, near Animal Aid",
+            "addressLocality": "Udaipur",
+            "addressRegion": "Rajasthan",
+            "postalCode": "313011",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "24.571270",
+            "longitude": "73.691544"
+          },
+          "checkinTime": "14:00",
+          "checkoutTime": "11:00",
+          "petsAllowed": true,
+          "starRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Private Swimming Pool",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Open Kitchen",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Bonfire Area",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Mountain View",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Pet Friendly",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Garden",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air Conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parking",
+              "value": true
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "124",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "priceRange": "₹8,000 - ₹15,000",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Bank Transfer, UPI",
+          "numberOfRooms": "3",
+          "maximumAttendeeCapacity": "15",
+          "smokingAllowed": false,
+          "openingHours": "Mo-Su 00:00-24:00",
+          "availableLanguage": ["English", "Hindi"],
+          "sameAs": [
+            "https://www.facebook.com/agpnaturevilla",
+            "https://www.instagram.com/agpnaturevilla"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "url": "https://agpnaturevilla.com/",
+            "priceCurrency": "INR",
+            "price": "8000",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Base rate for 4-6 guests (₹8,000). 7-8 guests: ₹10,000. 9-12 guests: ₹12,000. 13-15 guests: ₹15,000."
+          },
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://agpnaturevilla.com/contact/",
+              "actionPlatform": [
+                "https://schema.org/DesktopWebPlatform",
+                "https://schema.org/MobileWebPlatform"
+              ]
+            },
+            "result": {
+              "@type": "LodgingReservation",
+              "name": "Villa Booking"
+            }
+          },
+          "tourBookingPage": "https://agpnaturevilla.com/contact/",
+          "hasMap": "https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "24.571270",
-          "longitude": "73.691544"
-        },
-        "starRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "182",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "priceRange": "₹₹₹",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Bank Transfer, UPI",
-        "checkInTime": "14:00",
-        "checkOutTime": "11:00",
-        "numberOfRooms": "3",
-        "maximumAttendeeCapacity": "10",
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Private Swimming Pool",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Open Kitchen",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Garden",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Bonfire Area",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Mountain Views",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Air Conditioning",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "WiFi",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Parking",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Pet Friendly",
-            "value": true
-          }
-        ],
-        "petsAllowed": true,
-        "smokingAllowed": false,
-        "openingHours": "Mo-Su 00:00-24:00",
-        "availableLanguage": ["English", "Hindi"],
-        "sameAs": [
-          "https://www.facebook.com/agpnaturevilla",
-          "https://www.instagram.com/agpnaturevilla"
-        ],
-        "potentialAction": {
-          "@type": "ReserveAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://agpnaturevilla.com/contact/",
-            "actionPlatform": [
-              "https://schema.org/DesktopWebPlatform",
-              "https://schema.org/MobileWebPlatform"
-            ]
-          },
-          "result": {
-            "@type": "LodgingReservation",
-            "name": "Villa Booking"
-          }
-        },
-        "tourBookingPage": "https://agpnaturevilla.com/contact/",
-        "hasMap": "https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011"
-      }
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is the entire villa private for my group?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, AGP Nature Villa is a completely private villa in Udaipur. When you book, the entire property including the private pool, 3 bedrooms, and garden is exclusively yours. We do not share the space with other guests."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is AGP Nature Villa pet-friendly?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! We are a pet-friendly luxury villa. We welcome pets of all sizes and offer a large, enclosed garden area where your dogs can play safely and freely."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far is the villa from Udaipur City Palace?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The villa is located approximately 20-25 minutes drive from Udaipur City Palace and Fateh Sagar Lake, offering a peaceful nature retreat within easy reach of the city center."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is food available at the villa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can use our fully equipped open kitchen to cook your own meals. We can also arrange a private chef for authentic local cuisine or assist with ordering food from nearby restaurants."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the villa have a private pool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, AGP Nature Villa features a private swimming pool with views of the Aravali mountains, exclusively accessible to your group during your stay."
+              }
+            }
+          ]
+        }
+      ]
     },
     contentBlocks: [
       {
         type: 'villa-hero',
         order: 1,
         content: {
-          title: 'Best Luxurious Villa in Udaipur',
+          title: 'Private Luxury Pool Villa in Udaipur',
           subtitle: 'AGP Nature Villa',
           description: 'A beautiful villa cum Homestay nestled amidst the Aravali mountains of Udaipur is a perfect destination to spend time with your family or friends. The care and comfort given here at our property is very personalized.',
           images: [
@@ -166,8 +226,18 @@ function getDefaultPageData(slug = 'home') {
         }
       },
       {
-        type: 'pool-kitchen',
+        type: 'brand-experience',
         order: 2,
+        content: {
+          headline: 'Not Just a Villa. Your Private Kingdom in the Aravallis.',
+          bodyText: `Escape the cramped city hotels and step into Dangiyo Ki Hundar, a sanctuary where silence is the ultimate luxury. At AGP Nature Villa, we don't just offer rooms; we offer the luxury of exclusivity.
+
+Whether you are floating in the "Blue Wave" pool under the Udaipur sun, sharing stories by the "Heat Heaven" bonfire, or watching your pets run free in the "Infinity Garden", every corner of this 3-bedroom estate is yours. No sharing with strangers. No rigid hotel rules. Just you, your loved ones, and the mountains.`
+        }
+      },
+      {
+        type: 'pool-kitchen',
+        order: 3,
         content: {
           poolTitle: 'POOL AREA',
           poolDescription: 'Enjoy a serene escape at our villa with a private pool, perfect for ultimate relaxation.',
@@ -178,22 +248,76 @@ function getDefaultPageData(slug = 'home') {
         }
       },
       {
-        type: 'unique-offerings',
-        order: 3,
+        type: 'pricing-section',
+        order: 4,
         content: {
-          title: 'Unique Offerings of Our Villa',
-          description: 'Step into a world of refined luxury, where every corner of our villa exudes elegance, comfort, and an ambiance crafted to offer you a truly unforgettable escape.',
-          offerings: [
-            'Luxurious Rooms',
-            'Swimming Pool',
-            'Open Kitchen',
-            'Bonfire Place'
+          title: 'Transparent Luxury Pricing',
+          subtitle: 'Rates valid for 2024-2025 (Excluding New Year\'s Eve)',
+          note: '100% Private Booking – You never share the villa with strangers.',
+          pricingTiers: [
+            {
+              name: 'Intimate Group',
+              guests: '4-6 Guests',
+              price: '8,000',
+              inclusions: ['Full Villa Access', 'Pool', 'Kitchen'],
+              popular: false
+            },
+            {
+              name: 'Family Retreat',
+              guests: '7-8 Guests',
+              price: '10,000',
+              inclusions: ['Full Villa Access', 'Pool', 'Kitchen'],
+              popular: true
+            },
+            {
+              name: 'Large Group',
+              guests: '9-12 Guests',
+              price: '12,000',
+              inclusions: ['Extra Bedding', 'Full Amenities'],
+              popular: false
+            },
+            {
+              name: 'Grand Gathering',
+              guests: '13-15 Guests',
+              price: '15,000',
+              inclusions: ['Full Property Exclusivity'],
+              popular: false
+            }
+          ]
+        }
+      },
+      {
+        type: 'signature-amenities',
+        order: 5,
+        content: {
+          headline: 'Curated Spaces for Every Mood',
+          amenities: [
+            {
+              name: 'The "Blue Wave" Private Pool',
+              description: 'Dive into our 242 sq. ft. crystal-clear private pool. Unlike hotel pools with restricted timings, the Blue Wave is yours 24/7. Whether it\'s a sunrise swim or a midnight dip under the stars, the water is always inviting.',
+              image: '/images/Villa/pool-area-agp-nature-villa.jpg'
+            },
+            {
+              name: '"Laziz" & "The Little Paris" Kitchens',
+              description: 'Food tastes better when it\'s fresh. Use "Laziz," our fully equipped modern indoor kitchen, to whip up comfort food for your kids. For the evenings, step out to "The Little Paris," our chic open-air kitchenette perfect for barbecues, cocktails, and dining alfresco with a mountain view.',
+              image: '/images/Villa/open-kitchen.jpg'
+            },
+            {
+              name: 'The "Infinity Garden"',
+              description: 'A sprawling 2000 sq. ft. lawn that lives up to its name. It is the perfect stage for your intimate events, morning yoga sessions, or simply letting your pets stretch their legs in a secure, walled environment.',
+              image: '/images/Villa/villa-gallery/villa-outdoor-area-1.jpg'
+            },
+            {
+              name: '"Heat Heaven" Bonfire Area',
+              description: 'As the desert air cools at night, gather around Heat Heaven. Perfect for winter evenings, acoustic music sessions, and roasting marshmallows with family.',
+              image: '/images/Villa/villa-gallery/bonfire-place.jpg'
+            }
           ]
         }
       },
       {
         type: 'our-gallery',
-        order: 4,
+        order: 6,
         content: {
           title: 'OUR Gallery',
           subtitle: '',
@@ -220,7 +344,7 @@ function getDefaultPageData(slug = 'home') {
       },
       {
         type: 'story-sections',
-        order: 5,
+        order: 7,
         content: {
           sections: [
             {
@@ -286,8 +410,41 @@ The swimming pool glints under the sun, cool and tempting. The outdoor kitchen's
         }
       },
       {
+        type: 'faq-section',
+        order: 8,
+        content: {
+          title: 'Frequently Asked Questions about Your Luxury Stay',
+          faqs: [
+            {
+              question: 'Is the entire villa private for my group, or will we share it?',
+              answer: 'You get complete exclusivity. Unlike other villas in Udaipur, when you book AGP Nature Villa, the entire property-including the private swimming pool, garden, and open kitchen-is exclusively yours. We never mix groups, ensuring 100% privacy for your family or friends.'
+            },
+            {
+              question: 'Is AGP Nature Villa pet-friendly?',
+              answer: 'Yes, we are one of the top-rated pet-friendly luxurious villas in Udaipur. Your furry friends are welcome to roam freely in our secure, spacious garden while you relax. We believe a family vacation isn\'t complete without every family member.'
+            },
+            {
+              question: 'How far is the villa from Udaipur City Palace and the lakes?',
+              answer: 'We are located in a serene nature spot just 20-25 minutes from the City Palace and Fateh Sagar Lake. This gives you the perfect balance: quick access to Udaipur\'s tourist spots during the day, and a peaceful, noise-free luxury retreat at night.'
+            },
+            {
+              question: 'Can we cook our own meals or is food provided?',
+              answer: 'You have the best of both worlds. The villa features a fully equipped modern open kitchen if you wish to cook. Alternatively, we can arrange for a local chef to prepare authentic Rajasthani meals for you (at an additional cost), or you can order from nearby restaurants.'
+            },
+            {
+              question: 'What is the sleeping capacity of the villa?',
+              answer: 'The villa has 3 luxurious bedrooms (Love Nest, Mountain Peak, and Valley View). We comfortably accommodate 6 to 15 guests using extra bedding, making it the ideal 3 BHK villa in Udaipur for large family gatherings or group reunions.'
+            },
+            {
+              question: 'Is there a pool and is it private?',
+              answer: 'Yes, we feature a sparkling private swimming pool that overlooks the Aravali mountains. It is regularly cleaned and maintenance-free, ensuring a hygienic and luxurious dip whenever you want.'
+            }
+          ]
+        }
+      },
+      {
         type: 'cta-section',
-        order: 6,
+        order: 9,
         content: {
           title: 'Book Your Break Now',
           description: 'Spots at AGP Nature Villa don\'t hang around. Fall through spring, the Aravalis turn crisp and clear—prime for a getaway. Call +91 9892611983 or lock it in on the site. Don\'t wait; this isn\'t the kind of place that sits quiet. Come see why AGP Nature Villa turns a quick trip into something you\'ll carry home.',

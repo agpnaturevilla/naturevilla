@@ -25,7 +25,7 @@ export default function BookingSection({ content, settings }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 12h6m-8-8h8m-8 4h8" />
               </svg>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6" style={{ fontSize: '2.25rem' }}>
               {title}
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-8">

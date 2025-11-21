@@ -26,6 +26,10 @@ import Contact from '../Blocks/Contact'
 import CustomBlock from '../Blocks/CustomBlock'
 import CTASection from '../Blocks/CTASection'
 import TestimonialsSection from '../Blocks/TestimonialsSection'
+import FAQSection from '../Blocks/FAQSection'
+import PricingSection from '../Blocks/PricingSection'
+import BrandExperience from '../Blocks/BrandExperience'
+import SignatureAmenities from '../Blocks/SignatureAmenities'
 import Layout from '../Layout/Layout'
 import Loading from '../UI/Loading'
 
@@ -54,7 +58,11 @@ const blockComponents = {
   contact: Contact,
   custom: CustomBlock,
   'cta-section': CTASection,
-  'testimonials-section': TestimonialsSection
+  'testimonials-section': TestimonialsSection,
+  'faq-section': FAQSection,
+  'pricing-section': PricingSection,
+  'brand-experience': BrandExperience,
+  'signature-amenities': SignatureAmenities
 }
 
 function BlockRenderer({ block, index }) {
