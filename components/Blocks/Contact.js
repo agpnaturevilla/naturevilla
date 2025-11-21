@@ -80,8 +80,8 @@ export default function Contact({ content, settings }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    if (!captchaValue) {
+
+    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && !captchaValue) {
       setSubmitStatus({
         type: 'error',
         message: 'Please complete the reCAPTCHA challenge before submitting.'
@@ -386,11 +386,13 @@ export default function Contact({ content, settings }) {
                 )}
 
                 <div className="space-y-4">
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                    onChange={(value) => setCaptchaValue(value)}
-                  />
+                  {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      onChange={(value) => setCaptchaValue(value)}
+                    />
+                  )}
 
                   <button
                     type="submit"
