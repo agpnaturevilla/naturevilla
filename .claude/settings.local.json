@@ -25,7 +25,9 @@
       "WebSearch",
       "Bash(git remote set-url:*)",
       "Bash(git checkout:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(AGP Nature Villa)",
+      "Bash(Near Badi Lake\"\n- Updated description to highlight 3BHK, Blue Wave pool, Infinity Garden, pet-friendly, and proximity to Udaipur\n- Updated Open Graph and Twitter Card metadata accordingly\n- Added new keywords: badi lake, pet-friendly, 3bhk villa\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

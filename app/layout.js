@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL('https://agpnaturevilla.com/'),
   title: {
-    default: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
+    default: 'Luxurious Private Pool Villa in Udaipur | AGP Nature Villa | Near Badi Lake',
     template: '%s | AGP Nature Villa'
   },
-  description: 'A beautiful villa cum Homestay nestled amidst the Aravali mountains. Experience luxury accommodation with private pool, open kitchen, and stunning mountain views in Udaipur, Rajasthan.',
-  keywords: ['villa', 'udaipur', 'homestay', 'luxury', 'pool', 'rajasthan', 'vacation rental', 'nature villa', 'aravali mountains', 'private pool'],
+  description: 'Experience the Aravallis at AGP Nature Villa. A 3BHK luxury retreat featuring the \'Blue Wave\' private pool and \'Infinity Garden.\' Pet-friendly and just 20 mins from Udaipur City.',
+  keywords: ['villa', 'udaipur', 'homestay', 'luxury', 'pool', 'rajasthan', 'vacation rental', 'nature villa', 'aravali mountains', 'private pool', 'badi lake', 'pet-friendly', '3bhk villa'],
   authors: [{ name: 'AGP Nature Villa', url: 'https://agpnaturevilla.com/' }],
   creator: 'AGP Nature Villa',
   publisher: 'AGP Nature Villa',
@@ -24,14 +24,14 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://agpnaturevilla.com/',
     siteName: 'AGP Nature Villa',
-    title: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
-    description: 'Experience luxury accommodation with private pool and stunning mountain views in Udaipur, Rajasthan',
+    title: 'Luxurious Private Pool Villa in Udaipur | AGP Nature Villa | Near Badi Lake',
+    description: 'Experience the Aravallis at AGP Nature Villa. A 3BHK luxury retreat featuring the \'Blue Wave\' private pool and \'Infinity Garden.\' Pet-friendly and just 20 mins from Udaipur City.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AGP Nature Villa - Luxury villa in Udaipur',
+        alt: 'AGP Nature Villa - Luxurious Private Pool Villa in Udaipur',
       },
     ],
   },
@@ -39,8 +39,8 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@agpnaturevilla',
     creator: '@agpnaturevilla',
-    title: 'AGP Nature Villa - Best Luxurious Villa in Udaipur',
-    description: 'Experience luxury accommodation with private pool and stunning mountain views in Udaipur, Rajasthan',
+    title: 'Luxurious Private Pool Villa in Udaipur | AGP Nature Villa | Near Badi Lake',
+    description: 'Experience the Aravallis at AGP Nature Villa. A 3BHK luxury retreat featuring the \'Blue Wave\' private pool and \'Infinity Garden.\' Pet-friendly and just 20 mins from Udaipur City.',
     images: ['/images/twitter-image.jpg'],
   },
   robots: {
