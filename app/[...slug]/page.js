@@ -11,6 +11,14 @@ async function getPageData(slug) {
 }
 
 function getDefaultPageData(slug) {
+  // Valid page slugs
+  const validSlugs = ['villa-in-udaipur', 'rooms', 'contact', 'guide-pdf']
+
+  // If slug is not in valid pages, return null to trigger 404
+  if (!validSlugs.includes(slug)) {
+    return null
+  }
+
   const defaultPages = {
     'villa-in-udaipur': {
       slug: 'villa-in-udaipur',
@@ -468,18 +476,8 @@ function getDefaultPageData(slug) {
       ]
     }
   }
-  
-  return defaultPages[slug] || {
-    slug: slug,
-    title: `${slug} - AGP Nature Villa`,
-    template: 'default',
-    seo: {
-      title: `${slug} - AGP Nature Villa`,
-      description: 'AGP Nature Villa page',
-      canonicalUrl: `https://agpnaturevilla.com/${slug}/`
-    },
-    contentBlocks: []
-  }
+
+  return defaultPages[slug] || null
 }
 
 export async function generateStaticParams() {
