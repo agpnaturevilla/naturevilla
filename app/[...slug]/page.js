@@ -482,6 +482,7 @@ function getDefaultPageData(slug) {
 
 export async function generateStaticParams() {
   // Return static params directly - no API calls needed
+  // IMPORTANT: Do not add invalid slugs here, they should 404
   return [
     { slug: ['villa-in-udaipur'] },
     { slug: ['rooms'] },
