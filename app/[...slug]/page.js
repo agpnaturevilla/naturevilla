@@ -4,6 +4,9 @@ import SEOHead from '../../components/SEO/SEOHead'
 import Loading from '../../components/UI/Loading'
 import DynamicPageRenderer from '../../components/Page/DynamicPageRenderer'
 
+// Force 404 for any paths not in generateStaticParams
+export const dynamicParams = false
+
 async function getPageData(slug) {
   const cleanSlug = Array.isArray(slug) ? slug.join('/') : slug
   // Skip API calls for static deployment - use default data directly
