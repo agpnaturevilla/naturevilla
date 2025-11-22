@@ -1,33 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:agpnaturevilla.com)",
-      "Bash(npm install:*)",
-      "Bash(npm run dev:*)",
-      "Bash(copy:*)",
       "Bash(npm run build:*)",
-      "Bash(npm run server:*)",
-      "Bash(npm run:*)",
-      "Bash(npx kill-port:*)",
-      "Bash(grep:*)",
-      "Bash(git log:*)",
-      "Bash(git init:*)",
+      "Bash(cat:*)",
       "Bash(git add:*)",
-      "Bash(git remote add:*)",
-      "Bash(git push:*)",
-      "Bash(vercel:*)",
       "Bash(git commit:*)",
-      "Bash(npm audit:*)",
-      "Bash(node:*)",
-      "Bash(find:*)",
-      "Bash(curl:*)",
-      "WebFetch(domain:agpmantravilla.com)",
-      "WebSearch",
-      "Bash(git remote set-url:*)",
-      "Bash(git checkout:*)",
-      "Bash(git branch:*)",
-      "Bash(AGP Nature Villa)",
-      "Bash(Near Badi Lake\"\n- Updated description to highlight 3BHK, Blue Wave pool, Infinity Garden, pet-friendly, and proximity to Udaipur\n- Updated Open Graph and Twitter Card metadata accordingly\n- Added new keywords: badi lake, pet-friendly, 3bhk villa\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
