@@ -147,7 +147,7 @@ export default function VillaHero({ content, settings }) {
                   Udaipur, Rajasthan • Aravali Mountains
                 </div>
                 
-                <h1 className="text-5xl lg:text-7xl font-light text-white leading-tight tracking-tight mb-6">
+                <h1 className="font-light text-white leading-tight tracking-tight mb-6" style={{ fontSize: '3.2rem' }}>
                   <span className="block text-3xl lg:text-5xl text-primary-300 font-sans italic mb-2">
                     {subtitle}
                   </span>
@@ -162,14 +162,11 @@ export default function VillaHero({ content, settings }) {
               <div className={`transition-all duration-1000 delay-500 ${
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
-                <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8 font-light">
-                  {description}
-                </p>
-                
-                <p className="text-lg text-white/70 leading-relaxed mb-8">
-                  Hotels clog the streets, but for a true escape, nothing beats a villa in Udaipur. 
-                  And when it comes to the top spot, <span className="text-primary-400 font-semibold">AGP Nature Villa</span> doesn't just lead—it rules.
-                </p>
+                {description.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8 font-light">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
 
               <div className={`flex flex-col sm:flex-row gap-4 mb-16 transition-all duration-1000 delay-700 ${

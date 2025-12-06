@@ -74,12 +74,77 @@ export default function StorySections({ content, settings }) {
                     <div className={`prose prose-lg max-w-none ${
                       isGradient ? 'prose-gray' : 'prose-slate'
                     }`}>
-                      <div 
-                        className="text-gray-700 leading-relaxed space-y-4"
-                        dangerouslySetInnerHTML={{ 
-                          __html: section.content.replace(/\n\n/g, '</p><p class="mb-4">').replace(/^/, '<p class="mb-4">').replace(/$/, '</p>')
-                        }} 
+                      <div
+                        className={`text-gray-700 leading-relaxed space-y-4 ${
+                          section.title.includes('Day') || section.title.includes('itinerary') ? 'itinerary-timeline' : ''
+                        }`}
+                        style={{
+                          '--tw-prose-bullets': '#6366f1'
+                        }}
+                        dangerouslySetInnerHTML={{
+                          __html: section.content.includes('<ul>') || section.content.includes('<li>')
+                            ? section.content
+                            : section.content.replace(/\n\n/g, '</p><p class="mb-4">').replace(/^/, '<p class="mb-4">').replace(/$/, '</p>')
+                        }}
                       />
+                      <style jsx>{`
+                        div :global(ul) {
+                          list-style-type: disc !important;
+                          margin-left: 1.5rem !important;
+                          margin-top: 1rem !important;
+                          margin-bottom: 1rem !important;
+                        }
+                        div :global(ul li) {
+                          display: list-item !important;
+                          margin-bottom: 0.5rem !important;
+                          padding-left: 0.5rem !important;
+                        }
+                        div.itinerary-timeline :global(ul) {
+                          list-style-type: none !important;
+                          margin-left: 0 !important;
+                          padding-left: 0 !important;
+                          position: relative;
+                        }
+                        div.itinerary-timeline :global(ul::before) {
+                          content: '';
+                          position: absolute;
+                          left: 1rem;
+                          top: 0.5rem;
+                          bottom: 0.5rem;
+                          width: 2px;
+                          background: linear-gradient(to bottom, #6b7280, #6366f1);
+                        }
+                        div.itinerary-timeline :global(ul li) {
+                          position: relative;
+                          padding-left: 3.5rem !important;
+                          margin-bottom: 1.5rem !important;
+                          display: block !important;
+                        }
+                        div.itinerary-timeline :global(ul li::before) {
+                          content: '';
+                          position: absolute;
+                          left: 0.625rem;
+                          top: 0.375rem;
+                          width: 0.75rem;
+                          height: 0.75rem;
+                          background: white;
+                          border: 3px solid #6b7280;
+                          border-radius: 50%;
+                          z-index: 1;
+                        }
+                        div.itinerary-timeline :global(ul li strong:first-child) {
+                          color: #6b7280;
+                          font-weight: 700;
+                          font-size: 1.1em;
+                        }
+                        div :global(h3) {
+                          font-size: 1.25rem !important;
+                          font-weight: 600 !important;
+                          margin-top: 1.5rem !important;
+                          margin-bottom: 0.75rem !important;
+                          color: #1f2937 !important;
+                        }
+                      `}</style>
                     </div>
 
                     {/* Decorative Quote Mark */}

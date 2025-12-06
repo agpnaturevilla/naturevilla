@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'The Villa', href: '/villa-in-udaipur/' },
+  { name: 'The Villa', href: '/3bhk-private-villa-udaipur/' },
   { name: 'Rooms', href: '/rooms/' },
   { name: 'FAQs', href: '/faqs/' },
   { name: 'Contact', href: '/contact/' },

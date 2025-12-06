@@ -478,179 +478,311 @@ function getDefaultPageData(slug) {
     '3bhk-private-villa-udaipur': {
       slug: '3bhk-private-villa-udaipur',
       title: '3BHK Private Villa in Udaipur - AGP Nature Villa',
-      template: 'content-page',
+      template: 'villa',
       seo: {
-        title: 'Inside Your Private Kingdom: A Tour of AGP Nature Villa - 3BHK Private Villa Udaipur',
-        description: 'Explore the 3BHK layout, the "Blue Wave" pool technology, and the "Little Paris" culinary experience at AGP Nature Villa in Udaipur.',
+        title: '3BHK Private Pool Villa in Udaipur | Luxury 3 Bedroom Estate',
+        description: 'Book your private 3BHK villa in Udaipur. Exclusive access to the Blue Wave pool, Little Paris outdoor kitchen & Infinity Garden. Sleeps 6-15. Pet-friendly.',
         keywords: ['3bhk villa udaipur', 'private villa udaipur', 'blue wave pool', 'luxury villa', 'udaipur villa', 'badi lake', 'aravali mountains'],
-        canonicalUrl: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/'
+        canonicalUrl: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
+        structuredData: [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'VacationRental',
+            '@id': 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
+            name: 'AGP Nature Villa - Luxury 3BHK Private Villa in Udaipur',
+            description: 'Exclusive 3-bedroom private villa in Udaipur with Blue Wave pool, dual kitchens, luxury bedrooms, and Infinity Garden surrounded by the Aravali mountains. Perfect for families and groups seeking privacy and luxury.',
+            url: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
+            additionalType: 'Villa',
+            image: [
+              'https://agpnaturevilla.com/images/Villa/slider-image-1.jpg',
+              'https://agpnaturevilla.com/images/Villa/pool-area-agp-nature-villa.jpg',
+              'https://agpnaturevilla.com/images/Villa/swimming-pool.jpg',
+              'https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg'
+            ],
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '5, Dangiyo Ki Hundar, near Animal Aid',
+              addressLocality: 'Udaipur',
+              addressRegion: 'Rajasthan',
+              postalCode: '313011',
+              addressCountry: 'IN'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 24.6293633,
+              longitude: 73.7308233
+            },
+            containsPlace: {
+              '@type': 'Accommodation',
+              name: 'Luxury 3BHK Villa with Pool',
+              accommodationCategory: 'Villa',
+              numberOfRooms: 3,
+              numberOfBedrooms: 3,
+              numberOfBathroomsTotal: 3,
+              occupancy: {
+                '@type': 'QuantitativeValue',
+                minValue: 6,
+                maxValue: 15
+              },
+              amenityFeature: [
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Private Swimming Pool',
+                  value: 'Blue Wave Pool with 242 sq ft area, LED lighting, and filtration system'
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Dual Kitchens',
+                  value: 'Modern indoor kitchen (Laziz) and outdoor BBQ kitchen (Little Paris)'
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Infinity Garden',
+                  value: 'Private garden with mountain views'
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Pet Friendly',
+                  value: true
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'WiFi',
+                  value: 'High-speed fiber optic internet'
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Air Conditioning',
+                  value: true
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Parking',
+                  value: 'Free on-site parking'
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Security',
+                  value: '24/7 caretaker in separate staff quarters'
+                }
+              ],
+              floorSize: {
+                '@type': 'QuantitativeValue',
+                value: 2500,
+                unitCode: 'FTK'
+              }
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: 4.9,
+              reviewCount: 182,
+              bestRating: 5,
+              worstRating: 1
+            },
+            offers: {
+              '@type': 'Offer',
+              businessFunction: 'http://purl.org/goodrelations/v1#LeaseOut',
+              availability: 'https://schema.org/InStock',
+              priceCurrency: 'INR',
+              url: 'https://agpnaturevilla.com/contact/'
+            },
+            telephone: '+91-9892611983',
+            checkinTime: '14:00',
+            checkoutTime: '11:00',
+            petsAllowed: true,
+            smokingAllowed: false
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Is AGP Nature Villa safe for solo female travelers or all-girl groups?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes, AGP Nature Villa is extremely safe. The property is fully walled and gated. We have a dedicated caretaker who resides in separate staff quarters on the premises to ensure security 24/7 without intruding on your privacy. The neighborhood of Dangiyo Ki Hundar is peaceful and residential.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Can we host a pool party with loud music?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We are a nature villa, so while we encourage enjoyment, we respect the tranquility of the Aravalis. You can play music at a moderate volume on the outdoor speakers provided. For late-night parties, we ask guests to move the loud music indoors after 10:00 PM to comply with local noise regulations.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Is the pool heated for winter stays?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The Blue Wave pool is an outdoor fresh-water pool. It is not electrically heated. However, because the deck receives direct sunlight from morning until late afternoon, the water remains pleasant during the day, even in winter months like November and February.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you provide a cook or is it self-catering only?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We offer a hybrid model. The villa is designed for self-catering with fully equipped kitchens. However, for a relaxing holiday, we can arrange a local cook (Maharaj) for an additional daily charge who can prepare home-style Rajasthani meals using ingredients you provide or we procure for you.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'How is the internet connectivity for workcations?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We understand the need to stay connected. AGP Nature Villa is equipped with high-speed Wi-Fi (Fiber optic) that covers the entire property, including the garden and pool deck. It is perfectly suitable for Zoom calls and remote work.'
+                }
+              }
+            ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            name: 'AGP Nature Villa - Complete Property Walkthrough',
+            description: 'Virtual tour of our 3BHK private villa, featuring the Blue Wave pool, dual kitchens, luxury bedrooms, and the lush Infinity Garden surrounded by the Aravali mountains.',
+            thumbnailUrl: 'https://agpnaturevilla.com/images/Villa/slider-image-1.jpg',
+            uploadDate: '2024-01-15',
+            contentUrl: 'https://agpnaturevilla.com/agp-nature-villa.MP4',
+            embedUrl: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
+            duration: 'PT2M30S'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': 'https://agpnaturevilla.com/#business',
+            name: 'AGP Nature Villa',
+            image: 'https://agpnaturevilla.com/images/Villa/slider-image-1.jpg',
+            description: 'Luxury 3BHK private villa in Udaipur offering exclusive vacation rentals with premium amenities, private pool, and stunning Aravali mountain views.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '5, Dangiyo Ki Hundar, near Animal Aid',
+              addressLocality: 'Udaipur',
+              addressRegion: 'Rajasthan',
+              postalCode: '313011',
+              addressCountry: 'IN'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 24.6293633,
+              longitude: 73.7308233
+            },
+            url: 'https://agpnaturevilla.com',
+            telephone: '+91-9892611983',
+            priceRange: '₹₹₹',
+            openingHoursSpecification: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+              opens: '00:00',
+              closes: '23:59'
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: 4.9,
+              reviewCount: 182
+            },
+            sameAs: [
+              'https://www.facebook.com/agpnaturevilla',
+              'https://www.instagram.com/agpnaturevilla'
+            ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://agpnaturevilla.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '3BHK Private Villa Udaipur',
+                item: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/'
+              }
+            ]
+          }
+        ]
       },
       contentBlocks: [
         {
-          type: 'hero-banner',
+          type: 'villa-hero',
           order: 1,
           content: {
-            subtitle: 'Udaipur, Rajasthan • The AGP Experience',
-            title: 'Inside Your Private Kingdom: A Tour of AGP Nature Villa',
-            description: 'Explore the 3BHK layout, the "Blue Wave" pool technology, and the "Little Paris" culinary experience.',
-            image: '/images/Villa/slider-image-1.jpg'
+            title: 'The 3-Bedroom Private Estate: Detailed Amenities & Layout',
+            subtitle: '',
+            description: 'A technical deep-dive into Udaipur\'s most exclusive 3BHK nature retreat.\n\nWhile our homepage gives you the overview, this page details exactly what you get when you book the "Private Kingdom." From the filtration technology of the Blue Wave pool to the equipment list in the Little Paris kitchen, here is everything you need to know.',
+            images: [
+              '/images/Villa/slider-image-1.jpg',
+              '/images/Villa/pool-area-agp-nature-villa.jpg',
+              '/images/Villa/swimming-pool.jpg',
+              '/images/Villa/open-kitchen-and-dining-area.jpg'
+            ],
+            stats: {
+              rating: 4.9,
+              reviews: 182,
+              rooms: 3,
+              established: '2023'
+            }
           }
         },
         {
-          type: 'text-content',
+          type: 'story-sections',
           order: 2,
           content: {
-            title: 'More Than Just a Stay: The "Private World" Concept',
-            text: 'In a city famous for crowded palaces, true luxury is the ability to disconnect. AGP Nature Villa was built on a simple philosophy: <strong>Your vacation should belong to you.</strong>\n\nUnlike hotels where you share the lobby and pool with strangers, our villa offers a "Private World" experience. When you book with us, you don\'t just get a room key; you get the keys to a 3-bedroom estate, a 242 sq. ft. pool, and a sprawling garden. It is the perfect antithesis to the standard hotel experience.'
-          }
-        },
-        {
-          type: 'detailed-room-showcase',
-          order: 3,
-          content: {
-            title: 'The Sleeping Quarters: 3 Distinct "Micro-Environments"',
-            subtitle: 'AGP Nature Villa is a 3BHK configuration designed to offer privacy even within your group. Each room has a distinct personality designed for different moods.',
-            rooms: [
+            title: 'Villa Amenities & Specifications',
+            sections: [
               {
-                id: 1,
-                name: 'The Love Nest',
-                tagline: 'Where Hearts Find Home',
-                description: 'True to its name, this room is designed as a warm sanctuary. Featuring plush bedding, soft amber lighting, and quiet corners, it is the most intimate room in the villa. It includes a King Size bed and an en-suite bathroom with premium fittings.',
-                shortDescription: 'Perfect for Couples or Parents needing quiet',
-                features: ['King Size Bed', 'Plush Bedding', 'Soft Amber Lighting', 'En-suite Bathroom', 'Premium Fittings'],
-                amenities: ['AC', 'WiFi', 'TV'],
-                images: ['/images/Rooms/image-10.jpg'],
-                gradient: 'from-rose-500 via-pink-500 to-red-500',
-                mood: 'Intimate & Romantic',
-                capacity: '2-4 guests',
-                beds: '1 King Bed',
-                area: '320 sq ft',
-                view: 'Garden View'
+                title: 'The "Blue Wave" Pool: Technical Specifications',
+                content: '<p>Unlike shared resort pools, the <strong>Blue Wave</strong> is engineered for privacy and hygiene. It is not just a water body; it is a curated zone for your group.</p><ul><li><strong>Dimensions:</strong> 242 Sq. Ft. of swimming area.</li><li><strong>Depth Profile:</strong> Designed for families, with safe zones for children and ample depth for adults to swim laps.</li><li><strong>Hygiene Protocol:</strong> We use a high-grade filtration system that runs daily. The water is crystal clear, pH-balanced, and chemically treated to international safety standards—ensuring no skin irritation for kids.</li><li><strong>Night Mode:</strong> The pool features underwater LED ambient lighting, turning the deck into a glowing lounge space for your evening cocktails.</li></ul>',
+                image: '/images/Villa/swimming-pool.jpg',
+                layout: 'left',
+                backgroundColor: 'gradient'
               },
               {
-                id: 2,
-                name: 'Mountain Peak',
-                tagline: 'Touch the Aravalis',
-                description: 'This room "throws the Aravalis in your face." It features floor-to-ceiling glass windows that frame the jagged peaks of the Aravali mountains. You can wake up to the sunrise hitting the hills without ever leaving your bed.',
-                shortDescription: 'Perfect for Nature Lovers',
-                features: ['Floor-to-Ceiling Windows', 'Mountain Views', 'Sunrise Views', 'Spacious Layout'],
-                amenities: ['AC', 'WiFi', 'TV'],
-                images: ['/images/Rooms/image-6.jpg'],
-                gradient: 'from-blue-500 via-indigo-500 to-purple-500',
-                mood: 'Majestic & Inspiring',
-                capacity: '2-4 guests',
-                beds: '1 Bed + Extra Bedding',
-                area: '380 sq ft',
-                view: 'Aravali Mountains'
+                title: 'Dual-Kitchen Architecture: "Laziz" & "Little Paris"',
+                content: '<p>We are one of the few villas in Udaipur offering two distinct culinary zones, perfect for long-stay groups who crave home-cooked meals.</p><h3>Zone A: Laziz (The Indoor Command Center)</h3><p>Located centrally to serve all three bedrooms, this modern kitchen is fully stocked for functional cooking.</p><ul><li><strong>Appliances:</strong> Double-door refrigerator, microwave oven, gas hob, and mixer-grinder.</li><li><strong>Cookware:</strong> Full sets of pans, pressure cookers, and serving bowls sufficient for 15 guests.</li><li><strong>Essentials Provided:</strong> RO water purifier, tea/coffee making supplies, and basic spices.</li></ul><h3>Zone B: The Little Paris (Outdoor BBQ Deck)</h3><p>Designed for the "Experience," this open-air kitchenette is where memories are made.</p><ul><li><strong>The Vibe:</strong> Chic, rustic brickwork open to the sky and mountain views.</li><li><strong>Equipment:</strong> Professional-grade coal barbecue grill (Coal provided on request).</li><li><strong>Usage:</strong> Perfect for winter bonfires, grilling paneer tikkas, or enjoying a sundowner while the kids play in the garden.</li></ul>',
+                image: '/images/Villa/modern-indoor-kitchen.jpg',
+                layout: 'right',
+                backgroundColor: 'white'
               },
               {
-                id: 3,
-                name: 'Valley View',
-                tagline: 'Green Dreams Unfold',
-                description: 'The most spacious of the three, Valley View overlooks the "Infinity Garden" and the rolling greens below. It pulls the valley close, making you feel suspended in nature. It has ample space for extra bedding if required.',
-                shortDescription: 'Perfect for Families with Kids',
-                features: ['Valley Panorama', 'Infinity Garden View', 'Spacious Layout', 'Extra Bedding Space'],
-                amenities: ['AC', 'WiFi', 'TV'],
-                images: ['/images/Rooms/image-7.jpg'],
-                gradient: 'from-green-500 via-emerald-500 to-teal-500',
-                mood: 'Tranquil & Spacious',
-                capacity: '4-6 guests',
-                beds: '1 Bed + Extra Bedding',
-                area: '400 sq ft',
-                view: 'Valley & Gardens'
-              }
-            ],
-            capacityNote: 'While we have 3 bedrooms, we comfortably host groups of up to 15 using high-quality extra bedding in the spacious common areas.'
-          }
-        },
-        {
-          type: 'feature-section',
-          order: 4,
-          content: {
-            title: 'The "Blue Wave" Pool: Technical Specifications',
-            subtitle: 'The crown jewel of the villa is The Blue Wave. Unlike resort pools that close at 8 PM, this is yours 24/7.',
-            features: [
-              {
-                icon: 'pool',
-                title: 'Size',
-                description: '242 Sq. Ft. of swimming area'
+                title: 'The Sleeping Quarters: 3 Distinct "Micro-Environments"',
+                content: '<p>AGP Nature Villa is a <strong>3BHK configuration</strong> designed to offer privacy even within your group. Each room has a distinct personality.</p><ul><li><strong>Bedroom 1: The Love Nest.</strong> A cozy, warm-toned sanctuary designed for couples. Features soft lighting, blackout curtains for sleeping in, and an en-suite bathroom with premium fittings.</li><li><strong>Bedroom 2: Mountain Peak.</strong> The room with a view. Large glass windows frame the jagged Aravali peaks, allowing you to wake up to the sunrise without leaving your bed.</li><li><strong>Bedroom 3: Valley View.</strong> The most spacious room, overlooking the Infinity Garden and the valley below. Ideal for families with young children who need extra floor space.</li></ul><p><em><strong>Capacity Note:</strong> While we have 3 bedrooms, we comfortably host groups of up to 15 using high-quality extra bedding and convertible spaces.</em></p>',
+                image: '/images/Rooms/image-6.jpg',
+                layout: 'left',
+                backgroundColor: 'gradient'
               },
               {
-                icon: 'hygiene',
-                title: 'Hygiene',
-                description: 'High-grade filtration system that runs daily to ensure crystal-clear water'
-              },
-              {
-                icon: 'depth',
-                title: 'Depth',
-                description: 'Safe zones for children and ample depth for adults to swim laps'
-              },
-              {
-                icon: 'night',
-                title: 'Night Mode',
-                description: 'Underwater LED lighting, turning the deck into a glowing lounge space for evening cocktails'
-              }
-            ],
-            image: '/images/Villa/swimming-pool.jpg'
-          }
-        },
-        {
-          type: 'text-content',
-          order: 5,
-          content: {
-            title: 'Dual-Kitchen Architecture: "Laziz" & "Little Paris"',
-            text: 'We are one of the few villas in Udaipur offering two distinct culinary zones:\n\n<h3>Zone A: Laziz (The Indoor Modern Kitchen)</h3>\n<p>A fully equipped modern space with a refrigerator, microwave, gas stove, and mixer-grinder. It is stocked with essential cookware, making it perfect for preparing morning tea, heating milk for toddlers, or whipping up comfort food.</p>\n\n<h3>Zone B: The Little Paris (Outdoor BBQ Deck)</h3>\n<p>This is where the magic happens. Designed with a chic, open-air vibe, "The Little Paris" is your stage for evening barbecues. As the sun sets, fire up the coal grill for paneer tikkas or roasted marshmallows under the stars.</p>',
-            image: '/images/Villa/open-kitchen-and-dining-area.jpg'
-          }
-        },
-        {
-          type: 'itinerary-section',
-          order: 6,
-          content: {
-            title: 'A Typical Day at AGP Nature Villa',
-            subtitle: 'Can\'t visualize your trip? Here is how our guests usually spend 24 hours in the Private Kingdom:',
-            schedule: [
-              {
-                time: '07:00 AM',
-                activity: 'Yoga on the Infinity Garden lawn (2000 sq ft) while the peacocks call from the hills.'
-              },
-              {
-                time: '09:00 AM',
-                activity: 'Breakfast by the pool. Our helper sets up the table while you enjoy a morning dip in the Blue Wave.'
-              },
-              {
-                time: '11:00 AM',
-                activity: 'A short 10-minute drive to Badi Lake for a peaceful walk, or a trek up to Bahubali Hills for the best selfie in Udaipur.'
-              },
-              {
-                time: '01:00 PM',
-                activity: 'Lunch delivered by local partners (authentic Dal Baati Churma) or cooked fresh in Laziz.'
-              },
-              {
-                time: '04:00 PM',
-                activity: 'Tea time at Heat Heaven. As the sun dips behind the Aravalis, the bonfire is prepped.'
-              },
-              {
-                time: '08:00 PM',
-                activity: 'BBQ night at Little Paris. Music playing, coals glowing, and the entire property lit up just for you.'
+                title: 'What Does a Day at AGP Nature Villa Look Like?',
+                content: '<p>To help you visualize your stay, here is a typical itinerary our guests enjoy:</p><ul><li><strong>07:00 AM:</strong> Yoga on the <strong>Infinity Garden</strong> lawn while the peacocks call from the hills.</li><li><strong>09:00 AM:</strong> Breakfast by the pool. Our helper sets up the table while you enjoy a morning dip in the <strong>Blue Wave</strong>.</li><li><strong>11:00 AM:</strong> A short 10-minute drive to <strong>Badi Lake</strong> for a peaceful walk, or a trek up to <strong>Bahubali Hills</strong> for the best selfie in Udaipur.</li><li><strong>01:00 PM:</strong> Lunch delivered by local partners (authentic Dal Baati Churma) or cooked fresh in <strong>Laziz</strong>.</li><li><strong>04:00 PM:</strong> Tea time at <strong>Heat Heaven</strong>. As the sun dips behind the Aravalis, the bonfire is prepped.</li><li><strong>08:00 PM:</strong> BBQ night at <strong>Little Paris</strong>. Music playing, coals glowing, and the entire property lit up just for you.</li></ul>',
+                image: '/images/Villa/bonfire-place.jpg',
+                layout: 'right',
+                backgroundColor: 'white'
               }
             ]
           }
         },
         {
-          type: 'faq-detailed',
-          order: 7,
+          type: 'faq-section',
+          order: 3,
           content: {
             title: 'Frequently Asked Questions',
-            subtitle: 'Everything you need to know about your stay',
+            videoUrl: '/agp-nature-villa.MP4',
+            videoTitle: 'AGP Nature Villa - Complete Property Walkthrough',
+            videoDescription: 'Photos can only show so much. Take a virtual tour of our 3BHK private villa, featuring the Blue Wave pool, dual kitchens, luxury bedrooms, and the lush Infinity Garden surrounded by the Aravali mountains.',
             faqs: [
               {
                 question: 'Is AGP Nature Villa safe for solo female travelers or all-girl groups?',
-                answer: 'Yes, AGP Nature Villa is extremely safe. The property is fully walled and gated. We have a dedicated caretaker who resides in separate staff quarters on the premises to ensure security 24/7 without intruding on your privacy.'
+                answer: 'Yes, AGP Nature Villa is extremely safe. The property is fully walled and gated. We have a dedicated caretaker who resides in separate staff quarters on the premises to ensure security 24/7 without intruding on your privacy. The neighborhood of Dangiyo Ki Hundar is peaceful and residential.'
               },
               {
                 question: 'Can we host a pool party with loud music?',
-                answer: 'We are a nature villa, so while we encourage enjoyment, we respect the tranquility of the Aravalis. You can play music at a moderate volume on the outdoor speakers provided. For late-night parties, we ask guests to move the loud music indoors after 10:00 PM.'
+                answer: 'We are a nature villa, so while we encourage enjoyment, we respect the tranquility of the Aravalis. You can play music at a moderate volume on the outdoor speakers provided. For late-night parties, we ask guests to move the loud music indoors after 10:00 PM to comply with local noise regulations.'
               },
               {
                 question: 'Is the pool heated for winter stays?',
@@ -658,21 +790,21 @@ function getDefaultPageData(slug) {
               },
               {
                 question: 'Do you provide a cook or is it self-catering only?',
-                answer: 'We offer a hybrid model. The villa is designed for self-catering with fully equipped kitchens. However, for a relaxing holiday, we can arrange a local cook (Maharaj) for an additional daily charge who can prepare home-style Rajasthani meals.'
+                answer: 'We offer a hybrid model. The villa is designed for self-catering with fully equipped kitchens. However, for a relaxing holiday, we can arrange a local cook (Maharaj) for an additional daily charge who can prepare home-style Rajasthani meals using ingredients you provide or we procure for you.'
               },
               {
                 question: 'How is the internet connectivity for workcations?',
-                answer: 'We understand the need to stay connected. AGP Nature Villa is equipped with high-speed Wi-Fi that covers the entire property, including the garden and pool deck. It is perfectly suitable for Zoom calls and remote work.'
+                answer: 'We understand the need to stay connected. AGP Nature Villa is equipped with high-speed Wi-Fi (Fiber optic) that covers the entire property, including the garden and pool deck. It is perfectly suitable for Zoom calls and remote work.'
               }
             ]
           }
         },
         {
           type: 'cta-section',
-          order: 8,
+          order: 4,
           content: {
-            title: 'Ready to Experience the Unmatched?',
-            description: 'Whether you are a group of 15 looking for a party venue or a family of 4 seeking a quiet retreat, the villa adapts to your needs.',
+            title: 'Ready to secure your dates?',
+            description: 'Check Availability Now',
             phone: '+91 9892611983',
             directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
           }

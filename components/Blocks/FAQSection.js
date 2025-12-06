@@ -1,13 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDownIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon, SparklesIcon, XMarkIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
 
 export default function FAQSection({ content }) {
   const [openIndex, setOpenIndex] = useState(null)
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
 
   const {
     title = 'Frequently Asked Questions about Your Luxury Stay',
+    videoUrl,
+    videoTitle = 'AGP Nature Villa Tour',
+    videoDescription = 'Photos can only show so much. Take a 2-minute virtual tour of the 3BHK villa, the Blue Wave pool, and the lush Infinity Garden.',
     faqs = [
       {
         question: 'Is the entire villa private for my group, or will we share it?',
@@ -52,7 +56,7 @@ export default function FAQSection({ content }) {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-200/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -68,9 +72,12 @@ export default function FAQSection({ content }) {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-500 rounded-full mx-auto"></div>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+          {/* Left Column - FAQ Accordion */}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
             <div
               key={index}
               className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary-200/50 transition-all duration-300 hover:shadow-lg"
@@ -123,7 +130,43 @@ export default function FAQSection({ content }) {
                 </div>
               </div>
             </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Right Column - Video Section */}
+          {videoUrl && (
+            <div className="lg:sticky lg:top-24 self-start">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary-200/50 p-6 lg:p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Watch: A Walkthrough of Your Private Kingdom
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {videoDescription}
+                </p>
+
+                {/* Video Thumbnail with Play Button */}
+                <div
+                  className="relative rounded-xl overflow-hidden cursor-pointer group"
+                  style={{ paddingBottom: '56.25%', height: 0, background: '#000' }}
+                  onClick={() => setIsVideoModalOpen(true)}
+                >
+                  <img
+                    src="/images/Villa/slider-image-1.jpg"
+                    alt="Video Thumbnail"
+                    className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                    <PlayCircleIcon className="w-20 h-20 text-white opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" />
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-black/50 backdrop-blur-sm px-3 py-2 rounded-lg">
+                      <p className="text-white text-sm font-medium">Click to watch full video</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* CTA Below FAQs */}
@@ -140,6 +183,47 @@ export default function FAQSection({ content }) {
         </div>
 
       </div>
+
+      {/* Video Modal */}
+      {isVideoModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+          onClick={() => setIsVideoModalOpen(false)}
+        >
+          <div className="relative w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
+            <button
+              onClick={() => setIsVideoModalOpen(false)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200"
+            >
+              <XMarkIcon className="w-10 h-10" />
+            </button>
+
+            {/* Video Container */}
+            <div className="relative rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%', height: 0, background: '#000' }}>
+              {videoUrl && (videoUrl.endsWith('.mp4') || videoUrl.endsWith('.MP4')) ? (
+                <video
+                  controls
+                  autoPlay
+                  className="absolute top-0 left-0 w-full h-full object-contain"
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <iframe
+                  src={videoUrl}
+                  title={videoTitle}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
