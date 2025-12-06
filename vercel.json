@@ -1,4 +1,16 @@
 {
   "buildCommand": "next build",
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "redirects": [
+    {
+      "source": "/villa-in-udaipur",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/villa-in-udaipur/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }

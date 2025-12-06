@@ -489,6 +489,7 @@ function getDefaultPageData(slug) {
             '@context': 'https://schema.org',
             '@type': 'VacationRental',
             '@id': 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
+            identifier: 'agp-nature-villa-3bhk-udaipur',
             name: 'AGP Nature Villa - Luxury 3BHK Private Villa in Udaipur',
             description: 'Exclusive 3-bedroom private villa in Udaipur with Blue Wave pool, dual kitchens, luxury bedrooms, and Infinity Garden surrounded by the Aravali mountains. Perfect for families and groups seeking privacy and luxury.',
             url: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',
@@ -497,7 +498,11 @@ function getDefaultPageData(slug) {
               'https://agpnaturevilla.com/images/Villa/slider-image-1.jpg',
               'https://agpnaturevilla.com/images/Villa/pool-area-agp-nature-villa.jpg',
               'https://agpnaturevilla.com/images/Villa/swimming-pool.jpg',
-              'https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg'
+              'https://agpnaturevilla.com/images/Villa/open-kitchen-and-dining-area.jpg',
+              'https://agpnaturevilla.com/images/Villa/infinity-garden.jpg',
+              'https://agpnaturevilla.com/images/rooms/love-nest-bedroom.jpg',
+              'https://agpnaturevilla.com/images/rooms/mountain-peak-bedroom.jpg',
+              'https://agpnaturevilla.com/images/rooms/valley-view-bedroom.jpg'
             ],
             address: {
               '@type': 'PostalAddress',
@@ -516,13 +521,28 @@ function getDefaultPageData(slug) {
               '@type': 'Accommodation',
               name: 'Luxury 3BHK Villa with Pool',
               accommodationCategory: 'Villa',
+              additionalType: 'https://schema.org/House',
               numberOfRooms: 3,
               numberOfBedrooms: 3,
               numberOfBathroomsTotal: 3,
+              bed: [
+                {
+                  '@type': 'BedDetails',
+                  typeOfBed: 'King Bed',
+                  numberOfBeds: 2
+                },
+                {
+                  '@type': 'BedDetails',
+                  typeOfBed: 'Queen Bed',
+                  numberOfBeds: 1
+                }
+              ],
               occupancy: {
                 '@type': 'QuantitativeValue',
+                value: 10,
                 minValue: 6,
-                maxValue: 15
+                maxValue: 15,
+                unitText: 'Persons'
               },
               amenityFeature: [
                 {
