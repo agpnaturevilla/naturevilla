@@ -671,45 +671,6 @@ function getDefaultPageData(slug) {
           },
           {
             '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            '@id': 'https://agpnaturevilla.com/#business',
-            name: 'AGP Nature Villa',
-            image: 'https://agpnaturevilla.com/images/Villa/slider-image-1.jpg',
-            description: 'Luxury 3BHK private villa in Udaipur offering exclusive vacation rentals with premium amenities, private pool, and stunning Aravali mountain views.',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '5, Dangiyo Ki Hundar, near Animal Aid',
-              addressLocality: 'Udaipur',
-              addressRegion: 'Rajasthan',
-              postalCode: '313011',
-              addressCountry: 'IN'
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 24.6293633,
-              longitude: 73.7308233
-            },
-            url: 'https://agpnaturevilla.com',
-            telephone: '+91-9892611983',
-            priceRange: '₹₹₹',
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-              opens: '00:00',
-              closes: '23:59'
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: 4.9,
-              reviewCount: 182
-            },
-            sameAs: [
-              'https://www.facebook.com/agpnaturevilla',
-              'https://www.instagram.com/agpnaturevilla'
-            ]
-          },
-          {
-            '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
               {
