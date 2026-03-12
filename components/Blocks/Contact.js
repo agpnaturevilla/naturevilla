@@ -118,12 +118,13 @@ export default function Contact({ content, settings }) {
         setCaptchaValue(null)
         recaptchaRef.current?.reset()
       } else {
-        throw new Error('Failed to send message')
+        const data = await response.json().catch(() => ({}))
+        throw new Error(data.error || 'Failed to send message')
       }
     } catch (error) {
-      setSubmitStatus({ 
-        type: 'error', 
-        message: 'Sorry, there was an error sending your message. Please try again or call us directly.' 
+      setSubmitStatus({
+        type: 'error',
+        message: error.message || 'Sorry, there was an error sending your message. Please try again or call us directly.'
       })
     } finally {
       setIsSubmitting(false)
@@ -280,12 +281,13 @@ export default function Contact({ content, settings }) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                        Phone Number
+                        Phone Number *
                       </label>
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
+                        required
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200 bg-white/50"

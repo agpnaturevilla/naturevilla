@@ -116,7 +116,7 @@ function getDefaultPageData(slug = 'home') {
             "bestRating": "5",
             "worstRating": "1"
           },
-          "priceRange": "₹8,000 - ₹15,000",
+          "priceRange": "₹15,000",
           "currenciesAccepted": "INR",
           "paymentAccepted": "Cash, Bank Transfer, UPI",
           "numberOfRooms": "3",
@@ -132,10 +132,10 @@ function getDefaultPageData(slug = 'home') {
             "@type": "Offer",
             "url": "https://agpnaturevilla.com/",
             "priceCurrency": "INR",
-            "price": "8000",
-            "priceValidUntil": "2025-12-31",
+            "price": "15000",
+            "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
-            "description": "Base rate for 4-6 guests (₹8,000). 7-8 guests: ₹10,000. 9-12 guests: ₹12,000. 13-15 guests: ₹15,000."
+            "description": "₹15,000 per night. Minimum 2 nights on weekends. Full 3 BHK villa exclusively yours for up to 15 guests."
           },
           "potentialAction": {
             "@type": "ReserveAction",
@@ -251,38 +251,18 @@ Whether you are floating in the "Blue Wave" pool under the Udaipur sun, sharing 
         type: 'pricing-section',
         order: 4,
         content: {
-          title: 'Transparent Luxury Pricing',
-          subtitle: 'Rates valid for 2024-2025 (Excluding New Year\'s Eve)',
+          title: 'Special Tariffs for 2026',
+          subtitle: 'Minimum 2 nights on weekends',
           note: '100% Private Booking – You never share the villa with strangers.',
-          pricingTiers: [
-            {
-              name: 'Intimate Group',
-              guests: '4-6 Guests',
-              price: '8,000',
-              inclusions: ['Full Villa Access', 'Pool', 'Kitchen'],
-              popular: false
-            },
-            {
-              name: 'Family Retreat',
-              guests: '7-8 Guests',
-              price: '10,000',
-              inclusions: ['Full Villa Access', 'Pool', 'Kitchen'],
-              popular: true
-            },
-            {
-              name: 'Large Group',
-              guests: '9-12 Guests',
-              price: '12,000',
-              inclusions: ['Extra Bedding', 'Full Amenities'],
-              popular: false
-            },
-            {
-              name: 'Grand Gathering',
-              guests: '13-15 Guests',
-              price: '15,000',
-              inclusions: ['Full Property Exclusivity'],
-              popular: false
-            }
+          price: '15,000',
+          inclusions: [
+            'Full 3 BHK Villa — Exclusively Yours',
+            'Private Swimming Pool (24/7 Access)',
+            '"Laziz" Indoor Kitchen & "The Little Paris" Open Kitchen',
+            '"Infinity Garden" — 2000 sq. ft. Lawn',
+            '"Heat Heaven" Bonfire Area',
+            'Up to 15 Guests',
+            'Pet Friendly'
           ]
         }
       },

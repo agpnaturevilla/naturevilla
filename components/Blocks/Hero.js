@@ -167,7 +167,7 @@ export default function Hero({ content, settings }) {
                 </Link>
                 
                 <Link
-                  href="/villa-in-udaipur/"
+                  href="/3bhk-private-villa-udaipur/"
                   className="group inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white border-2 border-white/40 rounded-full backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105"
                 >
                   <PlayIcon className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100" />

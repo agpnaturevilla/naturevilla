@@ -280,7 +280,7 @@ function getDefaultPageData(slug) {
       template: 'rooms',
       seo: {
         title: 'Luxury Rooms - Love Nest, Mountain Peak & Valley View | AGP Nature Villa',
-        description: 'Experience luxury in our three unique rooms: Love Nest for romance, Mountain Peak for breathtaking views, and Valley View for tranquil serenity. Book your perfect mountain retreat.',
+        description: 'Three distinct suites at AGP Nature Villa: Love Nest for intimacy, Mountain Peak for sunrise views, and Valley View for garden access.',
         keywords: ['luxury rooms', 'udaipur rooms', 'villa rooms', 'mountain view rooms', 'romantic rooms', 'nature villa accommodation'],
         canonicalUrl: 'https://agpnaturevilla.com/rooms/',
         structuredData: {
@@ -310,9 +310,9 @@ function getDefaultPageData(slug) {
           type: 'room-hero',
           order: 1,
           content: {
-            title: 'Luxury Rooms',
-            subtitle: 'Your Perfect Mountain Retreat',
-            description: 'Three beautifully designed rooms, each offering a unique perspective of the majestic Aravali mountains. From intimate romance to panoramic vistas, find your perfect sanctuary.',
+            title: 'The Suites: Choose Your Sanctuary',
+            subtitle: '',
+            description: 'Three distinct "micro-environments" designed for different travel moods.\\n\\nAt AGP Nature Villa, no two rooms are the same. Whether you want to wake up to a sunrise, hide away in a romantic nook, or step directly onto the lawn, we have a room designed for your specific need.',
             images: [
               '/images/Rooms/image-7.jpg',
               '/images/Rooms/image-8.jpg',
@@ -332,123 +332,176 @@ function getDefaultPageData(slug) {
           order: 2,
           content: {
             title: "Choose Your Perfect Room",
-            subtitle: "Each room tells its own story, offers its own magic",
+            subtitle: "Three distinct suites designed for specific travel moods",
             rooms: [
               {
                 id: 1,
-                name: "Love Nest",
-                tagline: "Where Hearts Find Home",
-                description: "Love Nest wraps you in warm tones and quiet nooks—perfect for couples craving a romantic stay or parents dodging the kids' racket. Pillows fluffed to sink into, lights dialed soft, and corners that feel lived-in. Every detail whispers intimacy, from the private balcony overlooking mountain silhouettes to the cozy reading corner bathed in golden light.",
-                shortDescription: "Intimate sanctuary for couples seeking romance and tranquility",
-                features: ["King Size Bed", "Mountain Views", "Romantic Ambiance", "Reading Corner", "Mood Lighting"],
-                amenities: ["AC", "WiFi", "TV", "Room Service"],
+                name: "The Love Nest (Couples' Suite)",
+                tagline: "Best for: Honeymooners & Couples seeking total privacy",
+                description: "True to its name, this is the most intimate room in the villa. Tucked away in a quiet corner, it is designed with warm amber lighting and soft textures to create a cozy 'cocoon' effect. It's not just a room; it's a retreat from the world.",
+                shortDescription: "Cozy corner made for couples and honeymooners",
+                features: [
+                  "Size: 320 Sq. Ft. (Cozy & Intimate)",
+                  "Bed: King Size Memory Foam",
+                  "View: Private Mountain Silhouette",
+                  "Highlight: Dedicated Reading Corner with golden mood lighting"
+                ],
+                amenities: ["AC", "WiFi", "En-suite Bath", "Dimmer Lights"],
                 images: ["/images/Rooms/image-10.jpg"],
                 gradient: "from-rose-500 via-pink-500 to-red-500",
                 mood: "Intimate & Romantic",
-                capacity: "4 guests",
-                beds: "1 Bed + 2 Extra Beds",
+                capacity: "2 guests",
+                beds: "King Size Memory Foam",
                 area: "320 sq ft",
-                view: "Mountain & Garden"
+                view: "Private Mountain Silhouette"
               },
               {
                 id: 2,
-                name: "Mountain Peak", 
-                tagline: "Touch the Aravalis",
-                description: "Mountain Peak throws the Aravalis in your face, glass walls letting the peaks leer back over morning tea. Wake up to jagged hills painting the horizon, where every sunrise feels like a personal performance. Floor-to-ceiling windows frame nature's theater, while the spacious layout gives you room to breathe and appreciate the raw beauty of Rajasthan's ancient mountains.",
-                shortDescription: "Breathtaking mountain vistas through panoramic windows",
-                features: ["Floor-to-Ceiling Windows", "Mountain Views", "Morning Tea Setup", "Panoramic Vistas", "Spacious Layout", "Sunrise Views"],
-                amenities: ["AC", "WiFi", "TV", "Work Desk"],
+                name: "Mountain Peak (Panoramic Suite)",
+                tagline: "Best for: Nature Lovers & Early Risers",
+                description: "This room 'throws the Aravalis in your face.' Located on the upper level with floor-to-ceiling glass windows, it commands the best position in the house. You don't need an alarm clock here; the sunrise over the jagged peaks will wake you up naturally.",
+                shortDescription: "Panoramic suite for sunrise chasers and view lovers",
+                features: [
+                  "Size: 380 Sq. Ft. (Spacious & Airy)",
+                  "Bed: King Size + Space for Extra Bedding",
+                  "View: 180 Degrees Sunrise & Aravali Peaks",
+                  "Highlight: The 'Morning Tea' setup - two armchairs positioned perfectly against the glass wall"
+                ],
+                amenities: ["Sunrise View", "AC", "Telescope Ready", "Luxury Bath"],
                 images: ["/images/Rooms/image-6.jpg"],
                 gradient: "from-blue-500 via-indigo-500 to-purple-500",
                 mood: "Majestic & Inspiring",
-                capacity: "4 guests",
-                beds: "1 Bed + 2 Extra Beds",
+                capacity: "2-4 guests",
+                beds: "King Size + Extra Bedding",
                 area: "380 sq ft",
-                view: "Aravali Mountains"
+                view: "180 Degrees Sunrise & Mountains"
               },
               {
                 id: 3,
-                name: "Valley View",
-                tagline: "Green Dreams Unfold", 
-                description: "Valley View pulls the valley close, a green sweep that feels like your own secret. Watch the landscape breathe with morning mist, where rolling greens stretch endlessly and peace settles into your soul. The private terrace becomes your meditation deck, while large windows blur the line between indoor comfort and outdoor serenity.",
-                shortDescription: "Serene valley panoramas with private terrace retreat",
-                features: ["Valley Panorama", "Private Terrace", "Nature Immersion", "Serene Atmosphere", "Garden Access", "Bird Watching"],
-                amenities: ["AC", "WiFi", "TV"],
+                name: "Valley View (Garden Suite)",
+                tagline: "Best for: Families with Kids or Seniors",
+                description: "Grounded and lush. This room blurs the line between indoors and outdoors. With direct visual access to the 'Infinity Garden,' it allows parents to relax in cool comfort while watching their kids or pets play outside. It feels like sleeping in the lap of nature.",
+                shortDescription: "Garden-facing suite ideal for families and seniors",
+                features: [
+                  "Size: 350 Sq. Ft. (Wide Layout)",
+                  "Bed: 1 Bed + Convertible Daybed Area",
+                  "View: Lush Green Valley & Garden",
+                  "Highlight: Ground floor access (no stairs), ideal for elders"
+                ],
+                amenities: ["Garden View", "Family Friendly", "AC", "Easy Access"],
                 images: ["/images/Rooms/image-7.jpg"],
-                gradient: "from-green-500 via-emerald-500 to-teal-500", 
+                gradient: "from-green-500 via-emerald-500 to-teal-500",
                 mood: "Tranquil & Refreshing",
-                capacity: "4 guests",
-                beds: "1 Bed + 2 Extra Beds",
+                capacity: "2-4 guests",
+                beds: "1 Bed + Convertible Daybed",
                 area: "350 sq ft",
-                view: "Valley & Gardens"
+                view: "Lush Green Valley & Garden"
               }
             ]
           }
         },
         {
-          type: 'room-gallery',
+          type: 'room-comparison',
           order: 3,
           content: {
-            title: "Room Gallery",
-            subtitle: "Explore every corner of luxury and comfort",
-            categories: [
-              { id: 'all', name: 'All Rooms', count: 6 },
-              { id: 'love-nest', name: 'Love Nest', count: 1 },
-              { id: 'mountain-peak', name: 'Mountain Peak', count: 2 },
-              { id: 'valley-view', name: 'Valley View', count: 3 }
-            ],
-            images: [
+            title: "Which Room is Right for You?",
+            subtitle: "",
+            rooms: [
+              {
+                id: 1,
+                name: "Love Nest",
+                tagline: "Best for Couples",
+                price: "",
+                priceNote: "",
+                capacity: "Couples",
+                area: "320 sq ft",
+                view: "Private Mountain Silhouette",
+                image: "/images/Rooms/image-10.jpg",
+                gradient: "from-rose-500 via-pink-500 to-red-500",
+                features: [
+                  "Best For: Couples",
+                  "Floor: 1st Floor (Private)",
+                  "Vibe: Warm & Cozy"
+                ],
+                highlights: ["Intimate", "Reading Corner"],
+                bestFor: "Couples seeking total privacy"
+              },
               {
                 id: 2,
-                src: '/images/Rooms/image-10.jpg',
-                category: 'love-nest',
-                title: 'Love Nest - Reading Corner',
-                description: 'Perfect nook for quiet moments together'
+                name: "Mountain Peak",
+                tagline: "Best for View Lovers",
+                price: "",
+                priceNote: "",
+                capacity: "View Lovers",
+                area: "380 sq ft",
+                view: "180 Degrees Sunrise & Aravali Peaks",
+                image: "/images/Rooms/image-6.jpg",
+                gradient: "from-blue-500 via-indigo-500 to-purple-500",
+                features: [
+                  "Best For: View Lovers",
+                  "Floor: 2nd Floor (High)",
+                  "Vibe: Bright & Airy"
+                ],
+                highlights: ["Sunrise View", "Panoramic Glass"],
+                bestFor: "Nature lovers & early risers"
               },
               {
-                id: 4,
-                src: '/images/Rooms/image-6.jpg',
-                category: 'mountain-peak',
-                title: 'Mountain Peak - Morning Light',
-                description: 'Wake up to breathtaking sunrise views'
+                id: 3,
+                name: "Valley View",
+                tagline: "Best for Families/Elders",
+                price: "",
+                priceNote: "",
+                capacity: "Families & Elders",
+                area: "350 sq ft",
+                view: "Lush Green Valley & Garden",
+                image: "/images/Rooms/image-7.jpg",
+                gradient: "from-green-500 via-emerald-500 to-teal-500",
+                features: [
+                  "Best For: Families/Elders",
+                  "Floor: Ground (Accessible)",
+                  "Vibe: Green & Serene"
+                ],
+                highlights: ["Garden Access", "Easy Access"],
+                bestFor: "Families with kids or seniors"
+              }
+            ]
+          }
+        },
+        {
+          type: 'faq-section',
+          order: 4,
+          content: {
+            title: 'Questions About Our Rooms',
+            faqs: [
+              {
+                question: 'Can we put an extra mattress in the rooms?',
+                answer: 'Yes. Mountain Peak and Valley View are spacious enough to comfortably accommodate an extra floor mattress for a child or extra adult. Love Nest is designed to be cozy, so it is best restricted to 2 adults for the best experience.'
               },
               {
-                id: 5,
-                src: '/images/Rooms/image-4.jpg',
-                category: 'valley-view',
-                title: 'Valley View - Green Serenity',
-                description: 'Rolling green valleys as far as the eye can see'
+                question: 'Do the rooms have attached bathrooms?',
+                answer: 'Absolutely. All three rooms (Love Nest, Mountain Peak, and Valley View) come with private, modern en-suite bathrooms equipped with geysers for 24/7 hot water, western toilets, and fresh towels.'
               },
               {
-                id: 6,
-                src: '/images/Rooms/image-7.jpg',
-                category: 'valley-view',
-                title: 'Valley View - Private Terrace',
-                description: 'Your personal outdoor sanctuary'
+                question: 'Which room is best for elderly guests?',
+                answer: 'We highly recommend the Valley View room for guests with mobility issues or seniors. It is located on the ground level, offering easy access to the garden and dining area without the need to climb stairs.'
               },
               {
-                id: 7,
-                src: '/images/Rooms/image-8.jpg',
-                category: 'mountain-peak',
-                title: 'Mountain Peak - Spacious Interior',
-                description: 'Generous space with mountain-inspired design'
+                question: 'Do the rooms have TVs?',
+                answer: 'We deliberately do not put TVs in the bedrooms to encourage you to disconnect and enjoy the nature views. However, we have a large screen setup in the common living area for movie nights or cricket matches.'
               },
               {
-                id: 8,
-                src: '/images/Rooms/image-9.jpg',
-                category: 'valley-view',
-                title: 'Valley View - Natural Light',
-                description: 'Sun-drenched spaces overlooking the valley'
+                question: 'Are linens and toiletries provided?',
+                answer: 'Yes, we provide hotel-grade white linens, comforters, and basic toiletries (soap, shampoo, hand wash). The rooms are cleaned daily by our housekeeping staff.'
               }
             ]
           }
         },
         {
           type: 'cta-section',
-          order: 4,
+          order: 5,
           content: {
-            title: 'Ready to Book Your Perfect Room?',
-            description: 'Each room at AGP Nature Villa offers a unique mountain experience. Whether you seek romance, adventure, or tranquility, your perfect retreat awaits in the heart of the Aravali mountains. Call +91 9892611983 or book directly through our website.',
+            title: 'Ready to Book Your Stay?',
+            description: 'Lock in your dates and we’ll match you with the perfect suite. Call +91 9892611983 or tap Book Now to get a fast confirmation.',
             phone: '+91 9892611983',
             directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
           }

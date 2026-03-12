@@ -147,7 +147,7 @@ export default function RoomHero({ content, settings }) {
                   <span className="block text-3xl lg:text-5xl text-primary-300 font-sans italic mb-2">
                     {subtitle}
                   </span>
-                  <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ fontSize: '3.2rem' }}>
                     {title}
                   </span>
                 </h1>
@@ -160,10 +160,6 @@ export default function RoomHero({ content, settings }) {
               }`}>
                 <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8 font-light">
                   {description}
-                </p>
-                
-                <p className="text-lg text-white/70 leading-relaxed mb-8">
-                  Whether you seek romance, mountain vistas, or valley tranquility, our thoughtfully designed rooms provide the perfect backdrop for your <span className="text-primary-400 font-semibold">unforgettable mountain escape</span>.
                 </p>
               </div>
 
@@ -194,35 +190,23 @@ export default function RoomHero({ content, settings }) {
               </div>
             </div>
 
-            {/* Right Column - Image Thumbnails */}
-            <div className="hidden lg:block">
-              <div className="overflow-visible">
-                <div className={`grid grid-cols-2 gap-4 p-6 transition-all duration-1000 delay-900 ${
-                  isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
-                }`}>
-                {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`relative group cursor-pointer rounded-2xl overflow-hidden transition-all duration-500 ${
-                      index === currentImageIndex ? 'ring-4 ring-primary-400 scale-105' : 'hover:scale-105'
-                    }`}
-                    onClick={() => setCurrentImageIndex(index)}
-                  >
-                    <div className="aspect-square relative">
-                      <Image
-                        src={image}
-                        alt={`Room view ${index + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 50vw, 25vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className={`absolute inset-0 ring-2 ring-white/30 rounded-2xl transition-all duration-300 ${
-                        index === currentImageIndex ? 'ring-primary-400 ring-4' : ''
-                      }`} />
-                    </div>
+            {/* Right Column - Demo Video (visible on all breakpoints) */}
+            <div className="w-full lg:w-auto">
+              <div className={`p-4 lg:p-6 transition-all duration-1000 delay-900 ${
+                isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+              }`}>
+                <div className="relative w-full rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl p-4 space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-semibold text-white">Watch: A Walkthrough of Your Private Kingdom</h3>
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/20 bg-black">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      poster={images?.[0]}
+                    >
+                      <source src={content?.video || settings?.video || '/videos/demo-room.mp4'} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
-                ))}
                 </div>
               </div>
             </div>

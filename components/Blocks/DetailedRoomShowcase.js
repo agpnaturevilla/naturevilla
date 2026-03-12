@@ -9,6 +9,7 @@ export default function DetailedRoomShowcase({ content, settings }) {
   const [activeRoom, setActiveRoom] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [imageGalleryIndex, setImageGalleryIndex] = useState({})
+  const [isAutoPlay, setIsAutoPlay] = useState(true)
   const sectionRef = useRef(null)
 
   const {
@@ -93,6 +94,15 @@ export default function DetailedRoomShowcase({ content, settings }) {
     setImageGalleryIndex(initialIndices)
   }, [rooms])
 
+  // Auto-advance active room every 3s
+  useEffect(() => {
+    if (!isAutoPlay || rooms.length <= 1) return
+    const timer = setInterval(() => {
+      setActiveRoom((prev) => (prev + 1) % rooms.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [isAutoPlay, rooms.length])
+
   const currentRoom = rooms[activeRoom]
 
   const getRoomIcon = (roomId) => {
@@ -162,15 +172,17 @@ export default function DetailedRoomShowcase({ content, settings }) {
         </div>
 
         {/* Room Navigation Pills */}
-        <div className={`flex justify-center mb-16 transition-all duration-1000 delay-300 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
-          <div className="flex bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/50">
+        <div className={`flex justify-center mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div
+            className="flex w-full md:w-auto max-w-6xl bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/50 overflow-x-auto gap-2 scrollbar-hide"
+            onMouseEnter={() => setIsAutoPlay(false)}
+            onMouseLeave={() => setIsAutoPlay(true)}
+          >
             {rooms.map((room, index) => (
               <button
                 key={room.id}
                 onClick={() => setActiveRoom(index)}
-                className={`relative px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                className={`relative px-4 sm:px-6 py-3 rounded-xl font-semibold text-sm sm:text-base whitespace-pre-wrap text-left min-w-[9rem] flex-1 md:flex-none md:min-w-[14rem] md:px-8 transition-all duration-300 ${
                   activeRoom === index 
                     ? `bg-gradient-to-r ${room.gradient} text-white shadow-lg` 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-white/50'
@@ -277,29 +289,31 @@ export default function DetailedRoomShowcase({ content, settings }) {
                   </div>
 
                   {/* Room Stats */}
-                  <div className="grid grid-cols-3 gap-4 pt-4 pb-2 border-t border-gray-100">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-gray-900">{currentRoom.capacity}</div>
-                      <div className="text-sm text-gray-500">Capacity</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-gray-900">{currentRoom.beds}</div>
-                      <div className="text-sm text-gray-500">Beds</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-gray-900">{currentRoom.area}</div>
-                      <div className="text-sm text-gray-500">Area</div>
+                  <div className="pt-4 pb-2 border-t border-gray-100">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <div className="rounded-2xl border border-gray-100 bg-white shadow-sm px-4 py-3 text-left sm:text-center">
+                        <div className="text-xl sm:text-2xl font-bold text-gray-900">{currentRoom.capacity}</div>
+                        <div className="text-sm text-gray-500">Capacity</div>
+                      </div>
+                      <div className="rounded-2xl border border-gray-100 bg-white shadow-sm px-4 py-3 text-left sm:text-center">
+                        <div className="text-lg sm:text-xl font-bold text-gray-900">{currentRoom.beds}</div>
+                        <div className="text-sm text-gray-500">Beds</div>
+                      </div>
+                      <div className="rounded-2xl border border-gray-100 bg-white shadow-sm px-4 py-3 text-left sm:text-center">
+                        <div className="text-xl sm:text-2xl font-bold text-gray-900">{currentRoom.area}</div>
+                        <div className="text-sm text-gray-500">Area</div>
+                      </div>
                     </div>
                   </div>
 
                   {/* Features */}
                   <div className="-mt-2">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Room Features</h4>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
                       {currentRoom.features.slice(0, 6).map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentRoom.gradient}`} />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                        <div key={index} className="flex items-start space-x-3">
+                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentRoom.gradient} mt-1.5 flex-shrink-0`} />
+                          <span className="text-sm md:text-base text-gray-700 leading-relaxed">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -329,7 +343,7 @@ export default function DetailedRoomShowcase({ content, settings }) {
                     </Link>
                     
                     <Link
-                      href="/villa-in-udaipur/"
+                      href="/3bhk-private-villa-udaipur/"
                       className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-2xl hover:border-primary-300 hover:text-primary-600 hover:scale-105 transition-all duration-300"
                     >
                       Explore Villa
