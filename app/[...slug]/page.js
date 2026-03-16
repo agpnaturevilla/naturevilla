@@ -295,19 +295,19 @@ function getDefaultPageData(slug) {
               "name": "Air Conditioning"
             },
             {
-              "@type": "LocationFeatureSpecification", 
+              "@type": "LocationFeatureSpecification",
               "name": "Mountain Views"
             },
             {
               "@type": "LocationFeatureSpecification",
-              "name": "Mountain Views"
+              "name": "Garden Access"
             }
           ]
         }
       },
       contentBlocks: [
         {
-          type: 'room-hero',
+          type: 'story-sections',
           order: 1,
           content: {
             title: 'The Suites: Choose Your Sanctuary',
@@ -328,7 +328,7 @@ function getDefaultPageData(slug) {
           }
         },
         {
-          type: 'detailed-room-showcase',
+          type: 'pricing-section',
           order: 2,
           content: {
             title: "Choose Your Perfect Room",
@@ -492,6 +492,10 @@ function getDefaultPageData(slug) {
               {
                 question: 'Are linens and toiletries provided?',
                 answer: 'Yes, we provide hotel-grade white linens, comforters, and basic toiletries (soap, shampoo, hand wash). The rooms are cleaned daily by our housekeeping staff.'
+              },
+              {
+                question: 'Not sure which room fits you?',
+                answer: 'If you book the Full Villa, you don\'t have to choose—you get all three! Call +91 9892611983 to discuss your preferences and we\'ll help you choose the perfect room for your stay.'
               }
             ]
           }
@@ -501,7 +505,7 @@ function getDefaultPageData(slug) {
           order: 5,
           content: {
             title: 'Ready to Book Your Stay?',
-            description: 'Lock in your dates and we’ll match you with the perfect suite. Call +91 9892611983 or tap Book Now to get a fast confirmation.',
+            description: 'Lock in your dates and we\'ll match you with the perfect suite. Call +91 9892611983 or tap Book Now to get a fast confirmation.',
             phone: '+91 9892611983',
             directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
           }
