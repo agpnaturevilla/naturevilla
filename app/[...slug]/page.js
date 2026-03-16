@@ -307,12 +307,12 @@ function getDefaultPageData(slug) {
       },
       contentBlocks: [
         {
-          type: 'story-sections',
+          type: 'room-hero',
           order: 1,
           content: {
             title: 'The Suites: Choose Your Sanctuary',
-            subtitle: '',
-            description: 'Three distinct "micro-environments" designed for different travel moods.\\n\\nAt AGP Nature Villa, no two rooms are the same. Whether you want to wake up to a sunrise, hide away in a romantic nook, or step directly onto the lawn, we have a room designed for your specific need.',
+            subtitle: 'Three distinct luxury rooms',
+            description: 'Three distinct "micro-environments" designed for different travel moods. At AGP Nature Villa, no two rooms are the same. Whether you want to wake up to a sunrise, hide away in a romantic nook, or step directly onto the lawn, we have a room designed for your specific need.',
             images: [
               '/images/Rooms/image-7.jpg',
               '/images/Rooms/image-8.jpg',
@@ -328,7 +328,7 @@ function getDefaultPageData(slug) {
           }
         },
         {
-          type: 'pricing-section',
+          type: 'detailed-room-showcase',
           order: 2,
           content: {
             title: "Choose Your Perfect Room",
@@ -508,6 +508,14 @@ function getDefaultPageData(slug) {
             description: 'Lock in your dates and we\'ll match you with the perfect suite. Call +91 9892611983 or tap Book Now to get a fast confirmation.',
             phone: '+91 9892611983',
             directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
+          }
+        },
+        {
+          type: 'contact',
+          order: 6,
+          content: {
+            title: 'Send Us an Enquiry',
+            subtitle: 'Tell us your dates and we will confirm availability within a few hours'
           }
         }
       ]
