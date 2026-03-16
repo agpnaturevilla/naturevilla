@@ -394,6 +394,7 @@ The swimming pool glints under the sun, cool and tempting. The outdoor kitchen's
         order: 8,
         content: {
           title: 'Frequently Asked Questions about Your Luxury Stay',
+          videoUrl: '/agp-nature-villa.MP4',
           faqs: [
             {
               question: 'Is the entire villa private for my group, or will we share it?',
