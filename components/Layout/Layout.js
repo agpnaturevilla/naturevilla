@@ -31,7 +31,7 @@ export default function Layout({ children, headerStyle = 'default' }) {
       <ScrollToTop />
       <FloatingButtons 
         phone="+91 9892611983"
-        directionLink="http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011"
+        directionLink="https://maps.google.com/?q=24.6802778,73.6234722"
       />
     </div>
   )

@@ -164,11 +164,16 @@ export default function Footer() {
                 <div className="flex items-start justify-center sm:justify-start">
                   <MapPinIcon className="h-5 w-5 text-gray-400 mt-1 flex-shrink-0" />
                   <div className="ml-3 text-center sm:text-left">
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                    <a
+                      href="https://maps.google.com/?q=24.6802778,73.6234722"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm sm:text-base text-gray-300 leading-relaxed hover:text-white transition-colors"
+                    >
                       5, Dangiyo Ki Hundar near Animal Aid<br />
                       Udaipur, Rajasthan 313011<br />
                       India
-                    </p>
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center sm:justify-start">

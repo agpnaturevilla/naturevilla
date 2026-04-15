@@ -6,7 +6,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(git diff:*)"
+      "Bash(git diff:*)",
+      "WebFetch(domain:agpnaturevilla.com)",
+      "Bash(python3 -c \":*)"
     ],
     "deny": [],
     "ask": []
