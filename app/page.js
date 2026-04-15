@@ -52,8 +52,8 @@ function getDefaultPageData(slug = 'home') {
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "24.571270",
-            "longitude": "73.691544"
+            "latitude": "24.6802778",
+            "longitude": "73.6234722"
           },
           "checkinTime": "14:00",
           "checkoutTime": "11:00",
@@ -153,7 +153,7 @@ function getDefaultPageData(slug = 'home') {
             }
           },
           "tourBookingPage": "https://agpnaturevilla.com/contact/",
-          "hasMap": "https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011"
+          "hasMap": "https://maps.google.com/?q=24.6802778,73.6234722"
         },
         {
           "@context": "https://schema.org",
@@ -430,7 +430,7 @@ The swimming pool glints under the sun, cool and tempting. The outdoor kitchen's
           title: 'Book Your Break Now',
           description: 'Spots at AGP Nature Villa don\'t hang around. Fall through spring, the Aravalis turn crisp and clear—prime for a getaway. Call +91 9892611983 or lock it in on the site. Don\'t wait; this isn\'t the kind of place that sits quiet. Come see why AGP Nature Villa turns a quick trip into something you\'ll carry home.',
           phone: '+91 9892611983',
-          directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
+          directionLink: 'https://maps.google.com/?q=24.6802778,73.6234722'
         }
       }
     ]
