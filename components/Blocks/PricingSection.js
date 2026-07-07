@@ -7,7 +7,7 @@ export default function PricingSection({ content }) {
   const {
     title = 'Special Tariffs for 2026',
     subtitle = 'Minimum 2 nights on weekends',
-    price = '15,000',
+    price = '18,000',
     inclusions = [
       'Full 3 BHK Villa — Exclusively Yours',
       'Private Swimming Pool (24/7 Access)',

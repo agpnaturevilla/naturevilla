@@ -116,7 +116,7 @@ function getDefaultPageData(slug = 'home') {
             "bestRating": "5",
             "worstRating": "1"
           },
-          "priceRange": "₹15,000",
+          "priceRange": "₹18,000",
           "currenciesAccepted": "INR",
           "paymentAccepted": "Cash, Bank Transfer, UPI",
           "numberOfRooms": "3",
@@ -132,10 +132,10 @@ function getDefaultPageData(slug = 'home') {
             "@type": "Offer",
             "url": "https://agpnaturevilla.com/",
             "priceCurrency": "INR",
-            "price": "15000",
+            "price": "18000",
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
-            "description": "₹15,000 per night. Minimum 2 nights on weekends. Full 3 BHK villa exclusively yours for up to 15 guests."
+            "description": "₹18,000 per night. Minimum 2 nights on weekends. Full 3 BHK villa exclusively yours for up to 15 guests."
           },
           "potentialAction": {
             "@type": "ReserveAction",
@@ -254,7 +254,7 @@ Whether you are floating in the "Blue Wave" pool under the Udaipur sun, sharing 
           title: 'Special Tariffs for 2026',
           subtitle: 'Minimum 2 nights on weekends',
           note: '100% Private Booking – You never share the villa with strangers.',
-          price: '15,000',
+          price: '18,000',
           inclusions: [
             'Full 3 BHK Villa — Exclusively Yours',
             'Private Swimming Pool (24/7 Access)',
