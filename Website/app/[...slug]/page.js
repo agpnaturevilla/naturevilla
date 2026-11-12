@@ -279,8 +279,8 @@ function getDefaultPageData(slug) {
       title: 'Luxury Rooms - AGP Nature Villa',
       template: 'rooms',
       seo: {
-        title: 'Luxury Rooms - Love Nest, Mountain Peak & Valley View',
-        description: 'Three distinct suites at AGP Nature Villa: Love Nest for intimacy, Mountain Peak for sunrise views, and Valley View for garden access.',
+        title: 'Rooms: Love Nest, Mountain Peak & Valley View',
+        description: 'Compare the three suites at AGP Nature Villa, Udaipur: Love Nest for couples, Mountain Peak for sunrise views and Valley View for families and elders.',
         keywords: ['luxury rooms', 'udaipur rooms', 'villa rooms', 'mountain view rooms', 'romantic rooms', 'nature villa accommodation'],
         canonicalUrl: 'https://agpnaturevilla.com/rooms/',
         structuredData: {
@@ -525,8 +525,8 @@ function getDefaultPageData(slug) {
       title: 'Contact - AGP Nature Villa',
       template: 'contact',
       seo: {
-        title: 'Contact AGP Nature Villa - Book Your Stay',
-        description: 'Get in touch to book your perfect stay. Located in Udaipur, Rajasthan.',
+        title: 'Contact and Book Your Stay in Udaipur',
+        description: 'Call or WhatsApp +91 9892611983, email, or send your dates to book AGP Nature Villa, a private 3BHK pool villa near Badi Lake, Udaipur. Directions and map.',
         canonicalUrl: 'https://agpnaturevilla.com/contact/'
       },
       contentBlocks: [
@@ -545,7 +545,7 @@ function getDefaultPageData(slug) {
       title: '3BHK Private Villa in Udaipur - AGP Nature Villa',
       template: 'villa',
       seo: {
-        title: '3BHK Private Pool Villa in Udaipur | Luxury 3 Bedroom Estate',
+        title: '3BHK Villa in Udaipur: Pool, Kitchens & Rooms',
         description: 'Book your private 3BHK villa in Udaipur. Exclusive access to the Blue Wave pool, Little Paris outdoor kitchen & Infinity Garden. Sleeps 6-15. Pet-friendly.',
         keywords: ['3bhk villa udaipur', 'private villa udaipur', 'blue wave pool', 'luxury villa', 'udaipur villa', 'badi lake', 'aravali mountains'],
         canonicalUrl: 'https://agpnaturevilla.com/3bhk-private-villa-udaipur/',

@@ -108,7 +108,7 @@ export function SiteFoot() {
       <div>
         <h3>Contact information</h3>
         <address>
-          5, Dangiyo Ki Hundar near Animal Aid<br />Udaipur, Rajasthan 313011<br />India<br />
+          5, Dangiyo Ki Hundar, near Animal Aid<br />Udaipur, Rajasthan 313011<br />India<br />
           <a href={TEL}>{PHONE}</a><br />
           <a href="mailto:agpnaturevilla@gmail.com">agpnaturevilla@gmail.com</a>
         </address>

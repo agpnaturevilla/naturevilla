@@ -6,7 +6,7 @@ import SpotlightCard from '../ReactBits/SpotlightCard'
 import { PHONE, TEL, EMAIL, WHATSAPP } from './Chrome'
 
 const empty = { name: '', email: '', phone: '', checkIn: '', checkOut: '', guests: '2', message: '' }
-const ADDRESS = '5, Dangiyo Ki Hundar near Animal Aid, Udaipur, Rajasthan 313011'
+const ADDRESS = '5, Dangiyo Ki Hundar, near Animal Aid, Udaipur, Rajasthan 313011'
 const MAP_DIRECTIONS = 'https://maps.google.com/?q=24.6802778,73.6234722'
 const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3625.3562399676302!2d73.6234722!3d24.680277800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQwJzQ5LjAiTiA3M8KwMzcnMjQuNSJF!5e0!3m2!1sen!2sin!4v1776221191355!5m2!1sen!2sin'
 
@@ -26,6 +26,9 @@ export default function ContactForm({ content = {} }) {
   const recaptcha = useRef(null)
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
   const today = new Date().toISOString().split('T')[0]
+  // Heading levels follow the page: under the contact page's h1 these are h2s, under a section h2 they are h3s.
+  const H = content.noHead ? 'h2' : 'h3'
+  const Sub = content.noHead ? 'h3' : 'h4'
   const set = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 
   const submit = async (e) => {
@@ -71,7 +74,7 @@ export default function ContactForm({ content = {} }) {
         <div className="methods">
           {methods.map((m) => (
             <SpotlightCard key={m.title} className="method" spotlightColor="rgba(242, 178, 92, 0.35)" data-reveal>
-              <h3 className="display">{m.title}</h3>
+              <H className="display">{m.title}</H>
               <p>{m.note}</p>
               {m.href ? <a href={m.href}>{m.value}</a> : <strong>{m.value}</strong>}
             </SpotlightCard>
@@ -80,7 +83,7 @@ export default function ContactForm({ content = {} }) {
 
         <div className="contact-grid">
           <form onSubmit={submit} className="form" data-reveal>
-            <h3 className="display">Plan your stay</h3>
+            <H className="display">Plan your stay</H>
             <p>Tell us about your perfect getaway</p>
 
             <fieldset>
@@ -112,15 +115,15 @@ export default function ContactForm({ content = {} }) {
           </form>
 
           <div className="visit" data-reveal>
-            <h3 className="display">Visit our villa</h3>
+            <H className="display">Visit our villa</H>
             <p>Located in the heart of nature</p>
-            <h4>Our address</h4>
+            <Sub className="subh">Our address</Sub>
             <address>{ADDRESS}</address>
             <div className="map">
               <iframe src={MAP_EMBED} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" title="AGP Nature Villa Location" />
             </div>
             <a href={MAP_DIRECTIONS} target="_blank" rel="noopener noreferrer" className="btn btn-line">Get directions</a>
-            <h4>Follow us</h4>
+            <Sub className="subh">Follow us</Sub>
             <ul className="foot-inline">
               <li><a href="https://www.facebook.com/agpnaturevilla" target="_blank" rel="noopener noreferrer">Facebook</a></li>
               <li><a href="https://www.instagram.com/agpnaturevilla" target="_blank" rel="noopener noreferrer">Instagram</a></li>

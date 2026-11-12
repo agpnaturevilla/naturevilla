@@ -3,7 +3,7 @@
 
 .agp { --gold-ink: #8a5a10; }
 .agp .lede { margin-top: var(--gap-text); max-width: 44rem; color: var(--muted); font-size: 1.12em; }
-.agp h4 { margin: var(--gap-btn) 0 0.6rem; font-weight: 500; font-size: 1.05rem; }
+.agp h4, .agp .subh { margin: var(--gap-btn) 0 0.6rem; font-weight: 500; font-size: 1.05rem; }
 .agp .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; }
 .agp .chips li { background: var(--mist); border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.9rem; }
 
@@ -101,12 +101,12 @@
 .contact { padding-block: clamp(3rem, 8vw, 7rem); }
 .methods { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-top: clamp(1.5rem, 4vw, 3rem); }
 .contact .wrap > .methods:first-child { margin-top: 0; }
-.method h3 { font-size: 1.7rem; }
+.method .display { font-size: 1.7rem; }
 .method p { opacity: 0.75; margin: 0.4rem 0 1rem; }
 .method a, .method strong { color: var(--gold); font-weight: 500; text-decoration: none; overflow-wrap: anywhere; }
 .contact-grid { display: grid; gap: 3rem; margin-top: clamp(3rem, 6vw, 5rem); }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: 6fr 5fr; gap: clamp(3rem, 6vw, 6rem); } }
-.form h3, .visit h3 { font-size: clamp(1.9rem, 3vw, 2.7rem); }
+.form > .display, .visit > .display { font-size: clamp(1.9rem, 3vw, 2.7rem); }
 .form > p, .visit > p { margin-top: 0.4rem; color: var(--muted); }
 .form fieldset { border: 0; padding: 0; margin: var(--gap-btn) 0 0; min-width: 0; display: grid; gap: 1rem; }
 @media (min-width: 600px) { .form fieldset { grid-template-columns: 1fr 1fr; } }

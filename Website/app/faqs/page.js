@@ -2,10 +2,10 @@ import Link from 'next/link'
 import SitePage, { PageHead } from '../../components/Site/SitePage'
 
 export const metadata = {
-  title: 'Frequently Asked Questions | Booking, Rooms, Food & Pets',
-  description: 'Answers about booking AGP Nature Villa in Udaipur: deposits, cancellations, guest capacity, check-in times, food and cooks, pets, parking, airport pickup and house rules.',
+  title: 'FAQs: Booking, Food, Pets & Policies',
+  description: 'Answers about staying at AGP Nature Villa, Udaipur: booking, deposits, cancellations, capacity, check-in, food and cooks, pets, parking and house rules.',
   alternates: { canonical: 'https://agpnaturevilla.com/faqs/' },
-  openGraph: { title: 'Frequently Asked Questions | Booking, Rooms, Food & Pets', description: 'Answers about booking AGP Nature Villa in Udaipur: deposits, cancellations, guest capacity, check-in times, food and cooks, pets, parking, airport pickup and house rules.', url: 'https://agpnaturevilla.com/faqs/' },
+  openGraph: { title: 'FAQs: Booking, Food, Pets & Policies', description: 'Answers about staying at AGP Nature Villa, Udaipur: booking, deposits, cancellations, capacity, check-in, food and cooks, pets, parking and house rules.', url: 'https://agpnaturevilla.com/faqs/' },
 }
 
 export default function FAQsPage() {
