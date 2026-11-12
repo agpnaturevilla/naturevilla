@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://agpnaturevilla.com/sitemap.xml
+
+# Block admin areas
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+
+# Allow specific assets
+User-agent: *
+Allow: /images/
+Allow: /uploads/
+Allow: /_next/static/
+Allow: /favicon.ico
