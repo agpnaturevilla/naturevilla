@@ -269,7 +269,7 @@ function getDefaultPageData(slug) {
             title: 'Ready for Your Aravali Escape?',
             description: 'This isn\'t just a luxury villa in Udaipur—it\'s AGP Nature Villa, the king of private getaways. Your perfect mountain retreat awaits with personalized care, unforgettable experiences, and memories that will last a lifetime. Call +91 9892611983 or lock it in on the site.',
             phone: '+91 9892611983',
-            directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
+            directionLink: 'https://maps.google.com/?q=24.6802778,73.6234722'
           }
         }
       ]
@@ -507,7 +507,7 @@ function getDefaultPageData(slug) {
             title: 'Ready to Book Your Stay?',
             description: 'Lock in your dates and we\'ll match you with the perfect suite. Call +91 9892611983 or tap Book Now to get a fast confirmation.',
             phone: '+91 9892611983',
-            directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
+            directionLink: 'https://maps.google.com/?q=24.6802778,73.6234722'
           }
         },
         {
@@ -579,8 +579,8 @@ function getDefaultPageData(slug) {
             },
             geo: {
               '@type': 'GeoCoordinates',
-              latitude: 24.6293633,
-              longitude: 73.7308233
+              latitude: 24.6802778,
+              longitude: 73.6234722
             },
             containsPlace: {
               '@type': 'Accommodation',
@@ -852,7 +852,7 @@ function getDefaultPageData(slug) {
             title: 'Ready to secure your dates?',
             description: 'Check Availability Now',
             phone: '+91 9892611983',
-            directionLink: 'http://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa%20-%20Villa%20in%20Udaipur,%205,%20Dangiyo%20Ki%20Hundar,%20near%20Animal%20Aid,%20Udaipur,%20Rajasthan%20313011'
+            directionLink: 'https://maps.google.com/?q=24.6802778,73.6234722'
           }
         }
       ]

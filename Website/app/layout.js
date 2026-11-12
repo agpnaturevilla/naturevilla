@@ -76,8 +76,8 @@ export const metadata = {
   other: {
     'geo.region': 'IN-RJ',
     'geo.placename': 'Udaipur',
-    'geo.position': '24.571270;73.691544',
-    'ICBM': '24.571270, 73.691544',
+    'geo.position': '24.6802778;73.6234722',
+    'ICBM': '24.6802778, 73.6234722',
   }
 }
 

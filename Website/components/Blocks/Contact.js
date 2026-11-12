@@ -153,7 +153,7 @@ export default function Contact({ content, settings }) {
       title: 'Visit Us',
       description: 'Come see our beautiful location',
       value: 'Udaipur, Rajasthan',
-      href: 'https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa,%20Udaipur',
+      href: 'https://maps.google.com/?q=24.6802778,73.6234722',
       color: 'gray'
     },
     {
@@ -470,7 +470,7 @@ export default function Contact({ content, settings }) {
                 <div className="relative">
                   <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.0123456789!2d73.691544!3d24.57127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM0JzE2LjYiTiA3M8KwNDEnMjkuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3625.3562399676302!2d73.6234722!3d24.680277800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQwJzQ5LjAiTiA3M8KwMzcnMjQuNSJF!5e0!3m2!1sen!2sin!4v1776221191355!5m2!1sen!2sin"
                       width="100%"
                       height="300"
                       style={{ border: 0 }}
@@ -482,7 +482,7 @@ export default function Contact({ content, settings }) {
                   </div>
                   <div className="absolute top-4 right-4">
                     <a
-                      href="https://maps.google.com/maps/dir/?api=1&destination=AGP%20Nature%20Villa,%20Udaipur"
+                      href="https://maps.google.com/?q=24.6802778,73.6234722"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-sm text-gray-900 text-sm font-medium rounded-lg shadow-lg hover:bg-white transition-all duration-200"
