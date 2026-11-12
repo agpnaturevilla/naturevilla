@@ -51,6 +51,9 @@
 
 /* FAQ block without a video, and the video caption */
 .faq-one { max-width: 52rem; margin-top: 3rem; }
+/* Video and its caption pin together, so the caption never slides under the video. */
+.faq-side { width: min(100%, 60svh * 9 / 16); margin-inline: auto; position: sticky; top: 7rem; align-self: start; }
+.faq-side .faq-video { position: static; width: 100%; }
 .faq-video-h { font-size: 1.5rem; margin-top: 1.5rem; }
 .faq-video-p { margin-top: 0.6rem; color: var(--muted); }
 

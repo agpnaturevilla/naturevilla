@@ -206,7 +206,7 @@ function Faq({ content }) {
             <Link href="/faqs/" className="btn btn-line" style={{ marginTop: '2rem' }}>Read all customer FAQs</Link>
           </div>
           {video && (
-            <div>
+            <div className="faq-side">
               <div className="faq-video">
                 <video controls playsInline preload="none" poster="/images/Villa/slider-image-1.jpg" aria-label={content.videoTitle || 'Walkthrough video of AGP Nature Villa'}>
                   <source src={video} type="video/mp4" />
