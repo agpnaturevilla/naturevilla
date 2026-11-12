@@ -1,0 +1,8 @@
+# AGP Nature Villa. Search engines and AI assistants (Google, Bing, ChatGPT, Claude,
+# Perplexity, Gemini) may read and cite every public page.
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://agpnaturevilla.com/sitemap.xml

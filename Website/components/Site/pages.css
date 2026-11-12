@@ -1,0 +1,170 @@
+/* Inner pages (Villa, Rooms, FAQs, Contact, legal). Tokens, buttons, header, footer, FAQ and
+   story styles come from ../Home/home.css; this file only adds what those pages need. */
+
+.agp { --gold-ink: #8a5a10; }
+.agp .lede { margin-top: var(--gap-text); max-width: 44rem; color: var(--muted); font-size: 1.12em; }
+.agp h4 { margin: var(--gap-btn) 0 0.6rem; font-weight: 500; font-size: 1.05rem; }
+.agp .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; }
+.agp .chips li { background: var(--mist); border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.9rem; }
+
+/* Title band for pages with no picture hero */
+.page-head { background: var(--deep); color: var(--chalk); padding: clamp(8rem, 16vw, 12rem) 0 clamp(3rem, 6vw, 5rem); }
+.page-head h1 { font-size: clamp(2.8rem, 8vw, 8rem); }
+.page-head p { margin-top: var(--gap-text); opacity: 0.8; max-width: 40rem; }
+
+/* Picture hero: the page's photos fade through slowly behind the title */
+.phero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; gap: 2.2rem; padding: 7rem 0 5.5rem; color: #fff; background: var(--deep); overflow: hidden; }
+.phero-media { position: absolute; inset: -6% 0 0 0; }
+.phero-media img { position: absolute; inset: 0; opacity: 0; }
+.phero-media img:first-child { opacity: 1; }
+.phero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(12 18 32 / 0.94), rgb(12 18 32 / 0.35) 60%, rgb(12 18 32 / 0.5)); }
+.phero-copy, .phero-stats { position: relative; width: 100%; box-sizing: border-box; }
+.phero-copy h1 { font-size: clamp(2.3rem, 5.6vw, 5.6rem); max-width: 20ch; }
+.phero-copy p { max-width: 42rem; margin-top: var(--gap-text); color: rgb(255 255 255 / 0.88); }
+.phero-copy .phero-sub { font-family: var(--font-display), serif; font-size: 1.4rem; }
+.phero-copy .cta-row { margin-top: var(--gap-btn); align-items: center; }
+.phero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; margin-block: 0; }
+.phero-stats div { display: flex; flex-direction: column-reverse; border-top: 1px solid rgb(255 255 255 / 0.25); padding-top: 0.7rem; }
+.phero-stats dt { font-size: 0.9rem; opacity: 0.75; }
+.phero-stats dd { margin: 0; font-size: clamp(1.6rem, 3.2vw, 3.2rem); line-height: 1.05; }
+@media (min-width: 900px) { .phero { padding-bottom: clamp(2rem, 6vh, 4rem); } .phero-stats { grid-template-columns: repeat(4, 1fr); } }
+@media (prefers-reduced-motion: no-preference) {
+  /* Four pictures, six seconds each. The negative delay starts the first one already visible. */
+  .phero-media img { animation: phero-fade 24s linear infinite backwards; animation-delay: calc(var(--i) * 6s - 1s); }
+  @keyframes phero-fade { 0% { opacity: 0; transform: scale(1); } 4% { opacity: 1; } 25% { opacity: 1; } 29% { opacity: 0; transform: scale(1.08); } 100% { opacity: 0; } }
+}
+
+/* Walkthrough video strip (Rooms) */
+.watch { background: var(--deep); color: var(--chalk); padding-block: clamp(3rem, 8vw, 7rem); }
+.watch-grid { display: grid; gap: 2rem; align-items: center; }
+.watch-video { aspect-ratio: 9 / 16; width: min(100%, 78svh * 9 / 16); margin-inline: auto; border-radius: 24px; overflow: hidden; background: #000; }
+@media (min-width: 900px) { .watch-grid { grid-template-columns: 1fr auto; gap: 5rem; } .watch-video { width: min(28rem, 78svh * 9 / 16); } }
+
+/* Stories with rich text */
+.stories-wrap { padding-top: clamp(4rem, 10vw, 9rem); }
+.stories-wrap .stories { padding-top: clamp(1.5rem, 4vw, 3rem); }
+.story .prose { color: var(--muted); max-width: 38rem; }
+.story .prose > * { margin-top: var(--gap-text); }
+.story .prose h3 { font-family: var(--font-display), serif; font-weight: 500; font-size: 1.5rem; color: var(--ink); margin-top: var(--gap-btn); }
+.story .prose ul { padding-left: 1.2rem; display: grid; gap: 0.6rem; }
+.story .prose strong { color: var(--ink); font-weight: 500; }
+
+/* FAQ block without a video, and the video caption */
+.faq-one { max-width: 52rem; margin-top: 3rem; }
+.faq-video-h { font-size: 1.5rem; margin-top: 1.5rem; }
+.faq-video-p { margin-top: 0.6rem; color: var(--muted); }
+
+/* Closing call when it is its own block, and the footer under it */
+.call.cta { padding-bottom: clamp(4rem, 9vw, 7rem); }
+.call.cta .mega { font-size: clamp(2.6rem, 8vw, 8rem); max-width: 16ch; }
+.site-foot { background: var(--deep); color: var(--chalk); padding-bottom: 2rem; }
+.site-foot .foot { margin-top: 0; border-top: 0; padding-top: clamp(3rem, 6vw, 5rem); }
+
+/* Rooms */
+.rooms { padding-block: clamp(4rem, 10vw, 9rem) clamp(2rem, 5vw, 4rem); }
+.room-nav { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--gap-btn); }
+.room-nav a { text-decoration: none; padding: 0.55rem 1.2rem; border-radius: 999px; background: var(--mist); transition: background-color 0.2s ease, color 0.2s ease; }
+.room { display: grid; gap: 2rem; padding-block: clamp(2.5rem, 6vw, 5rem); scroll-margin-top: 6rem; }
+.room-card { aspect-ratio: 4 / 5; max-height: 82svh; width: 100%; }
+.room-back { height: 100%; box-sizing: border-box; background: var(--teal); color: var(--chalk); border-radius: 24px; padding: clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: center; }
+.room-back > p { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.room-back dl { margin: var(--gap-btn) 0 0; display: grid; gap: 1rem; }
+.room-back dt { font-size: 0.85rem; opacity: 0.7; }
+.room-back dd { margin: 0; font-size: 1.15rem; }
+.room-text h3 { font-size: clamp(2rem, 4.2vw, 4rem); }
+.room-text p { margin-top: var(--gap-text); color: var(--muted); max-width: 38rem; }
+.room-text .room-tag, .compare .room-tag { color: var(--gold-ink); font-weight: 500; }
+.room-text .room-short { font-family: var(--font-display), serif; font-style: italic; font-size: 1.25rem; color: var(--ink); }
+.room-specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: var(--gap-btn) 0 0; }
+.room-specs dt { font-size: 0.85rem; color: var(--muted); }
+.room-specs dd { margin: 0.2rem 0 0; font-family: var(--font-display), serif; font-size: 1.25rem; line-height: 1.2; }
+.room-features { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; }
+@media (min-width: 900px) {
+  .room { grid-template-columns: 5fr 6fr; gap: clamp(3rem, 6vw, 7rem); align-items: center; }
+  .room:nth-of-type(even) .room-card { order: 2; }
+}
+@media (hover: hover) and (pointer: fine) { .room-nav a:hover { background: var(--gold); } }
+
+/* Which room is right for you */
+.compare { background: var(--deep); color: var(--chalk); padding-block: clamp(4rem, 10vw, 9rem); }
+.compare-grid { display: grid; gap: 1.2rem; margin-top: clamp(2rem, 5vw, 4rem); }
+@media (min-width: 900px) { .compare-grid { grid-template-columns: repeat(3, 1fr); } }
+.agp .compare-card, .agp .method { color: var(--chalk); padding: 1.4rem; }
+.agp .compare-card img { aspect-ratio: 4 / 3; height: auto; border-radius: 1rem; }
+.compare-card h3 { font-size: 2rem; margin-top: 1.2rem; }
+.compare .room-tag { color: var(--gold); margin-top: 0.3rem; }
+.compare-card ul:not(.chips) { margin: var(--gap-text) 0; padding-left: 1.2rem; display: grid; gap: 0.4rem; opacity: 0.88; }
+.agp .compare .chips li { background: rgb(243 236 224 / 0.14); }
+.compare-best { margin-top: var(--gap-text); font-family: var(--font-display), serif; font-style: italic; font-size: 1.15rem; }
+
+/* Contact */
+.contact { padding-block: clamp(3rem, 8vw, 7rem); }
+.methods { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-top: clamp(1.5rem, 4vw, 3rem); }
+.contact .wrap > .methods:first-child { margin-top: 0; }
+.method h3 { font-size: 1.7rem; }
+.method p { opacity: 0.75; margin: 0.4rem 0 1rem; }
+.method a, .method strong { color: var(--gold); font-weight: 500; text-decoration: none; overflow-wrap: anywhere; }
+.contact-grid { display: grid; gap: 3rem; margin-top: clamp(3rem, 6vw, 5rem); }
+@media (min-width: 900px) { .contact-grid { grid-template-columns: 6fr 5fr; gap: clamp(3rem, 6vw, 6rem); } }
+.form h3, .visit h3 { font-size: clamp(1.9rem, 3vw, 2.7rem); }
+.form > p, .visit > p { margin-top: 0.4rem; color: var(--muted); }
+.form fieldset { border: 0; padding: 0; margin: var(--gap-btn) 0 0; min-width: 0; display: grid; gap: 1rem; }
+@media (min-width: 600px) { .form fieldset { grid-template-columns: 1fr 1fr; } }
+.form legend { font-family: var(--font-display), serif; font-size: 1.35rem; padding: 0; margin-bottom: 0.9rem; }
+.form label { display: grid; gap: 0.35rem; font-size: 0.92rem; color: var(--muted); }
+.form .full { grid-column: 1 / -1; }
+.form input, .form select, .form textarea { font: inherit; font-size: 1rem; color: var(--ink); background: #fff; border: 1.5px solid rgb(23 25 31 / 0.2); border-radius: 0.8rem; padding: 0.75rem 1rem; min-height: 3rem; width: 100%; box-sizing: border-box; transition: border-color 0.2s ease; }
+.form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible { border-color: var(--gold-ink); outline-offset: 1px; }
+.form .btn { margin-top: var(--gap-btn); border: 0; cursor: pointer; font: inherit; font-weight: 500; }
+.form .btn:disabled { opacity: 0.6; cursor: progress; }
+.form-status { margin-top: var(--gap-text); padding: 0.8rem 1rem; border-radius: 0.8rem; }
+.form-status.is-success { background: #dcefe0; color: #14532d; }
+.form-status.is-error { background: #fbe3e0; color: #8a1c12; }
+.visit address { font-style: normal; color: var(--muted); }
+.map { aspect-ratio: 4 / 3; border-radius: 1.2rem; overflow: hidden; margin: 1.4rem 0; background: var(--mist); }
+.map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.visit .foot-inline { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+
+/* FAQs page: category list on the left, answers on the right */
+.faqp { padding-block: clamp(3rem, 8vw, 7rem); }
+.faqp-intro { max-width: 48rem; }
+.faqp-grid { display: grid; gap: 2rem; margin-top: clamp(2rem, 5vw, 4rem); }
+.faqp-rail { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.faqp-rail a { text-decoration: none; padding: 0.5rem 1rem; border-radius: 999px; background: var(--mist); font-size: 0.95rem; transition: background-color 0.2s ease; }
+.agp .faq.faq-flat { background: none; padding: 0; }
+.faq-flat section { scroll-margin-top: 7rem; }
+.faq-flat section + section { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.faq-flat h2 { margin-bottom: 0.6rem; }
+@media (min-width: 900px) {
+  .faqp-grid { grid-template-columns: 17rem minmax(0, 1fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+  .faqp-rail { position: sticky; top: 7rem; flex-direction: column; flex-wrap: nowrap; }
+  .faqp-rail a { border-radius: 0.8rem; }
+}
+@media (hover: hover) and (pointer: fine) { .faqp-rail a:hover { background: var(--gold); } }
+.help { background: var(--teal); color: var(--chalk); border-radius: 24px; padding: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(3rem, 6vw, 5rem); }
+.help h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); }
+.help > p { margin-top: var(--gap-text); opacity: 0.85; }
+.help dl { display: grid; gap: 1.2rem; margin: var(--gap-btn) 0; }
+@media (min-width: 700px) { .help dl { grid-template-columns: repeat(3, 1fr); } }
+.help dt { font-size: 0.85rem; opacity: 0.7; }
+.help dd { margin: 0.2rem 0 0; }
+.help dd a { color: var(--gold); text-decoration: none; overflow-wrap: anywhere; }
+.thanks { margin-top: var(--gap-btn); font-family: var(--font-display), serif; font-style: italic; font-size: 1.3rem; max-width: 44rem; }
+
+/* Legal text */
+.legal { padding-block: clamp(3rem, 8vw, 7rem); }
+.legal > * { max-width: 46rem; }
+.legal h2 { font-family: var(--font-display), serif; font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.legal h3 { font-weight: 500; font-size: 1.1rem; margin-top: var(--gap-btn); }
+.legal p { margin-top: var(--gap-text); }
+.legal ul { margin: var(--gap-text) 0 0; padding-left: 1.2rem; display: grid; gap: 0.5rem; }
+.legal a { text-decoration: underline; text-underline-offset: 3px; }
+.legal strong { font-weight: 500; }
+
+/* 404 */
+.lost { padding-block: clamp(3rem, 8vw, 7rem); }
+.lost .cta-row { margin-top: var(--gap-btn); }
+
+/* Arrival: set by SitePage when motion is allowed. Without the class everything is simply visible. */
+.has-reveal [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.has-reveal [data-reveal].is-in { opacity: 1; transform: none; }
