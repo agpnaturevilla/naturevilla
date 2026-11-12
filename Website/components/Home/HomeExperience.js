@@ -337,7 +337,7 @@ export default function HomeExperience({ page }) {
         {/* 7. STORIES */}
         <section className="stories wrap">
           <div className="story-pics" aria-hidden="true">
-            {stories.map((s, i) => <img key={s.title} data-zoom className={i ? '' : 'on'} src={s.image} alt="" loading="lazy" width="1024" height="700" />)}
+            {stories.map((s, i) => <img key={s.title} data-zoom className={i ? '' : 'on'} src={s.image} alt={s.title} loading="lazy" width="1024" height="700" />)}
           </div>
           <div className="story-list">
             {stories.map((s) => (

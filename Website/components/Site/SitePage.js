@@ -133,7 +133,7 @@ function Hero({ content, video }) {
     <>
       <section className="phero">
         <div className="phero-media">
-          {images.map((src, i) => <img key={src} src={src} alt="" style={{ '--i': i }} fetchPriority={i ? 'low' : 'high'} />)}
+          {images.map((src, i) => <img key={src} src={src} alt={`${title}, AGP Nature Villa photo ${i + 1}`} style={{ '--i': i }} fetchPriority={i ? 'low' : 'high'} />)}
         </div>
         <div className="wrap phero-copy">
           <h1 className="display">{title}</h1>
@@ -171,7 +171,7 @@ function Stories({ content }) {
       {content.title && <div className="wrap"><h2 className="display h2 rise">{content.title}</h2></div>}
       <div className="stories wrap">
         <div className="story-pics" aria-hidden="true">
-          {sections.map((s, i) => <img key={s.title} data-zoom className={i ? '' : 'on'} src={s.image} alt="" loading="lazy" width="1024" height="700" />)}
+          {sections.map((s, i) => <img key={s.title} data-zoom className={i ? '' : 'on'} src={s.image} alt={s.title} loading="lazy" width="1024" height="700" />)}
         </div>
         <div className="story-list">
           {sections.map((s) => (
