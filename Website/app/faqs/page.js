@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 export default function FAQsPage() {
-  const lastUpdated = "January 2025"
+  const lastUpdated = "November 2026"
 
   const faqData = [
     {
@@ -21,15 +21,15 @@ export default function FAQsPage() {
         },
         {
           question: "What is the minimum stay requirement?",
-          answer: "We typically require a minimum stay of 2-3 nights for regular bookings. During peak seasons like Diwali, Christmas, and New Year, we may require a minimum stay of 5-7 nights. For longer stays, we offer attractive discounted rates."
+          answer: "Our minimum stay is 2 nights on weekends. During peak seasons like Diwali, Christmas, and New Year, we may require a minimum stay of 5-7 nights. For longer stays, we offer attractive discounted rates."
         },
         {
           question: "How much deposit is required to secure my booking?",
-          answer: "We require a 30% advance payment to confirm your booking. The remaining balance can be paid upon arrival at the villa. We accept payments via bank transfer, UPI, or cash. A refundable security deposit may also be required."
+          answer: "We require a 30% advance payment to confirm your booking. The remaining balance can be paid upon arrival at the villa. We accept payments via bank transfer, UPI, or cash. A refundable security deposit of ₹5,000 - ₹10,000 (depending on group size) is collected at check-in and returned at checkout after a damage inspection."
         },
         {
           question: "What is your cancellation policy?",
-          answer: "Cancellations made 7 days prior to arrival are eligible for a full refund minus processing charges. Cancellations within 7 days may be subject to charges. We understand emergencies happen and will work with guests on a case-by-case basis."
+          answer: "Cancellations made 15 or more days before check-in receive a 100% refund minus a 5% bank processing fee. Cancellations 7 to 14 days before check-in receive a 50% refund. Cancellations less than 7 days before check-in are not refunded. The full policy is in our Terms and Conditions."
         }
       ]
     },
@@ -38,7 +38,7 @@ export default function FAQsPage() {
       questions: [
         {
           question: "How many guests can AGP Nature Villa accommodate?",
-          answer: "AGP Nature Villa can comfortably accommodate up to 8-10 guests. We have 3 spacious bedrooms (Love Nest, Mountain Peak, and Valley View) with attached bathrooms, plus additional space in the living areas for extra guests if needed."
+          answer: "AGP Nature Villa comfortably accommodates 6 to 15 guests. We have 3 spacious bedrooms (Love Nest, Mountain Peak, and Valley View) with attached bathrooms, and we use high-quality extra bedding and the living areas for larger groups."
         },
         {
           question: "Is the entire villa private for my group?",
@@ -63,7 +63,7 @@ export default function FAQsPage() {
         },
         {
           question: "How far is the villa from Udaipur city center?",
-          answer: "The villa is approximately 15-20 minutes drive from Udaipur city center and major attractions like City Palace, Lake Pichola, and Jagdish Temple. Despite being close to the city, you'll feel like you're in a peaceful mountain retreat."
+          answer: "The villa is approximately 20-25 minutes drive from Udaipur City Palace and Fateh Sagar Lake, and close to major attractions like Lake Pichola and Jagdish Temple. Despite being close to the city, you'll feel like you're in a peaceful mountain retreat."
         },
         {
           question: "Do you provide airport/railway station pickup?",

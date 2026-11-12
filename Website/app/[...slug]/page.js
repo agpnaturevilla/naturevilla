@@ -321,7 +321,7 @@ function getDefaultPageData(slug) {
             ],
             stats: {
               rooms: 3,
-              capacity: '4 guests per room',
+              capacity: 'Up to 4 guests per room',
               amenities: '15+ luxury amenities',
               rating: 4.9
             }

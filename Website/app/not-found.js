@@ -4,6 +4,8 @@ import SitePage, { PageHead } from '../components/Site/SitePage'
 export const metadata = {
   title: '404 - Page Not Found',
   description: 'The page you are looking for does not exist.',
+  alternates: { canonical: null },
+  robots: { index: false, follow: true },
 }
 
 export default function NotFound() {

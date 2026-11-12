@@ -247,7 +247,7 @@ export default function HomeExperience({ page }) {
           <div className="hero-after">
             <div><b>{stats.rating}</b><span>Rating, from {stats.reviews} reviews</span></div>
             <div><b>{stats.rooms}</b><span>Luxury rooms</span></div>
-            <div><b>15 min</b><span>From Udaipur city, in the Aravalis</span></div>
+            <div><b>20 min</b><span>From Udaipur city, in the Aravalis</span></div>
             <div><b>{stats.established}</b><span>Hosting since</span></div>
           </div>
         </section>

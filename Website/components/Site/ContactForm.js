@@ -90,7 +90,7 @@ export default function ContactForm({ content = {} }) {
               <label>Phone number *<input type="tel" name="phone" required autoComplete="tel" value={form.phone} onChange={set} placeholder="+91 9876543210" /></label>
               <label>Number of guests
                 <select name="guests" value={form.guests} onChange={set}>
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => <option key={n} value={n}>{n} Guest{n > 1 ? 's' : ''}</option>)}
+                  {Array.from({ length: 15 }, (_, i) => i + 1).map((n) => <option key={n} value={n}>{n} Guest{n > 1 ? 's' : ''}</option>)}
                 </select>
               </label>
             </fieldset>
