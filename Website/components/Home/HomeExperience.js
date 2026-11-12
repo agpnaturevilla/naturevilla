@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { preload } from 'react-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
@@ -31,6 +32,8 @@ const altFor = (src) => {
 
 export default function HomeExperience({ page }) {
   const { root, smooth, extras, rootProps } = useSite()
+  // The hero poster is the largest thing on the first screen; ask for it before the CSS and JS.
+  preload('/images/Villa/villa-gallery/night-time-outdoor.jpg', { as: 'image', fetchPriority: 'high' })
   const hero = block(page, 'villa-hero')
   const brand = block(page, 'brand-experience')
   const pk = block(page, 'pool-kitchen')

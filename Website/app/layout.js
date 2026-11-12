@@ -66,9 +66,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    google: 'u4Lza026JrXPhS4p-saNayywdU3srXuij5sZF3MOU68',
   },
   alternates: {
     canonical: 'https://agpnaturevilla.com/',
@@ -85,12 +83,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <meta name="theme-color" content="#22c55e" />
+        {/* Next adds charset and viewport itself. */}
+        <meta name="theme-color" content="#0c1220" />
         <meta name="color-scheme" content="light" />
-        <meta name="google-site-verification" content="u4Lza026JrXPhS4p-saNayywdU3srXuij5sZF3MOU68" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="language" content="en" />

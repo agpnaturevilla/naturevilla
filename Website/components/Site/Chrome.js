@@ -74,7 +74,7 @@ export function SiteHeader() {
   return (
     <header className="agp-head">
       <Link href="/" aria-label="AGP Nature Villa, home">
-        <img className="logo" src="/images/logos/agp-nature-villa-logo-main-white.png" alt="AGP Nature Villa" width="400" height="120" />
+        <img className="logo" src="/images/logos/agp-nature-villa-logo-white-180.webp" alt="AGP Nature Villa" width="180" height="180" />
       </Link>
       <nav aria-label="Main">
         {nav.slice(1).map((n) => <Link key={n.href} href={n.href}>{n.label}</Link>)}
@@ -88,7 +88,7 @@ export function SiteFoot() {
   return (
     <div className="foot">
       <div>
-        <img className="logo" src="/images/logos/agp-nature-villa-logo-main-white.png" alt="AGP Nature Villa" width="400" height="120" loading="lazy" />
+        <img className="logo" src="/images/logos/agp-nature-villa-logo-white-180.webp" alt="AGP Nature Villa" width="180" height="180" loading="lazy" />
         <p>Experience the perfect blend of luxury and nature at AGP Nature Villa. Nestled amidst the Aravali mountains, our villa offers an unforgettable stay with modern amenities and breathtaking views.</p>
         <h3>Follow us</h3>
         <ul className="foot-inline">
