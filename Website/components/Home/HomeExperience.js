@@ -43,7 +43,7 @@ export default function HomeExperience({ page }) {
   const stories = block(page, 'story-sections').sections || []
   const faq = block(page, 'faq-section')
   const cta = block(page, 'cta-section')
-  const price = Number(String(pricing.price || '15000').replace(/\D/g, ''))
+  const price = Number(String(pricing.price || '18000').replace(/\D/g, ''))
   const stats = hero.stats || {}
   const am = spaces.amenities || []
   // The walk through the villa: each chapter is one or more shots cut from the owner's own walkthrough reel.
